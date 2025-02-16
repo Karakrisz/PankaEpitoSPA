@@ -1,4 +1,4 @@
-<script setup lang="ts"></script>
+<script setup></script>
 <template>
   <section class="services">
     <h2 class="services__title">Szolgáltatásaink</h2>

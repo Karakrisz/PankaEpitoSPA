@@ -48,8 +48,9 @@ a {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 400;
+  margin: 0;
 }
 
 button {
@@ -294,7 +295,7 @@ ul {
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -326,6 +327,7 @@ ul {
 .services__description {
   color: #666;
   line-height: 1.6;
+  width: 25em;
 }
 
 .services__card--highlighted {
@@ -462,20 +464,19 @@ ul {
 }
 
 .offer__title {
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   color: #8b0000;
   line-height: 1.2;
   margin: 0;
 }
 
 .offer__subtitle {
-  font-size: 1.25rem;
   color: #333;
   margin: 0;
 }
 
 .offer__info-title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #333;
   margin: 0 0 0.5em;
 }
@@ -517,7 +518,7 @@ ul {
 }
 
 .offer__manufacturing-title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #333;
   margin: 0 0 0.5em;
 }
@@ -530,9 +531,7 @@ ul {
 }
 
 .offer__cta-text {
-  font-size: 1.125rem;
   color: #333;
-  margin: 1em 0;
 }
 
 .offer__cta-button {
