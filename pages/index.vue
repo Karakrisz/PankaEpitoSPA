@@ -11,7 +11,7 @@
         />
         <div class="hero__content-overlay position-absolute">
           <NuxtImg
-            src="/img/logo.png"
+            src="/img/hero-logo.svg"
             alt="Panka Plast Kft."
             class="hero__logo"
           />
@@ -20,11 +20,15 @@
     </div>
   </section>
   <section class="services">
-    <h2 class="services__title">Szolgáltatásaink</h2>
+    <h2 class="services__title text-transform-uppercase f-400 text-color">Szolgáltatásaink</h2>
     <div class="services__container grid-2">
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-window-maximize"></i>
+          <NuxtImg
+            src="/img/services/services.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
@@ -34,7 +38,11 @@
       </div>
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-clipboard-check"></i>
+          <NuxtImg
+            src="/img/services/services2.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
@@ -44,7 +52,11 @@
       </div>
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-blinds"></i>
+          <NuxtImg
+            src="/img/services/services3.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
@@ -54,7 +66,11 @@
       </div>
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-mosquito-net"></i>
+          <NuxtImg
+            src="/img/services/services4.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
@@ -64,7 +80,11 @@
       </div>
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-bolt"></i>
+          <NuxtImg
+            src="/img/services/services5.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
@@ -74,7 +94,11 @@
       </div>
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-tools"></i>
+          <NuxtImg
+            src="/img/services/services6.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
@@ -84,7 +108,11 @@
       </div>
       <div class="services__card">
         <div class="services__icon">
-          <i class="fas fa-house-damage"></i>
+          <NuxtImg
+            src="/img/services/services7.svg"
+            alt="Panka Plast Kft."
+            class="services__icon-image"
+          />
         </div>
         <div class="services__content">
           <p class="services__description">
