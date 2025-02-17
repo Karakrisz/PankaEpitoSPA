@@ -1,12 +1,11 @@
 <script setup>
 const links = [
   { name: 'Főoldal', path: '/' },
-  { name: 'Partnerek', path: '/partnerek' },
-  { name: 'Szolgáltatások', path: '/szolgaltatasok' },
-  { name: 'Dokumentumok', path: '/dokumentumok' },
-  { name: 'Ajánlatkérés', path: '/ajanlatkeres' },
+  { name: 'PVC-ajtó, ablak', path: '/partnerek' },
+  { name: 'Alumínium-ajtó, ablak', path: '/szolgaltatasok' },
+  { name: 'Árnyékolástechnika', path: '/dokumentumok' },
+  { name: 'Beltéri ajók', path: '/ajanlatkeres' },
   { name: 'Kapcsolat', path: '/kapcsolat' },
-  { name: 'Facebook', path: '/', imagePath: '/img/header/facebook.svg' },
 ]
 
 const isMenuOpen = ref(false)
@@ -14,16 +13,16 @@ const isMenuOpen = ref(false)
 
 <template>
   <header class="header">
-    <div class="header-content d-flex">
+    <div class="header-content d-flex position-relative bg-color-w">
       <div class="logo-box header-content__logo-box">
-        <a href="/" class="header-content__logo-box__link">
+        <NuxtLink to="/" class="header-content__logo-box__link">
           <NuxtImg
-            src="/img/header/logo.svg"
-            alt="Biztos Alkuszom"
+            src="/img/logo.svg"
+            alt="Panka Plast Kft."
             class="header-content__logo-box__link__img"
             height="100%"
           />
-        </a>
+        </NuxtLink>
       </div>
       <div class="nav-box header-content__nav-box d-flex">
         <button
@@ -38,10 +37,7 @@ const isMenuOpen = ref(false)
         <nav :class="{ 'menu--open': isMenuOpen, menu: true }" id="menu">
           <ul id="menu__list" class="menu__list d-flex">
             <li v-for="link in links" :key="link.path" class="menu__list__li">
-              <NuxtLink
-                :to="link.path"
-                :class="['menu__item text-color text-transform-uppercase']"
-              >
+              <NuxtLink :to="link.path" :class="['menu__item text-color']">
                 <template v-if="link.imagePath">
                   <NuxtImg
                     class="menu__list__li__img"
@@ -57,6 +53,44 @@ const isMenuOpen = ref(false)
             </li>
           </ul>
         </nav>
+      </div>
+      <div class="header-content__phone-box text-end">
+        <NuxtLink
+          to="/ajanlatkeres"
+          class="header-content__phone-box__link page-link text-transform-uppercase"
+        >
+          Ajánlatkérés
+        </NuxtLink>
+      </div>
+    </div>
+    <div class="header-content__link-box bg-color-w position-relative d-flex">
+      <div class="header-content__link-box__content">
+        <a
+          href="tel:+36703337387"
+          class="header-content__link-box__link d-flex text-color"
+        >
+          <img
+            src="/img/phone.svg"
+            alt="Panka Plast Kft."
+            class="header-content__link-box__link__img"
+            height="100%"
+          />
+          06 70 333 7387
+        </a>
+      </div>
+      <div class="header-content__link-box__content">
+        <a
+          href="mailto:info@ablaktechnika.com"
+          class="header-content__link-box__link d-flex text-color"
+        >
+          <img
+            src="/img/mail.svg"
+            alt="Panka Plast Kft."
+            class="header-content__link-box__link__img"
+            height="100%"
+          />
+          info@ablaktechnika.com
+        </a>
       </div>
     </div>
   </header>

@@ -1,5 +1,24 @@
 <script setup></script>
 <template>
+  <section class="hero">
+    <div class="hero__container">
+      <div class="hero__content position-relative">
+        <NuxtImg
+          src="/img/slider.webp"
+          alt="Panka Plast Kft."
+          class="hero__image"
+          :srcset="['/img/slider.webp 1920w', '/img/slider.webp 100w']"
+        />
+        <div class="hero__content-overlay position-absolute">
+          <NuxtImg
+            src="/img/logo.png"
+            alt="Panka Plast Kft."
+            class="hero__logo"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="services">
     <h2 class="services__title">Szolgáltatásaink</h2>
     <div class="services__container grid-2">
