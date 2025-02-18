@@ -20,7 +20,9 @@
     </div>
   </section>
   <section class="services">
-    <h2 class="services__title text-transform-uppercase f-400 text-color">Szolgáltatásaink</h2>
+    <h2 class="services__title text-transform-uppercase f-400 text-color">
+      Szolgáltatásaink
+    </h2>
     <div class="services__container grid-2">
       <div class="services__card">
         <div class="services__icon">
@@ -142,7 +144,7 @@
       <p class="warranty__note">
         Kérje árajánlatunkat díjtalan helyszíni felmérés után.
       </p>
-      <a href="#" class="warranty__button">AJÁNLATKÉRÉS</a>
+      <NuxtLink to="/contact" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
     </div>
   </section>
   <section class="offer">
@@ -202,14 +204,13 @@
           Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
           megújulása felé!
         </p>
-        <a href="#" class="offer__cta-button">AJÁNLATKÉRÉS</a>
+        <NuxtLink to="/contact" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
       </div>
     </div>
   </section>
   <section class="contact">
     <div class="contact__container">
       <h2 class="contact__title">LÉPJÜNK KAPCSOLATBA!</h2>
-
       <form class="contact__form d-flex">
         <div class="contact__form-row d-flex">
           <div class="contact__form-group">
@@ -233,7 +234,6 @@
             />
           </div>
         </div>
-
         <div class="contact__form-row d-flex">
           <div class="contact__form-group">
             <input
@@ -265,7 +265,6 @@
             rows="6"
           ></textarea>
         </div>
-
         <div class="contact__footer d-flex">
           <div class="contact__consent">
             <p class="contact__consent-text">
@@ -282,7 +281,7 @@
       </form>
     </div>
   </section>
-  <!-- HTML -->
+
   <section class="blog">
     <div class="blog__container">
       <h2 class="blog__title">CIKKEK</h2>

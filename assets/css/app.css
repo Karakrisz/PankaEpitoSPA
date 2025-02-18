@@ -334,7 +334,7 @@ ul {
 
 /********************  Services formating start **********************/
 .services {
-  padding: 4rem 2rem;
+  padding: 4em 10%;
   background-color: #fff;
 }
 
@@ -478,10 +478,8 @@ ul {
 }
 
 .offer__container {
-  max-width: 75em;
-  margin: 0 auto;
   gap: 4em;
-  padding: 0 2em;
+  padding: 1em 10%;
 }
 
 .offer__image-wrapper {
@@ -726,13 +724,8 @@ ul {
 /********************  Blog formating start **********************/
 
 .blog {
-  padding: 4em 2em;
+  padding: 4em 10%;
   background-color: #f8f8f8;
-}
-
-.blog__container {
-  max-width: 75em;
-  margin: 0 auto;
 }
 
 .blog__title {
@@ -909,142 +902,603 @@ ul {
 /********************  Subpage formating formating end **********************/
 
 /********************  Media formating start **********************/
-
 @media (min-width: 2200px) and (max-width: 2570px) {
+  .header-content__logo-box__link__img {
+    width: 40%;
+  }
+
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link {
+    font-size: 1.3rem;
+  }
+  .menu__item {
+    padding-left: 3em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3.2rem;
+  }
+
+  .services__title,
+  .contact__title {
+    font-size: 2rem;
+  }
+
+  .services__description {
+    font-size: 1.2rem;
+  }
+
+  .hero__logo {
+    width: 18em;
+  }
+
+  .services__icon-image {
+    width: 7em;
+  }
+
+  .warranty {
+    width: 50%;
+  }
+
+  .warranty__number {
+    font-size: 15rem;
+  }
+
+  .warranty__title {
+    font-size: 4rem;
+  }
+
+  .warranty__description {
+    font-size: 1.3rem;
+  }
+
+  .contact {
+    width: 60%;
+  }
+
+  .blog__title {
+    font-size: 3rem;
+  }
+
+  .blog__card-title {
+    font-size: 1.5rem;
+  }
+
+  .blog__excerpt {
+    font-size: 1.2rem;
+  }
+
+  .footer__menu-link {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 2000px) and (max-width: 2200px) {
+  .header-content__logo-box__link__img {
+    width: 45%;
+  }
+
+  .menu__item {
+    font-size: 1.1rem;
+    padding-left: 2.8em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3rem;
+  }
+
+  .services__title {
+    font-size: 1.8rem;
+  }
+
+  .services__description {
+    font-size: 1.15rem;
+  }
+
+  .hero__logo {
+    width: 16em;
+  }
+
+  .warranty {
+    width: 55%;
+  }
+
+  .warranty__number {
+    font-size: 14rem;
+  }
+
+  .warranty__title {
+    font-size: 3.8rem;
+  }
+
+  .warranty__description {
+    font-size: 1.25rem;
+  }
+
+  .contact {
+    width: 65%;
+  }
+
+  .contact__title {
+    font-size: 2.8rem;
+  }
+
+  .blog__title {
+    font-size: 2.8rem;
+  }
+
+  .blog__card-title {
+    font-size: 1.4rem;
+  }
+
+  .blog__excerpt {
+    font-size: 1.15rem;
+  }
+
+  .footer__menu-link {
+    font-size: 1.15rem;
+  }
 }
 
 @media (min-width: 1800px) and (max-width: 2000px) {
+  .menu__item {
+    font-size: 1.05rem;
+    padding-left: 2.5em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 2.8rem;
+  }
+
+  .services__title {
+    font-size: 1.7rem;
+  }
+
+  .services__description {
+    font-size: 1.1rem;
+  }
+
+  .warranty {
+    width: 58%;
+  }
+
+  .warranty__number {
+    font-size: 13rem;
+  }
+
+  .warranty__title {
+    font-size: 3.6rem;
+  }
+
+  .contact {
+    width: 68%;
+  }
+
+  .contact__title {
+    font-size: 2.6rem;
+  }
+
+  .blog__title {
+    font-size: 2.6rem;
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1800px) {
+  .menu__item {
+    font-size: 1rem;
+    padding-left: 2.3em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 2.6rem;
+  }
+
+  .services__title {
+    font-size: 1.6rem;
+  }
+
+  .warranty {
+    width: 60%;
+  }
+
+  .warranty__number {
+    font-size: 12rem;
+  }
+
+  .warranty__title {
+    font-size: 3.4rem;
+  }
+
+  .contact {
+    width: 70%;
+  }
 }
 
 @media (min-width: 1500px) and (max-width: 1600px) {
+  .menu__item {
+    font-size: 0.95rem;
+    padding-left: 2.1em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 2.4rem;
+  }
+
+  .warranty {
+    width: 62%;
+  }
+
+  .warranty__number {
+    font-size: 11rem;
+  }
+
+  .warranty__title {
+    font-size: 3.2rem;
+  }
+
+  .contact {
+    width: 72%;
+  }
 }
 
 @media (min-width: 1400px) and (max-width: 1500px) {
+  .menu__item {
+    font-size: 0.9rem;
+    padding-left: 2em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 2.2rem;
+  }
+
+  .warranty {
+    width: 65%;
+  }
+
+  .warranty__number {
+    font-size: 10rem;
+  }
+
+  .warranty__title {
+    font-size: 3rem;
+  }
+
+  .contact {
+    width: 75%;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
+  .menu__item {
+    font-size: 0.85rem;
+    padding-left: 1.8em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 2rem;
+  }
+
+  .warranty {
+    width: 68%;
+  }
+
+  .warranty__number {
+    font-size: 9rem;
+  }
+
+  .warranty__title {
+    font-size: 2.8rem;
+  }
+
+  .contact {
+    width: 78%;
+  }
+
+  .page__header--right {
+    padding: 0.7em 4em 0.7em 7.5em;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1200px) {
+  .header-content {
+    width: 100%;
+    padding: 1em 2em;
+  }
+
+  .menu__item {
+    font-size: 0.85rem;
+    padding-left: 1.5em;
+  }
+
+  .page__header {
+    width: 25%;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 1.8rem;
+  }
+
+  .warranty {
+    width: 70%;
+  }
+
+  .warranty__number {
+    font-size: 8rem;
+  }
+
+  .warranty__title {
+    font-size: 2.5rem;
+  }
+
+  .contact {
+    width: 80%;
+  }
+
+  .contact__title {
+    font-size: 2.2rem;
+  }
+
+  .page__header--right {
+    padding: 0.7em 3em 0.7em 6em;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .menu__item {
-    font-weight: 600;
-  }
-  .menu__item {
-    font-size: 1rem;
-  }
   .header-content {
-    padding: 2em;
+    padding: 1em;
+    width: 100%;
+    margin: 0;
     flex-direction: row-reverse;
     align-items: center;
   }
+
+  .header-content__logo-box__link__img {
+    width: 120px;
+  }
+
   .header-content__logo-box,
   .header-content__nav-box {
     width: 100%;
   }
+
   .header-content__nav-box {
     padding-left: 0.7em;
   }
-  .menu__list__li:first-child {
-    border-left: 0;
-  }
+
   .hamburger,
   .menu {
     background-color: #001647;
   }
+
   .menu {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
-    height: 100%;
+    width: 60%;
+    height: 100vh;
     transition: right 0.7s ease;
     z-index: 1000;
   }
+
   .menu--open {
     right: 0;
   }
+
   .menu__list {
-    padding: 1.5em;
+    padding: 2em 1em;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   .menu__list__li {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
+    width: 100%;
   }
+
   .menu__item {
-    padding-left: 0.5em;
+    font-size: 1.2rem;
+    padding: 0.8em 0;
     color: #fff;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
   }
+
   .menu__item--border-left {
     border-left: unset;
   }
+
   .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 4.3em;
-    height: 3.7em;
+    width: 3.5em;
+    height: 3em;
     border: none;
     cursor: pointer;
     padding: 0.7em;
   }
+
   .bar {
     height: 0.23em;
     width: 100%;
     background-color: #fff;
     transition: all 0.3s ease;
   }
+
   .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   .hamburger.open .bar:nth-child(2) {
     opacity: 0;
   }
+
   .hamburger.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
-  .menu__list {
-    align-items: flex-start;
+
+  .hero__image {
+    height: 70vh;
   }
-  .menu__list {
+
+  .hero__content-overlay {
+    width: 90%;
+    text-align: center;
+    top: 79%;
+  }
+
+  .hero__logo {
+    width: 55%;
+  }
+
+  .services {
+    padding: 2rem 1rem;
+  }
+
+  .services__card {
     flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
   }
-  .header-content__logo-box__link__img {
-    width: 17em;
+
+  .services__description {
+    width: 100%;
   }
+
+  .services__container {
+    gap: 1rem;
+  }
+
+  .grid-2,
   .grid-3,
   .grid-7 {
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
+
   .page__header {
-    width: 30%;
+    width: 80%;
+    padding: 0.7em 1em;
+    margin: 0.7em auto 2em auto;
   }
+
   .page__header__h2,
   .page__header__h3 {
     font-size: 1.3rem;
   }
-  .page__header.page__header--right {
-    width: 40%;
-    padding: 0.7em 5em 0.7em 2.5em;
-  }
+
   .page__header--right {
-    top: -1%;
+    position: relative;
+    width: 80%;
+    padding: 0.7em 1em;
+    margin: auto;
+    top: 0;
   }
-  .page__header--right--format {
-    top: -2.3%;
+
+  .warranty {
+    width: 90%;
+    padding: 3em 1em;
   }
+
+  .warranty__content {
+    flex-direction: column;
+  }
+
+  .warranty__number {
+    font-size: 6rem;
+  }
+
+  .warranty__title {
+    font-size: 2rem;
+  }
+
+  .warranty__text {
+    text-align: center;
+  }
+
+  .offer__container {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .contact {
+    width: 90%;
+    padding: 2em 1em;
+  }
+
+  .contact__form-row {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .contact__title {
+    font-size: 1.8rem;
+  }
+
+  .contact__footer {
+    flex-direction: column;
+  }
+
+  .blog {
+    padding: 2em 1em;
+  }
+
+  .blog__title {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+
+  .blog__card {
+    margin-bottom: 1em;
+  }
+
+  .blog__content {
+    padding: 1em;
+  }
+
+  .footer {
+    width: 90%;
+    padding: 2em 1em;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+  }
+
+  .footer__contact {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .header-content__link-box {
+    width: 100%;
+    padding: 0.7em 1em;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .header-content__link-box__content {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
   .menu__list__li__img {
     width: 70%;
-  }
-  .menu__item {
-    font-size: 1rem;
+    margin: 0 auto;
+    display: block;
   }
 }
 
