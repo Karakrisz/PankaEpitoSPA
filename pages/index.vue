@@ -25,101 +25,116 @@
     </h2>
     <div class="services__container grid-2">
       <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
-        </div>
-        <div class="services__content">
-          <p class="services__description">
-            Ajtók, ablakok gyártása egyedi méretekben, rövid határidővel.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services2.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
-        </div>
-        <div class="services__content">
-          <p class="services__description">
-            Ingyenes helyszíni felmérés és szakmai tanácsadás.
-          </p>
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Ajtók, ablakok gyártása egyedi méretekben, rövid határidővel.
+            </p>
+          </div>
         </div>
       </div>
       <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services3.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
-        </div>
-        <div class="services__content">
-          <p class="services__description">
-            Alumínium és műanyag redőnyök gyártása, szerelése.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services4.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
-        </div>
-        <div class="services__content">
-          <p class="services__description">
-            Szúnyoghálók, harmonikaajtók, napernyők forgalmazása, szerelése.
-          </p>
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services2.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Ingyenes helyszíni felmérés és szakmai tanácsadás.
+            </p>
+          </div>
         </div>
       </div>
       <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services5.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
-        </div>
-        <div class="services__content">
-          <p class="services__description">
-            Motoros redőnyök szél, fény érzékelővel időkapcsolós távirányítóval.
-          </p>
-        </div>
-      </div>
-      <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services6.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
-        </div>
-        <div class="services__content">
-          <p class="services__description">
-            Nyílászáró csere utáni spaletta javítás.
-          </p>
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services3.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Alumínium és műanyag redőnyök gyártása, szerelése.
+            </p>
+          </div>
         </div>
       </div>
       <div class="services__card">
-        <div class="services__icon">
-          <NuxtImg
-            src="/img/services/services7.svg"
-            alt="Panka Plast Kft."
-            class="services__icon-image"
-          />
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services4.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Szúnyoghálók, harmonikaajtók, napernyők forgalmazása, szerelése.
+            </p>
+          </div>
         </div>
-        <div class="services__content">
-          <p class="services__description">
-            Homlokzati hőszigetelés, színezés.
-          </p>
+      </div>
+      <div class="services__card">
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services5.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Motoros redőnyök szél, fény érzékelővel időkapcsolós
+              távirányítóval.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="services__card">
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services6.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Nyílászáró csere utáni spaletta javítás.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="services__card">
+        <div class="services__card-inner d-flex">
+          <div class="services__icon">
+            <NuxtImg
+              src="/img/services/services7.svg"
+              alt="Panka Plast Kft."
+              class="services__icon-image"
+            />
+          </div>
+          <div class="services__content">
+            <p class="services__description">
+              Homlokzati hőszigetelés, színezés.
+            </p>
+          </div>
         </div>
       </div>
       <div class="services__card services__card--highlighted">
@@ -144,152 +159,272 @@
       <p class="warranty__note">
         Kérje árajánlatunkat díjtalan helyszíni felmérés után.
       </p>
-      <NuxtLink to="/contact" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
+      <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
     </div>
   </section>
   <section class="offer">
-    <div class="offer__container d-flex">
-      <div class="offer__image-wrapper">
-        <img
-          src="/img/offer.png"
-          alt="Modern ablak kilátással és növényekkel"
-          class="offer__image"
-        />
-      </div>
-      <div class="offer__content">
-        <h1 class="offer__title">
-          ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
-        </h1>
-        <p class="offer__subtitle">
-          A legjobb döntés csak egy kattintásra van!
-        </p>
-
-        <div class="offer__info">
-          <h2 class="offer__info-title">
-            Miért válassza a Panka Plast Kft.-t?
-          </h2>
-          <p class="offer__info-text">
-            Mert nálunk az Ön kényelme és elégedettsége az első.
+    <div class="offer__container">
+      <div class="offer__container-inner d-flex">
+        <div class="offer__image-wrapper">
+          <NuxtImg
+            src="/img/offer.webp"
+            alt="Modern ablak kilátással és növényekkel"
+            class="offer__image"
+          />
+        </div>
+        <div class="offer__content">
+          <h1 class="offer__title">
+            ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
+          </h1>
+          <p class="offer__subtitle">
+            A legjobb döntés csak egy kattintásra van!
           </p>
 
-          <div class="offer__features">
-            <p class="offer__features-main">
-              Csúcsminőségű MARSHALL műanyag ablakok, ajtók és erkélyajtók,
-              amelyek hosszú távon garantálják:
+          <div class="offer__info">
+            <h2 class="offer__info-title">
+              Miért válassza a Panka Plast Kft.-t?
+            </h2>
+            <p class="offer__info-text">
+              Mert nálunk az Ön kényelme és elégedettsége az első.
             </p>
-            <ul class="offer__features-list">
-              <li class="offer__features-item">
-                A kiváló hő- és hangszigetelést,
-              </li>
-              <li class="offer__features-item">Otthona biztonságát,</li>
-              <li class="offer__features-item">
-                Az időtálló, esztétikus megjelenést.
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="offer__manufacturing">
-          <h2 class="offer__manufacturing-title">
-            Gyártás és beépítés egy kézből, szakértőktől!
-          </h2>
-          <p class="offer__manufacturing-text">
-            Az ország bármely pontjára szállítunk, és tapasztalt kollégáink
-            gondoskodnak a gyors és precíz beépítésről. Önnek nincs más dolga,
-            mint élvezni a tökéletes eredményt.
+            <div class="offer__features">
+              <p class="offer__features-main">
+                Csúcsminőségű MARSHALL műanyag ablakok, ajtók és erkélyajtók,
+                amelyek hosszú távon garantálják:
+              </p>
+              <ul class="offer__features-list">
+                <li class="offer__features-item">
+                  A kiváló hő- és hangszigetelést,
+                </li>
+                <li class="offer__features-item">Otthona biztonságát,</li>
+                <li class="offer__features-item">
+                  Az időtálló, esztétikus megjelenést.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="offer__manufacturing">
+            <h2 class="offer__manufacturing-title">
+              Gyártás és beépítés egy kézből, szakértőktől!
+            </h2>
+            <p class="offer__manufacturing-text">
+              Az ország bármely pontjára szállítunk, és tapasztalt kollégáink
+              gondoskodnak a gyors és precíz beépítésről. Önnek nincs más dolga,
+              mint élvezni a tökéletes eredményt.
+            </p>
+          </div>
+
+          <p class="offer__cta-text">
+            Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
+            megújulása felé!
           </p>
+          <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
-
-        <p class="offer__cta-text">
-          Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
-          megújulása felé!
-        </p>
-        <NuxtLink to="/contact" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
       </div>
-    </div>
-  </section>
-  <section class="contact">
-    <div class="contact__container">
-      <h2 class="contact__title">LÉPJÜNK KAPCSOLATBA!</h2>
-      <form class="contact__form d-flex">
-        <div class="contact__form-row d-flex">
-          <div class="contact__form-group">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="contact__input"
-              placeholder="Név*"
-              required
-            />
-          </div>
-          <div class="contact__form-group">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="contact__input"
-              placeholder="E-mail*"
-              required
-            />
-          </div>
-        </div>
-        <div class="contact__form-row d-flex">
-          <div class="contact__form-group">
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              class="contact__input"
-              placeholder="Telefonszám"
-            />
-          </div>
-          <div class="contact__form-group">
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              class="contact__input"
-              placeholder="Tárgy*"
-              required
-            />
-          </div>
-        </div>
+      <div class="offer__container-inner d-flex">
+        <div class="offer__content">
+          <h1 class="offer__title">
+            ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
+          </h1>
+          <p class="offer__subtitle">
+            A legjobb döntés csak egy kattintásra van!
+          </p>
 
-        <div class="contact__form-group">
-          <textarea
-            id="message"
-            name="message"
-            class="contact__textarea"
-            placeholder="Üzenet"
-            rows="6"
-          ></textarea>
-        </div>
-        <div class="contact__footer d-flex">
-          <div class="contact__consent">
-            <p class="contact__consent-text">
-              A küldés gombra kattintva elfogadja az
-              <a href="#" class="contact__consent-link"
-                >Adatkezelési Tájékoztatót</a
-              >
+          <div class="offer__info">
+            <h2 class="offer__info-title">
+              Miért válassza a Panka Plast Kft.-t?
+            </h2>
+            <p class="offer__info-text">
+              Mert nálunk az Ön kényelme és elégedettsége az első.
+            </p>
+
+            <div class="offer__features">
+              <p class="offer__features-main">
+                Csúcsminőségű MARSHALL műanyag ablakok, ajtók és erkélyajtók,
+                amelyek hosszú távon garantálják:
+              </p>
+              <ul class="offer__features-list">
+                <li class="offer__features-item">
+                  A kiváló hő- és hangszigetelést,
+                </li>
+                <li class="offer__features-item">Otthona biztonságát,</li>
+                <li class="offer__features-item">
+                  Az időtálló, esztétikus megjelenést.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="offer__manufacturing">
+            <h2 class="offer__manufacturing-title">
+              Gyártás és beépítés egy kézből, szakértőktől!
+            </h2>
+            <p class="offer__manufacturing-text">
+              Az ország bármely pontjára szállítunk, és tapasztalt kollégáink
+              gondoskodnak a gyors és precíz beépítésről. Önnek nincs más dolga,
+              mint élvezni a tökéletes eredményt.
             </p>
           </div>
-          <button type="submit" class="contact__submit">
-            Küldés <span class="contact__submit-icon">→</span>
-          </button>
+
+          <p class="offer__cta-text">
+            Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
+            megújulása felé!
+          </p>
+          <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
-      </form>
+        <div class="offer__image-wrapper">
+          <NuxtImg
+            src="/img/offer2.webp"
+            alt="Modern ablak kilátással és növényekkel"
+            class="offer__image"
+          />
+        </div>
+      </div>
+      <div class="offer__container-inner d-flex">
+        <div class="offer__image-wrapper">
+          <NuxtImg
+            src="/img/offer.webp"
+            alt="Modern ablak kilátással és növényekkel"
+            class="offer__image"
+          />
+        </div>
+        <div class="offer__content">
+          <h1 class="offer__title">
+            ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
+          </h1>
+          <p class="offer__subtitle">
+            A legjobb döntés csak egy kattintásra van!
+          </p>
+
+          <div class="offer__info">
+            <h2 class="offer__info-title">
+              Miért válassza a Panka Plast Kft.-t?
+            </h2>
+            <p class="offer__info-text">
+              Mert nálunk az Ön kényelme és elégedettsége az első.
+            </p>
+
+            <div class="offer__features">
+              <p class="offer__features-main">
+                Csúcsminőségű MARSHALL műanyag ablakok, ajtók és erkélyajtók,
+                amelyek hosszú távon garantálják:
+              </p>
+              <ul class="offer__features-list">
+                <li class="offer__features-item">
+                  A kiváló hő- és hangszigetelést,
+                </li>
+                <li class="offer__features-item">Otthona biztonságát,</li>
+                <li class="offer__features-item">
+                  Az időtálló, esztétikus megjelenést.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="offer__manufacturing">
+            <h2 class="offer__manufacturing-title">
+              Gyártás és beépítés egy kézből, szakértőktől!
+            </h2>
+            <p class="offer__manufacturing-text">
+              Az ország bármely pontjára szállítunk, és tapasztalt kollégáink
+              gondoskodnak a gyors és precíz beépítésről. Önnek nincs más dolga,
+              mint élvezni a tökéletes eredményt.
+            </p>
+          </div>
+
+          <p class="offer__cta-text">
+            Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
+            megújulása felé!
+          </p>
+          <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="blog">
+    <div class="contact">
+      <div class="contact__container">
+        <h2 class="contact__title">LÉPJÜNK KAPCSOLATBA!</h2>
+        <form class="contact__form d-flex">
+          <div class="contact__form-row d-flex">
+            <div class="contact__form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="contact__input"
+                placeholder="Név*"
+                required
+              />
+            </div>
+            <div class="contact__form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="contact__input"
+                placeholder="E-mail*"
+                required
+              />
+            </div>
+          </div>
+          <div class="contact__form-row d-flex">
+            <div class="contact__form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="contact__input"
+                placeholder="Telefonszám"
+              />
+            </div>
+            <div class="contact__form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="contact__input"
+                placeholder="Tárgy*"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="contact__form-group">
+            <textarea
+              id="message"
+              name="message"
+              class="contact__textarea"
+              placeholder="Üzenet"
+              rows="6"
+            ></textarea>
+          </div>
+          <div class="contact__footer d-flex">
+            <div class="contact__consent">
+              <p class="contact__consent-text">
+                A küldés gombra kattintva elfogadja az
+                <a href="#" class="contact__consent-link"
+                  >Adatkezelési Tájékoztatót</a
+                >
+              </p>
+            </div>
+            <button type="submit" class="contact__submit">
+              Küldés <span class="contact__submit-icon">→</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="blog__container">
-      <h2 class="blog__title">CIKKEK</h2>
+      <h2 class="blog__title f-400">CIKKEK</h2>
       <div class="blog__grid grid-3">
         <article class="blog__card">
           <div class="blog__image-wrapper">
-            <img
-              src="/img/offer.png"
+            <NuxtImg
+              src="/img/offer.webp"
               alt="Energiatakarékos otthon nyílászárókkal"
               class="blog__image"
             />
@@ -310,8 +445,8 @@
 
         <article class="blog__card">
           <div class="blog__image-wrapper">
-            <img
-              src="/img/offer.png"
+            <NuxtImg
+              src="/img/offer.webp"
               alt="Műanyag vs. fa nyílászárók"
               class="blog__image"
             />
@@ -323,7 +458,7 @@
               nyílászárókat választanak. Ebben a cikkben összehasonlítjuk a két
               anyag tulajdonságait, előnyeit és hátrányait.
             </p>
-              <NuxtLink to="/" class="blog__link">
+            <NuxtLink to="/" class="blog__link">
               <span class="blog__link-arrow">→</span>
             </NuxtLink>
           </div>
@@ -331,8 +466,8 @@
 
         <article class="blog__card">
           <div class="blog__image-wrapper">
-            <img
-              src="/img/offer.png"
+            <NuxtImg
+              src="/img/offer.webp"
               alt="5 jel, hogy itt az ideje ablakot cserélni"
               class="blog__image"
             />
