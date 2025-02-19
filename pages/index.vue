@@ -173,7 +173,7 @@
           />
         </div>
         <div class="offer__content">
-          <h1 class="offer__title">
+          <h1 class="offer__title text-transform-uppercase">
             ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
           </h1>
           <p class="offer__subtitle">
@@ -225,53 +225,26 @@
       </div>
       <div class="offer__container-inner d-flex">
         <div class="offer__content">
-          <h1 class="offer__title">
-            ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
-          </h1>
+          <h2 class="offer__title text-transform-uppercase">
+            Miért válassza a MARSHALL nyílászárókat?
+          </h2>
           <p class="offer__subtitle">
             A legjobb döntés csak egy kattintásra van!
           </p>
 
-          <div class="offer__info">
-            <h2 class="offer__info-title">
-              Miért válassza a Panka Plast Kft.-t?
-            </h2>
-            <p class="offer__info-text">
-              Mert nálunk az Ön kényelme és elégedettsége az első.
-            </p>
+          <h3 class="offer__info-title">
+            Tökéletes megoldás, kompromisszumok nélkül!
+          </h3>
 
-            <div class="offer__features">
-              <p class="offer__features-main">
-                Csúcsminőségű MARSHALL műanyag ablakok, ajtók és erkélyajtók,
-                amelyek hosszú távon garantálják:
-              </p>
-              <ul class="offer__features-list">
-                <li class="offer__features-item">
-                  A kiváló hő- és hangszigetelést,
-                </li>
-                <li class="offer__features-item">Otthona biztonságát,</li>
-                <li class="offer__features-item">
-                  Az időtálló, esztétikus megjelenést.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="offer__manufacturing">
-            <h2 class="offer__manufacturing-title">
-              Gyártás és beépítés egy kézből, szakértőktől!
-            </h2>
-            <p class="offer__manufacturing-text">
-              Az ország bármely pontjára szállítunk, és tapasztalt kollégáink
-              gondoskodnak a gyors és precíz beépítésről. Önnek nincs más dolga,
-              mint élvezni a tökéletes eredményt.
-            </p>
-          </div>
-
-          <p class="offer__cta-text">
-            Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
-            megújulása felé!
+          <p class="offer__subtitle">
+            Ne várjon tovább! Forduljon hozzánk bizalommal, és tegye otthonát
+            szebbé, melegebbé és biztonságosabbá!
           </p>
+
+          <h4 class="offer__info-title">
+            Kattintson, és kérje árajánlatunkat most!
+          </h4>
+
           <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
         <div class="offer__image-wrapper">
@@ -291,53 +264,32 @@
           />
         </div>
         <div class="offer__content">
-          <h1 class="offer__title">
-            ABLAKCSERE? ITT AZ IDŐ, HOGY OTTHONA MEGÚJULJON!
-          </h1>
+          <h2 class="offer__title text-transform-uppercase">
+            A nyílászárók szakértője, ahol otthona új szintre lép!
+          </h2>
+
+          <h5 class="offer__info-title">Miben más a Panka Plast Kft.?</h5>
+
           <p class="offer__subtitle">
-            A legjobb döntés csak egy kattintásra van!
+            Cégünk kiemelkedik a piacon a kiváló minőségű MARSHALL műanyag
+            nyílászárók forgalmazásával, amelyek a legmodernebb nyugat-európai
+            technológiával készülnek. Nemcsak csúcsminőséget kínálunk, hanem
+            megfizethető árakat is, így kompromisszumok nélkül választhatja a
+            legjobbat.
           </p>
 
-          <div class="offer__info">
-            <h2 class="offer__info-title">
-              Miért válassza a Panka Plast Kft.-t?
-            </h2>
-            <p class="offer__info-text">
-              Mert nálunk az Ön kényelme és elégedettsége az első.
-            </p>
-
-            <div class="offer__features">
-              <p class="offer__features-main">
-                Csúcsminőségű MARSHALL műanyag ablakok, ajtók és erkélyajtók,
-                amelyek hosszú távon garantálják:
-              </p>
-              <ul class="offer__features-list">
-                <li class="offer__features-item">
-                  A kiváló hő- és hangszigetelést,
-                </li>
-                <li class="offer__features-item">Otthona biztonságát,</li>
-                <li class="offer__features-item">
-                  Az időtálló, esztétikus megjelenést.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="offer__manufacturing">
-            <h2 class="offer__manufacturing-title">
-              Gyártás és beépítés egy kézből, szakértőktől!
-            </h2>
-            <p class="offer__manufacturing-text">
-              Az ország bármely pontjára szállítunk, és tapasztalt kollégáink
-              gondoskodnak a gyors és precíz beépítésről. Önnek nincs más dolga,
-              mint élvezni a tökéletes eredményt.
-            </p>
-          </div>
-
-          <p class="offer__cta-text">
-            Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
-            megújulása felé!
+          <p class="offer__subtitle">
+            Szolgáltatásaink a teljes folyamatot lefedik: ingyenes helyszíni
+            felmérés, szakmai tanácsadás és precíz beépítés az ország bármely
+            pontján. Ügyfélközpontú szemléletünk és megbízható csapatunk
+            biztosítja, hogy minden részlet az Ön igényei szerint valósuljon
+            meg.
           </p>
+
+          <h6 class="offer__info-title">
+            Panka Plast Kft. – ahol a minőség és a gondoskodás találkozik!
+          </h6>
+
           <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
       </div>
@@ -412,7 +364,12 @@
               </p>
             </div>
             <button type="submit" class="contact__submit">
-              Küldés <span class="contact__submit-icon">→</span>
+              Küldés
+              <NuxtImg
+                src="/img/mailsend.svg"
+                alt="5 jel, hogy itt az ideje ablakot cserélni"
+                class="contact__submit-icon"
+              />
             </button>
           </div>
         </form>
@@ -438,7 +395,13 @@
               hőszigetelésű ablakokkal és ajtókkal!
             </p>
             <NuxtLink to="/" class="blog__link">
-              <span class="blog__link-arrow">→</span>
+              <span class="blog__link-arrow">
+                <NuxtImg
+                  src="/img/blogright.svg"
+                  alt="5 jel, hogy itt az ideje ablakot cserélni"
+                  class="blog__link-icon"
+                />
+              </span>
             </NuxtLink>
           </div>
         </article>
@@ -459,7 +422,13 @@
               anyag tulajdonságait, előnyeit és hátrányait.
             </p>
             <NuxtLink to="/" class="blog__link">
-              <span class="blog__link-arrow">→</span>
+              <span class="blog__link-arrow">
+                <NuxtImg
+                  src="/img/blogright.svg"
+                  alt="5 jel, hogy itt az ideje ablakot cserélni"
+                  class="blog__link-icon"
+                />
+              </span>
             </NuxtLink>
           </div>
         </article>
@@ -483,7 +452,13 @@
               elkerülhetetlenné vált.
             </p>
             <NuxtLink to="/" class="blog__link">
-              <span class="blog__link-arrow">→</span>
+              <span class="blog__link-arrow">
+                <NuxtImg
+                  src="/img/blogright.svg"
+                  alt="5 jel, hogy itt az ideje ablakot cserélni"
+                  class="blog__link-icon"
+                />
+              </span>
             </NuxtLink>
           </div>
         </article>

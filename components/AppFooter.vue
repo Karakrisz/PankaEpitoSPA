@@ -12,11 +12,19 @@
       </div>
       <div class="footer__contact">
         <a href="tel:+36703337387" class="footer__contact-link">
-          <i class="fas fa-phone"></i>
+          <NuxtImg
+            src="/img/footerphone.svg"
+            alt="5 jel, hogy itt az ideje ablakot cserélni"
+            class="footer__contact-icon"
+          />
           06 70 333 7387
         </a>
         <a href="mailto:info@ablaktechnika.com" class="footer__contact-link">
-          <i class="fas fa-envelope"></i>
+          <NuxtImg
+            src="/img/footermail.svg"
+            alt="5 jel, hogy itt az ideje ablakot cserélni"
+            class="footer__contact-icon"
+          />
           info@ablaktechnika.com
         </a>
       </div>
