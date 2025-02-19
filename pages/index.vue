@@ -302,10 +302,9 @@
               Fedezze fel, hogyan csökkentheti otthona rezsidíját a megfelelő
               hőszigetelésű ablakokkal és ajtókkal!
             </p>
-            <a href="#" class="blog__link">
-              <span class="blog__link-text">Tovább</span>
+            <NuxtLink to="/" class="blog__link">
               <span class="blog__link-arrow">→</span>
-            </a>
+            </NuxtLink>
           </div>
         </article>
 
@@ -324,10 +323,9 @@
               nyílászárókat választanak. Ebben a cikkben összehasonlítjuk a két
               anyag tulajdonságait, előnyeit és hátrányait.
             </p>
-            <a href="#" class="blog__link">
-              <span class="blog__link-text">Tovább</span>
+              <NuxtLink to="/" class="blog__link">
               <span class="blog__link-arrow">→</span>
-            </a>
+            </NuxtLink>
           </div>
         </article>
 
@@ -349,10 +347,9 @@
               leggyakoribb jelet, amelyek arra utalnak, hogy az ablakcsere
               elkerülhetetlenné vált.
             </p>
-            <a href="#" class="blog__link">
-              <span class="blog__link-text">Tovább</span>
+            <NuxtLink to="/" class="blog__link">
               <span class="blog__link-arrow">→</span>
-            </a>
+            </NuxtLink>
           </div>
         </article>
       </div>

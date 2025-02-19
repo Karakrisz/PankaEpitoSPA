@@ -1,18 +1,15 @@
 <script setup></script>
 
 <template>
-  <!-- HTML -->
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__branding">
-        <img
-          src="/img/offer.png"
+        <NuxtImg
+          src="/img/hero-logo.svg"
           alt="Panka Plast logo"
           class="footer__logo"
         />
-        <p class="footer__tagline">GENERAL CONSTRUCTION</p>
       </div>
-
       <div class="footer__contact">
         <a href="tel:+36703337387" class="footer__contact-link">
           <i class="fas fa-phone"></i>

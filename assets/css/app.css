@@ -229,7 +229,8 @@ ul {
   font-weight: 400;
 }
 
-.services__title {
+.services__title,
+.contact__title {
   font-size: 1.5rem;
 }
 
@@ -623,7 +624,6 @@ ul {
 
 .contact__title {
   color: #fff;
-  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -677,7 +677,6 @@ ul {
 
 .contact__consent-text {
   color: #999;
-  font-size: 0.875rem;
   margin: 0;
 }
 
@@ -838,9 +837,7 @@ ul {
 }
 
 .footer__logo {
-  width: auto;
-  height: 3.5em;
-  margin-bottom: 0.5em;
+  width: 10em;
 }
 
 .footer__tagline {
@@ -856,6 +853,7 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin: -2% 0 2% 0;
 }
 
 .footer__contact-link {
@@ -903,13 +901,23 @@ ul {
 
 /********************  Media formating start **********************/
 @media (min-width: 2200px) and (max-width: 2570px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: 1.2rem;
+  }
   .header-content__logo-box__link__img {
-    width: 40%;
+    width: 45%;
   }
 
   .header-content__link-box__link,
   .menu__item,
-  .page-link {
+  .page-link,
+  .contact__submit {
     font-size: 1.3rem;
   }
   .menu__item {
@@ -922,11 +930,13 @@ ul {
   }
 
   .services__title,
-  .contact__title {
+  .contact__title,
+  .blog__title {
     font-size: 2rem;
   }
 
-  .services__description {
+  .services__description,
+  .services__card--highlighted .services__card-title {
     font-size: 1.2rem;
   }
 
@@ -938,12 +948,303 @@ ul {
     width: 7em;
   }
 
+  .offer__title {
+    font-size: 2rem;
+  }
+
+  .offer__info-title,
+  .offer__manufacturing-title {
+    font-size: 1.3rem;
+  }
+
   .warranty {
     width: 50%;
   }
 
   .warranty__number {
     font-size: 15rem;
+  }
+
+  .warranty__title {
+    font-size: 5rem;
+  }
+
+  .warranty__description {
+    font-size: 1.3rem;
+  }
+
+  .contact {
+    width: 60%;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    font-size: 1.3rem;
+  }
+
+  .blog__card-title {
+    font-size: 1.7rem;
+  }
+
+  .blog__excerpt {
+    font-size: 1.2rem;
+  }
+  .footer__logo {
+    width: 15em;
+  }
+}
+
+@media (min-width: 2000px) and (max-width: 2200px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: 1.2rem;
+  }
+  .header-content__logo-box__link__img {
+    width: 45%;
+  }
+
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link,
+  .contact__submit {
+    font-size: 1.2rem;
+  }
+  .menu__item {
+    padding-left: 3em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3.2rem;
+  }
+
+  .services__title,
+  .contact__title,
+  .blog__title {
+    font-size: 1.8rem;
+  }
+
+  .services__description,
+  .services__card--highlighted .services__card-title {
+    font-size: 1.2rem;
+  }
+
+  .hero__logo {
+    width: 18em;
+  }
+
+  .services__icon-image {
+    width: 6em;
+  }
+
+  .offer__title {
+    font-size: 1.8rem;
+  }
+
+  .offer__info-title,
+  .offer__manufacturing-title {
+    font-size: 1.3rem;
+  }
+
+  .warranty {
+    width: 50%;
+  }
+
+  .warranty__number {
+    font-size: 15rem;
+  }
+
+  .warranty__title {
+    font-size: 5rem;
+  }
+
+  .warranty__description {
+    font-size: 1.3rem;
+  }
+
+  .contact {
+    width: 60%;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    font-size: 1.3rem;
+  }
+
+  .blog__card-title {
+    font-size: 1.6rem;
+  }
+
+  .blog__excerpt {
+    font-size: 1.2rem;
+  }
+  .footer__logo {
+    width: 13em;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 2000px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: 1.1rem;
+  }
+  .header-content__logo-box__link__img {
+    width: 45%;
+  }
+
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link,
+  .contact__submit {
+    font-size: 1.1rem;
+  }
+  .menu__item {
+    padding-left: 3em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3.2rem;
+  }
+
+  .services__title,
+  .contact__title,
+  .blog__title {
+    font-size: 1.7rem;
+  }
+
+  .services__description,
+  .services__card--highlighted .services__card-title {
+    font-size: 1.1rem;
+  }
+
+  .hero__logo {
+    width: 18em;
+  }
+
+  .services__icon-image {
+    width: 5em;
+  }
+
+  .offer__title {
+    font-size: 1.6rem;
+  }
+
+  .offer__info-title,
+  .offer__manufacturing-title {
+    font-size: 1.3rem;
+  }
+
+  .warranty {
+    width: 50%;
+  }
+
+  .warranty__number {
+    font-size: 15rem;
+  }
+
+  .warranty__title {
+    font-size: 4.3rem;
+  }
+
+  .warranty__description {
+    font-size: 1.3rem;
+  }
+
+  .contact {
+    width: 60%;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    font-size: 1.2rem;
+  }
+
+  .blog__card-title {
+    font-size: 1.4rem;
+  }
+
+  .blog__excerpt {
+    font-size: 1.2rem;
+  }
+  .footer__logo {
+    width: 12em;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1800px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: 1rem;
+  }
+  .header-content__logo-box__link__img {
+    width: 45%;
+  }
+
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link,
+  .contact__submit {
+    font-size: 1rem;
+  }
+  .menu__item {
+    padding-left: 3em;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3.2rem;
+  }
+
+  .services__title,
+  .contact__title,
+  .blog__title {
+    font-size: 1.5rem;
+  }
+
+  .services__description,
+  .services__card--highlighted .services__card-title {
+    font-size: 1rem;
+  }
+
+  .hero__logo {
+    width: 15em;
+  }
+
+  .services__icon-image {
+    width: 4.5em;
+  }
+
+  .offer__title {
+    font-size: 1.5rem;
+  }
+
+  .offer__info-title,
+  .offer__manufacturing-title {
+    font-size: 1.1rem;
+  }
+
+  .warranty {
+    width: 50%;
+  }
+
+  .warranty__number {
+    font-size: 14rem;
   }
 
   .warranty__title {
@@ -958,112 +1259,90 @@ ul {
     width: 60%;
   }
 
-  .blog__title {
-    font-size: 3rem;
+  .contact__input,
+  .contact__textarea {
+    font-size: 1.1rem;
+  }
+
+  .contact__consent-text {
+    font-size: 0.9rem;
   }
 
   .blog__card-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .blog__excerpt {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-
-  .footer__menu-link {
-    font-size: 1.2rem;
+  .footer__logo {
+    width: 11em;
   }
 }
 
-@media (min-width: 2000px) and (max-width: 2200px) {
+@media (min-width: 1500px) and (max-width: 1600px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: .9rem;
+  }
   .header-content__logo-box__link__img {
     width: 45%;
   }
 
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link,
+  .contact__submit {
+    font-size: 0.9rem;
+  }
+
+  .header-content__link-box__link__img {
+    width: 2.5em;
+  }
   .menu__item {
-    font-size: 1.1rem;
-    padding-left: 2.8em;
+    padding-left: 3em;
   }
 
   .page__header__h2,
   .page__header__h3 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
-  .services__title {
-    font-size: 1.8rem;
-  }
-
-  .services__description {
-    font-size: 1.15rem;
-  }
-
-  .hero__logo {
-    width: 16em;
-  }
-
-  .warranty {
-    width: 55%;
-  }
-
-  .warranty__number {
-    font-size: 14rem;
-  }
-
-  .warranty__title {
-    font-size: 3.8rem;
-  }
-
-  .warranty__description {
-    font-size: 1.25rem;
-  }
-
-  .contact {
-    width: 65%;
-  }
-
-  .contact__title {
-    font-size: 2.8rem;
-  }
-
+  .services__title,
+  .contact__title,
   .blog__title {
-    font-size: 2.8rem;
-  }
-
-  .blog__card-title {
     font-size: 1.4rem;
   }
 
-  .blog__excerpt {
-    font-size: 1.15rem;
+  .services__description,
+  .services__card--highlighted .services__card-title {
+    font-size: 0.9rem;
   }
 
-  .footer__menu-link {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 1800px) and (max-width: 2000px) {
-  .menu__item {
-    font-size: 1.05rem;
-    padding-left: 2.5em;
+  .hero__logo {
+    width: 13em;
   }
 
-  .page__header__h2,
-  .page__header__h3 {
-    font-size: 2.8rem;
+  .services__icon-image {
+    width: 4.3em;
   }
 
-  .services__title {
-    font-size: 1.7rem;
+  .offer__title {
+    font-size: 1.4rem;
   }
 
-  .services__description {
-    font-size: 1.1rem;
+  .offer__info-title,
+  .offer__manufacturing-title {
+    font-size: 1rem;
   }
 
   .warranty {
-    width: 58%;
+    width: 50%;
   }
 
   .warranty__number {
@@ -1071,79 +1350,35 @@ ul {
   }
 
   .warranty__title {
-    font-size: 3.6rem;
+    font-size: 3.5rem;
+  }
+
+  .warranty__description {
+    font-size: 1.3rem;
   }
 
   .contact {
-    width: 68%;
-  }
-
-  .contact__title {
-    font-size: 2.6rem;
-  }
-
-  .blog__title {
-    font-size: 2.6rem;
-  }
-}
-
-@media (min-width: 1600px) and (max-width: 1800px) {
-  .menu__item {
-    font-size: 1rem;
-    padding-left: 2.3em;
-  }
-
-  .page__header__h2,
-  .page__header__h3 {
-    font-size: 2.6rem;
-  }
-
-  .services__title {
-    font-size: 1.6rem;
-  }
-
-  .warranty {
     width: 60%;
   }
 
-  .warranty__number {
-    font-size: 12rem;
+  .contact__input,
+  .contact__textarea {
+    font-size: 1rem;
   }
 
-  .warranty__title {
-    font-size: 3.4rem;
+  .contact__consent-text {
+    font-size: 0.9rem;
   }
 
-  .contact {
-    width: 70%;
-  }
-}
-
-@media (min-width: 1500px) and (max-width: 1600px) {
-  .menu__item {
-    font-size: 0.95rem;
-    padding-left: 2.1em;
+  .blog__card-title {
+    font-size: 1.1rem;
   }
 
-  .page__header__h2,
-  .page__header__h3 {
-    font-size: 2.4rem;
+  .blog__excerpt {
+    font-size: .9rem;
   }
-
-  .warranty {
-    width: 62%;
-  }
-
-  .warranty__number {
-    font-size: 11rem;
-  }
-
-  .warranty__title {
-    font-size: 3.2rem;
-  }
-
-  .contact {
-    width: 72%;
+  .footer__logo {
+    width: 10em;
   }
 }
 
