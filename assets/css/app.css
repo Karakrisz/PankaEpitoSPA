@@ -801,7 +801,7 @@ ul {
 }
 
 .blog__card-title {
-  color: #333;
+  color: #000;
   margin: 0 0 0.75em;
   line-height: 1.4;
 }
@@ -916,7 +916,7 @@ ul {
 
 .footer__contact-icon {
   width: 1.5em;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 /********************  Footer formating end **********************/
 
@@ -1602,7 +1602,7 @@ ul {
   }
 
   .header-content__logo-box__link__img {
-    width: 120px;
+    width: 9em;
   }
 
   .header-content__nav-box {
@@ -1714,21 +1714,21 @@ ul {
   }
 
   .hero__image {
-    height: 70vh;
+    height: 100vh;
   }
 
   .hero__content-overlay {
     width: 90%;
     text-align: center;
-    top: 79%;
+    top: 70%;
   }
 
   .hero__logo {
-    width: 55%;
+    width: 30%;
   }
 
   .services {
-    padding: 2rem 1rem;
+    padding: 2em 2em 18% 2em;
   }
 
   .services__card {
@@ -1788,6 +1788,8 @@ ul {
   .offer__container-inner {
     flex-direction: column;
     gap: 2em;
+    align-items: unset;
+    margin-bottom: 4em;
   }
 
   .contact {
@@ -1805,7 +1807,7 @@ ul {
   }
 
   .blog {
-    padding: 2em 1em;
+    padding: 2em 2em 5em 2em;
   }
 
   .blog__title {
@@ -1860,6 +1862,39 @@ ul {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: 0.9rem;
+  }
+
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link,
+  .contact__submit {
+    font-size: 0.9rem;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3.2rem;
+  }
+
+  .services__title,
+  .contact__title,
+  .blog__title {
+    font-size: 1.2rem;
+  }
+
+  .services__description,
+  .services__card--highlighted .services__card-title {
+    font-size: 0.9rem;
+  }
+
   .header-content {
     padding: 1em;
     width: 100%;
@@ -1886,7 +1921,7 @@ ul {
 
   .hamburger,
   .menu {
-    background-color: #001647;
+    background-color: #5a0001;
   }
 
   .menu {
@@ -1916,7 +1951,7 @@ ul {
   }
 
   .menu__item {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     padding: 0.8em 0;
     color: #fff;
     width: 100%;
@@ -1981,21 +2016,21 @@ ul {
   }
 
   .hero__image {
-    height: 70vh;
+    height: 100vh;
   }
 
   .hero__content-overlay {
     width: 90%;
     text-align: center;
-    top: 79%;
+    top: 72%;
   }
 
   .hero__logo {
-    width: 55%;
+    width: 35%;
   }
 
   .services {
-    padding: 2rem 1rem;
+    padding: 2em 2em 17.5% 2em;
   }
 
   .services__card {
@@ -2048,7 +2083,7 @@ ul {
   }
 
   .warranty__number {
-    font-size: 6rem;
+    font-size: 9rem;
   }
 
   .warranty__title {
@@ -2062,6 +2097,12 @@ ul {
   .offer__container-inner {
     flex-direction: column;
     gap: 2em;
+    align-items: unset;
+    margin-bottom: 5em;
+  }
+
+  .offer__container {
+    padding: 2em 2em 12em 2em;
   }
 
   .contact {
@@ -2083,13 +2124,9 @@ ul {
   }
 
   .blog {
-    padding: 2em 1em;
+    padding: 2em 2em 5em 2em;
   }
 
-  .blog__title {
-    font-size: 1.8rem;
-    margin-bottom: 1em;
-  }
 
   .blog__card {
     margin-bottom: 1em;
@@ -2135,6 +2172,43 @@ ul {
 }
 
 @media screen and (max-width: 767px) {
+  p,
+  .offer__features-main,
+  .offer__info-text,
+  .offer__features-item,
+  .offer__manufacturing-text,
+  .footer__contact-link,
+  .footer__menu-link {
+    font-size: 0.9rem;
+  }
+
+  .header-content__link-box__link,
+  .menu__item,
+  .page-link,
+  .contact__submit {
+    font-size: 0.9rem;
+  }
+
+  .page__header__h2,
+  .page__header__h3 {
+    font-size: 3.2rem;
+  }
+
+  .services__title,
+  .contact__title,
+  .blog__title {
+    font-size: 1.2rem;
+  }
+
+  .services__description,
+  .services__card--highlighted .services__card-title {
+    font-size: 0.9rem;
+  }
+
+  .header-content__link-box__link__img {
+    width: 2.3em;
+  }
+
   .header-content {
     padding: 1em;
     width: 100%;
@@ -2144,7 +2218,7 @@ ul {
   }
 
   .header-content__logo-box__link__img {
-    width: 120px;
+    width: 6em;
   }
 
   .header-content__nav-box {
@@ -2153,6 +2227,7 @@ ul {
 
   .header-content__logo-box {
     width: 100%;
+    text-align: end;
   }
 
   .header-content__nav-box {
@@ -2161,7 +2236,7 @@ ul {
 
   .hamburger,
   .menu {
-    background-color: #001647;
+    background-color: #5a0001;
   }
 
   .menu {
@@ -2191,8 +2266,8 @@ ul {
   }
 
   .menu__item {
-    font-size: 1.2rem;
-    padding: 0.8em 0;
+    font-size: 0.9rem;
+    padding: 0;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -2208,10 +2283,11 @@ ul {
     flex-direction: column;
     justify-content: space-around;
     width: 3.5em;
-    height: 3em;
+    height: 2.87em;
     border: none;
     cursor: pointer;
     padding: 0.7em;
+    margin-right: 1em;
   }
 
   .bar {
@@ -2256,13 +2332,13 @@ ul {
   }
 
   .hero__image {
-    height: 70vh;
+    height: 100vh;
   }
 
   .hero__content-overlay {
     width: 90%;
     text-align: center;
-    top: 79%;
+    top: 70%;
   }
 
   .hero__logo {
@@ -2270,7 +2346,7 @@ ul {
   }
 
   .services {
-    padding: 2rem 1rem;
+    padding: 2em 1em 19.5% 1em;
   }
 
   .services__card {
@@ -2279,12 +2355,25 @@ ul {
     padding: 1.5rem;
   }
 
+  .services__icon-image {
+    margin-right: 1em;
+    width: 4.3em;
+  }
+
   .services__description {
     width: 100%;
   }
 
   .services__container {
     gap: 1rem;
+  }
+
+  .offer__image {
+    height: 50vh;
+  }
+
+  .offer__container-inner {
+    margin-bottom: 5em;
   }
 
   .grid-2,
@@ -2340,7 +2429,7 @@ ul {
   }
 
   .contact {
-    width: 90%;
+    width: 100%;
     padding: 2em 1em;
   }
 
@@ -2358,12 +2447,7 @@ ul {
   }
 
   .blog {
-    padding: 2em 1em;
-  }
-
-  .blog__title {
-    font-size: 1.8rem;
-    margin-bottom: 1em;
+    padding: 2em 1em 5em 1em;
   }
 
   .blog__card {
