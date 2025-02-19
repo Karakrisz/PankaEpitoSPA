@@ -159,7 +159,7 @@
       <p class="warranty__note">
         Kérje árajánlatunkat díjtalan helyszíni felmérés után.
       </p>
-      <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
+      <NuxtLink to="/" class="page-link page-link--format">AJÁNLATKÉRÉS</NuxtLink>
     </div>
   </section>
   <section class="offer">

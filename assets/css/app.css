@@ -230,6 +230,11 @@ ul {
   width: max-content;
 }
 
+.page-link--format {
+  background: #fff;
+  color: #5a0001;
+}
+
 .services__title,
 .contact__title {
   font-size: 1.5rem;
