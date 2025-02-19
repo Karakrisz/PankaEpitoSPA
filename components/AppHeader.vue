@@ -1,11 +1,11 @@
 <script setup>
 const links = [
   { name: 'Főoldal', path: '/' },
-  { name: 'PVC-ajtó, ablak', path: '/partnerek' },
-  { name: 'Alumínium-ajtó, ablak', path: '/szolgaltatasok' },
-  { name: 'Árnyékolástechnika', path: '/dokumentumok' },
-  { name: 'Beltéri ajók', path: '/ajanlatkeres' },
-  { name: 'Kapcsolat', path: '/kapcsolat' },
+  { name: 'PVC-ajtó, ablak', path: '/' },
+  { name: 'Alumínium-ajtó, ablak', path: '/' },
+  { name: 'Árnyékolástechnika', path: '/' },
+  { name: 'Beltéri ajók', path: '/' },
+  { name: 'Kapcsolat', path: '/' },
 ]
 
 const isMenuOpen = ref(false)
