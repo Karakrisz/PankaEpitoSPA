@@ -927,6 +927,105 @@ ul {
 
 /********************  Subpage formating start **********************/
 
+.service-subpage {
+  padding: 13em 10% 13% 10%;
+}
+
+.service-subpage__image {
+  width: 7em;
+}
+
+.service-subpage__title {
+  padding: 1em 0;
+}
+
+.service-subpage__header {
+  margin-bottom: 3em;
+}
+
+.service-subpage__breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.service-subpage__breadcrumb-link {
+  color: #8b2500;
+  text-decoration: none;
+}
+
+.service-subpage__breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.service-subpage__breadcrumb-separator {
+  margin: 0 0.5rem;
+}
+
+.service-subpage__breadcrumb-current {
+  font-weight: 500;
+}
+
+.service-subpage__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service-subpage__description {
+  line-height: 1.6;
+}
+
+.service-subpage__text {
+  margin-bottom: 2em;
+}
+
+.service-subpage__cta .service-subpage__text {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+.service-subpage__list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 1em;
+}
+
+.service-subpage__list-item {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.service-subpage__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #8b2500;
+  border-radius: 20%;
+}
+
+.service-subpage__cta {
+  background-color: #f9f5f2;
+  border-radius: 1em;
+  text-align: center;
+  padding: 5em 5em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-subpage__button:hover {
+  background-color: #6e1d00;
+}
+
+.service-subpage__subtitle {
+  margin: 1.5em 0;
+}
+
 /********************  Subpage formating formating end **********************/
 
 /********************  Media formating start **********************/
@@ -2132,7 +2231,6 @@ ul {
     padding: 2em 2em 5em 2em;
   }
 
-
   .blog__card {
     margin-bottom: 1em;
   }
@@ -2495,6 +2593,13 @@ ul {
     width: 70%;
     margin: 0 auto;
     display: block;
+  }
+  .service-subpage__cta {
+    padding: 1em 1em 3em 1em;
+    margin-bottom: 3em;
+  }
+  .service-subpage__cta .service-subpage__text {
+    width: 100%;
   }
 }
 

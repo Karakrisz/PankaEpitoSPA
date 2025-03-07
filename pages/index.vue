@@ -25,54 +25,157 @@
     </h2>
     <div class="services__container grid-2">
       <div class="services__card">
-        <div class="services__card-inner d-flex">
-          <div class="services__icon">
-            <NuxtImg
-              src="/img/services/services.svg"
-              alt="Panka Plast Kft."
-              class="services__icon-image"
-            />
+        <NuxtLink to="/ingyenes-helyszini-felmeres">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/services2.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Ingyenes helyszíni felmérés és szakmai tanácsadás.
+              </p>
+            </div>
           </div>
-          <div class="services__content">
-            <p class="services__description">
-              Ajtók, ablakok gyártása egyedi méretekben, rövid határidővel.
-            </p>
-          </div>
-        </div>
+        </NuxtLink>
       </div>
       <div class="services__card">
-        <div class="services__card-inner d-flex">
-          <div class="services__icon">
-            <NuxtImg
-              src="/img/services/services2.svg"
-              alt="Panka Plast Kft."
-              class="services__icon-image"
-            />
+        <NuxtLink to="/nyilaszaro-ertekesites">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/services.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Cégünk kiváló minőségű nyílászárók forgalmazásával foglalkozik,
+                legyen szó műanyag, fa vagy alumínium szerkezetekről.
+              </p>
+            </div>
           </div>
-          <div class="services__content">
-            <p class="services__description">
-              Ingyenes helyszíni felmérés és szakmai tanácsadás.
-            </p>
-          </div>
-        </div>
+        </NuxtLink>
       </div>
       <div class="services__card">
-        <div class="services__card-inner d-flex">
-          <div class="services__icon">
-            <NuxtImg
-              src="/img/services/services3.svg"
-              alt="Panka Plast Kft."
-              class="services__icon-image"
-            />
+        <NuxtLink to="/nyilaszaro-beepitese">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/services6.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Professzionális nyílászáró beépítés, precíz és energiahatékony
+                kivitelezés. Kérjen árajánlatot szakértő csapatunktól!
+              </p>
+            </div>
           </div>
-          <div class="services__content">
-            <p class="services__description">
-              Alumínium és műanyag redőnyök gyártása, szerelése.
-            </p>
-          </div>
-        </div>
+        </NuxtLink>
       </div>
       <div class="services__card">
+        <NuxtLink to="/arnyekolastechnika">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/services7.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Modern árnyékolástechnikai megoldások: redőnyök, zsalúziák,
+                napellenzők és más árnyékolók. Kérjen ajánlatot szakértőinktől!
+              </p>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+      <div class="services__card">
+        <NuxtLink to="/belteri-ajto-ertekesites">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/door.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Prémium minőségű beltéri ajtók széles választéka. Esztétikus,
+                tartós és funkcionális megoldások minden enteriőrhöz.
+              </p>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+      <div class="services__card">
+        <NuxtLink to="/belteri-ajto-beepites">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/door2.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Szakszerű beltéri ajtó beépítés precíz kivitelezéssel. Tartós,
+                esztétikus és tökéletesen illeszkedő ajtók otthonába.
+              </p>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+      <div class="services__card">
+        <NuxtLink to="/pergola-naphalo-ertekesites">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/pergola1.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Modern pergolák és naphálók kültéri árnyékoláshoz. Esztétikus,
+                tartós és energiahatékony megoldások teraszokra, kertekbe és
+                erkélyekre.
+              </p>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+      <div class="services__card">
+        <NuxtLink to="/aluminium-muanyag-redonyok">
+          <div class="services__card-inner d-flex">
+            <div class="services__icon">
+              <NuxtImg
+                src="/img/services/services3.svg"
+                alt="Panka Plast Kft."
+                class="services__icon-image"
+              />
+            </div>
+            <div class="services__content">
+              <p class="services__description">
+                Alumínium és műanyag redőnyök gyártása, szerelése.
+              </p>
+            </div>
+          </div>
+        </NuxtLink>
+      </div>
+      <!-- <div class="services__card">
         <div class="services__card-inner d-flex">
           <div class="services__icon">
             <NuxtImg
@@ -104,44 +207,12 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="services__card">
-        <div class="services__card-inner d-flex">
-          <div class="services__icon">
-            <NuxtImg
-              src="/img/services/services6.svg"
-              alt="Panka Plast Kft."
-              class="services__icon-image"
-            />
-          </div>
-          <div class="services__content">
-            <p class="services__description">
-              Nyílászáró csere utáni spaletta javítás.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="services__card">
-        <div class="services__card-inner d-flex">
-          <div class="services__icon">
-            <NuxtImg
-              src="/img/services/services7.svg"
-              alt="Panka Plast Kft."
-              class="services__icon-image"
-            />
-          </div>
-          <div class="services__content">
-            <p class="services__description">
-              Homlokzati hőszigetelés, színezés.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="services__card services__card--highlighted">
+      </div> -->
+      <!-- <div class="services__card services__card--highlighted">
         <div class="services__content">
           <h3 class="services__card-title">Összes szolgáltatás</h3>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <section class="warranty">
@@ -159,7 +230,9 @@
       <p class="warranty__note">
         Kérje árajánlatunkat díjtalan helyszíni felmérés után.
       </p>
-      <NuxtLink to="/" class="page-link page-link--format">AJÁNLATKÉRÉS</NuxtLink>
+      <NuxtLink to="/" class="page-link page-link--format"
+        >AJÁNLATKÉRÉS</NuxtLink
+      >
     </div>
   </section>
   <section class="offer">

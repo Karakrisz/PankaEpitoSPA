@@ -2495,37 +2495,16 @@ const sources$1 = [
                 "loc": "/ajanlatkeres"
             },
             {
-                "loc": "/dokumentumok"
-            },
-            {
-                "loc": "/gepjarmu-biztositas"
-            },
-            {
                 "loc": "/"
             },
             {
                 "loc": "/kapcsolat"
             },
             {
-                "loc": "/karbejentes"
-            },
-            {
-                "loc": "/partnerek"
-            },
-            {
-                "loc": "/rendezvenyszolgalat"
-            },
-            {
-                "loc": "/szemelyes-tanacsadas"
+                "loc": "/nyilaszaro-ertekesites"
             },
             {
                 "loc": "/szolgaltatasok"
-            },
-            {
-                "loc": "/tanulobiztositas"
-            },
-            {
-                "loc": "/utasbiztositas"
             }
         ],
         "sourceType": "app"
