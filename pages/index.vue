@@ -36,7 +36,7 @@
             </div>
             <div class="services__content">
               <p class="services__description">
-                Ingyenes helyszíni felmérés és szakmai tanácsadás
+                Ingyenes helyszíni felmérés és szakmai tanácsadás.
               </p>
             </div>
           </div>
