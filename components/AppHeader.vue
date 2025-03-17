@@ -17,7 +17,7 @@ const isMenuOpen = ref(false)
       <div class="logo-box header-content__logo-box">
         <NuxtLink to="/" class="header-content__logo-box__link">
           <NuxtImg
-            src="/img/logo.svg"
+            src="/img/logo-next.svg"
             alt="Panka Plast Kft."
             class="header-content__logo-box__link__img"
             height="100%"

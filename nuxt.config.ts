@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Panka Plast',
+      title: 'Panka Plast Kft., Nyílászárók forgalmazása, beépítése. árnyékolástechnika',
       htmlAttrs: {
         lang: 'hu',
       },
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            'A Panka Plast Kft minőségi lakó- és nem lakóépületek kivitelezésével foglalkozik. Precíz munkavégzés és megbízható szolgáltatások Nadapon és környékén.',
+            'Cégünk nyílászárók forgalmazását és beszerelését végzi a nyílászárók kiegészítőinek minden fajtájával együtt. Árnyékolástechnikai termékek széles választéka.',
         },
         { name: 'format-detection', content: 'telephone=no' },
         { hid: 'robots', name: 'robots', content: 'index, follow' },

@@ -11,7 +11,7 @@
         />
         <div class="hero__content-overlay position-absolute">
           <NuxtImg
-            src="/img/hero-logo.svg"
+            src="/img/logo-next.svg"
             alt="Panka Plast Kft."
             class="hero__logo"
           />
@@ -255,7 +255,7 @@
 
           <div class="offer__info">
             <h2 class="offer__info-title">
-              Miért válassza a Panka Plast Kft.-t?
+              Miért válassza a Panka Építő Kft.-t?
             </h2>
             <p class="offer__info-text">
               Mert nálunk az Ön kényelme és elégedettsége az első.
@@ -341,7 +341,7 @@
             A nyílászárók szakértője, ahol otthona új szintre lép!
           </h2>
 
-          <h5 class="offer__info-title">Miben más a Panka Plast Kft.?</h5>
+          <h5 class="offer__info-title">Miben más a Panka Építő Kft.?</h5>
 
           <p class="offer__subtitle">
             Cégünk kiemelkedik a piacon a kiváló minőségű MARSHALL műanyag
@@ -360,7 +360,7 @@
           </p>
 
           <h6 class="offer__info-title">
-            Panka Plast Kft. – ahol a minőség és a gondoskodás találkozik!
+            Panka Építő Kft. – ahol a minőség és a gondoskodás találkozik!
           </h6>
 
           <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>

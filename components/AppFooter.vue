@@ -5,7 +5,7 @@
     <div class="footer__container">
       <div class="footer__branding">
         <NuxtImg
-          src="/img/hero-logo.svg"
+          src="/img/logo-next.svg"
           alt="Panka Plast logo"
           class="footer__logo"
         />
