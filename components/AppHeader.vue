@@ -4,8 +4,8 @@ const links = [
   { name: 'PVC-ajtó, ablak', path: '/' },
   { name: 'Alumínium-ajtó, ablak', path: '/' },
   { name: 'Árnyékolástechnika', path: '/' },
-  { name: 'Beltéri ajók', path: '/' },
-  { name: 'Kapcsolat', path: '/' },
+  { name: 'Beltéri ajók', path: '/belteri-ajtok' },
+  { name: 'Kapcsolat', path: '/ajanlatkeres' },
 ]
 
 const isMenuOpen = ref(false)

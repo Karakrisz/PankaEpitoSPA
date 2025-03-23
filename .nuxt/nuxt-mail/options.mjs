@@ -1,15 +1,15 @@
 export default {
   "message": [
     {
-      "to": "web@alkuszom.info"
+      "to": "info@ablaktechnika.com"
     }
   ],
   "smtp": {
     "host": "s56.tarhely.com",
     "port": 587,
     "auth": {
-      "user": "web@alkuszom.info",
-      "pass": "#+SpM_HR~QCy"
+      "user": "info@ablaktechnika.com",
+      "pass": "Hacker13prog"
     }
   }
 }

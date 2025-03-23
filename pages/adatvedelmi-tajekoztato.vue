@@ -6,30 +6,30 @@ useHead({
 
 <template>
   <section>
-    <div class="aszf-content subpage-two-services-content">
+    <div class="service-subpage aszf">
       <h4
-        class="aszf-content__h4 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h4 blog__card-title text-transform-uppercase text-color"
       >
         Adatkezelési Tájékoztató
       </h4>
 
-      <p class="aszf-content__p text-color">Elfogadás dátuma: 2024.05.28</p>
+      <p class="aszf-content__p text-color">Elfogadás dátuma: 2025.03.23</p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         1. ADATKEZELŐ
       </h5>
-      <p class="aszf-content__p text-color">web@alkuszom.info</p>
+      <p class="aszf-content__p text-color">info@ablaktechnika.com</p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2. A WEBOLDAL ÜZEMELTETÉSE SORÁN VÉGZETT ADATKEZELÉSEK LEÍRÁSA
       </h5>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.1 A COOKIE-K HASZNÁLATÁVAL KAPCSOLATOS TÁJÉKOZTATÁS
       </h5>
@@ -52,7 +52,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.1.1. Google Adwords cookie
       </h5>
@@ -73,7 +73,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.1.2. Facebook pixel (Facebook cookie)
       </h5>
@@ -102,7 +102,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.2. HÍRLEVÉL-CÉLÚ ADATKEZELÉSEK
       </h5>
@@ -124,7 +124,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.3. KAPCSOLATFELVÉTEL SZEMÉLYES ADATOK MEGADÁSA CÉLJÁBÓL
       </h5>
@@ -151,7 +151,7 @@ useHead({
         (pl. „megerősítem az adatközlést”) válik hatályossá.
       </p>
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.4. KÖZÖSSÉGI ESEMÉNYEK BEMUTATÁSA
       </h5>
@@ -162,7 +162,7 @@ useHead({
         hangfelvételt, ha Ön ahhoz előzetesen, kifejezetten hozzájárult.
       </p>
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         2.5. A HOZZÁJÁRULÁS IGAZOLHATÓSÁGÁVAL KAPCSOLATBAN KEZELT ADATOK
       </h5>
@@ -179,7 +179,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3. AZ ADATKEZELÉS SORÁN ÖNT MEGILLETŐ JOGOK
       </h5>
@@ -199,12 +199,12 @@ useHead({
         panaszokat legkésőbb 30 napon belül válaszolja meg Adatkezelő, amely
         határidő indokolt esetben további két hónappal meghosszabbítható.
         Kérjük, hogy az Önt megillető jogok gyakorlása érdekében a
-        web@alkuszom.info e-mail címre küldött üzenettel keresse meg az
+        info@ablaktechnika.com e-mail címre küldött üzenettel keresse meg az
         Adatkezelőt.
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3.1. A hozzájárulás visszavonásának joga:
       </h5>
@@ -216,7 +216,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3.2. A személyes adatokhoz való hozzáférés
       </h5>
@@ -246,7 +246,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3.3. Helyesbítéshez való jog
       </h5>
@@ -261,7 +261,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3.4. Adatkezelés korlátozásához való jog
       </h5>
@@ -299,7 +299,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3.5. Törléshez – elfeledtetéshez való jog
       </h5>
@@ -371,7 +371,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__p blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__p blog__card-title text-transform-uppercase text-color"
       >
         3.6. Adathordozhatósághoz való jog
       </h5>
@@ -403,7 +403,7 @@ useHead({
       </p>
 
       <h5
-        class="szf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="szf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         3.7. További információk
       </h5>
@@ -420,7 +420,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         4. ADATBIZTONSÁGI INTÉZKEDÉSEK
       </h5>
@@ -438,7 +438,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         5. JOGORVOSLATI LEHETŐSÉGEK
       </h5>
@@ -461,7 +461,7 @@ useHead({
       </p>
 
       <h5
-        class="aszf-content__h5 blog-box__text__h3 text-transform-uppercase text-color"
+        class="aszf-content__h5 blog__card-title text-transform-uppercase text-color"
       >
         6. ADATKEZELÉSI TÁJÉKOZTATÓ MÓDOSÍTÁSA
       </h5>
@@ -477,3 +477,11 @@ useHead({
     </div>
   </section>
 </template>
+
+<style scoped>
+.aszf .blog__card-title {
+  color: #000;
+  margin: 1em 0 0.75em;
+  line-height: 1.4;
+}
+</style>

@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Pergola és napháló értékesítés | Panka Plast',
+  title: 'Pergola és napháló értékesítés | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -96,13 +96,19 @@ useHead({
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">Kérjen ingyenes árajánlatot!</h2>
         <p class="service-subpage__text">
           Teremtse meg az ideális árnyékolási megoldást otthonában vagy
           vállalkozásában! Válassza minőségi pergoláinkat és naphálóinkat, és
           élvezze a komfortot egész évben.
         </p>
-        <NuxtLink href="/" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

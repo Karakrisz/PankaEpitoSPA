@@ -332,10 +332,11 @@ ul {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 1em;
 }
 
 .hero__logo {
-  width: 13em;
+  width: 11em;
 }
 
 /********************  Hero formating end **********************/
@@ -744,6 +745,13 @@ ul {
   transform: translateX(0.25em);
 }
 
+.confirmation-message {
+  background: #5a0001;
+  width: max-content;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+}
+
 /********************  Contact formating end **********************/
 
 /********************  Blog formating start **********************/
@@ -863,6 +871,8 @@ ul {
 
 .footer__logo {
   width: 10em;
+  border-radius: 1em;
+  margin-bottom: 1.5em;
 }
 
 .footer__tagline {
@@ -1024,6 +1034,11 @@ ul {
 
 .service-subpage__subtitle {
   margin: 1.5em 0;
+  text-transform: uppercase;
+}
+
+.service-subpage__cta__img {
+  width: 20%;
 }
 
 /********************  Subpage formating formating end **********************/
@@ -1070,7 +1085,7 @@ ul {
   }
 
   .hero__logo {
-    width: 18em;
+    width: 16em;
   }
 
   .services__icon-image {
@@ -1160,7 +1175,7 @@ ul {
   }
 
   .hero__logo {
-    width: 18em;
+    width: 16em;
   }
 
   .services__icon-image {
@@ -1246,7 +1261,7 @@ ul {
   }
 
   .hero__logo {
-    width: 18em;
+    width: 16em;
   }
 
   .services__icon-image {
@@ -1332,7 +1347,7 @@ ul {
   }
 
   .hero__logo {
-    width: 15em;
+    width: 13em;
   }
 
   .services__icon-image {
@@ -1426,7 +1441,7 @@ ul {
   }
 
   .hero__logo {
-    width: 13em;
+    width: 11em;
   }
 
   .services__icon-image {
@@ -1520,7 +1535,7 @@ ul {
   }
 
   .hero__logo {
-    width: 13em;
+    width: 11em;
   }
 
   .services__icon-image {
@@ -1614,7 +1629,7 @@ ul {
   }
 
   .hero__logo {
-    width: 13em;
+    width: 11em;
   }
 
   .services__icon-image {
@@ -1822,13 +1837,13 @@ ul {
   }
 
   .hero__content-overlay {
-    width: 90%;
+    width: 13%;
     text-align: center;
     top: 70%;
   }
 
   .hero__logo {
-    width: 30%;
+    width: 100%;
   }
 
   .services {
@@ -2124,13 +2139,13 @@ ul {
   }
 
   .hero__content-overlay {
-    width: 90%;
+    width: 20%;
     text-align: center;
     top: 72%;
   }
 
   .hero__logo {
-    width: 35%;
+    width: 100%;
   }
 
   .services {
@@ -2439,13 +2454,13 @@ ul {
   }
 
   .hero__content-overlay {
-    width: 90%;
+    width: 50%;
     text-align: center;
-    top: 70%;
+    top: 68%;
   }
 
   .hero__logo {
-    width: 55%;
+    width: 100%;
   }
 
   .services {
@@ -2532,7 +2547,7 @@ ul {
   }
 
   .contact {
-    width: 100%;
+    width: 95%;
     padding: 2em 1em;
   }
 
@@ -2559,6 +2574,11 @@ ul {
 
   .blog__content {
     padding: 1em;
+  }
+
+  .blog__container {
+    width: 95%;
+    margin: auto;
   }
 
   .footer {
@@ -2600,6 +2620,10 @@ ul {
   }
   .service-subpage__cta .service-subpage__text {
     width: 100%;
+  }
+  .service-subpage__cta__img {
+    width: 40%;
+    margin-top: 3em;
   }
 }
 

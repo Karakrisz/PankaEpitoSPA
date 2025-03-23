@@ -7,7 +7,7 @@
         <NuxtImg
           src="/img/logo-next.svg"
           alt="Panka Plast logo"
-          class="footer__logo"
+          class="footer__logo bg-color-w"
         />
       </div>
       <div class="footer__contact">
@@ -32,22 +32,22 @@
       <nav class="footer__nav">
         <ul class="footer__menu d-flex">
           <li class="footer__menu-item">
-            <a href="#" class="footer__menu-link">Főoldal</a>
+            <NuxtLink to="/" class="footer__menu-link">Főoldal</NuxtLink>
           </li>
           <li class="footer__menu-item">
-            <a href="#" class="footer__menu-link">PVC-ajtó, ablak</a>
+            <NuxtLink to="/" class="footer__menu-link">PVC-ajtó, ablak</NuxtLink>
           </li>
           <li class="footer__menu-item">
-            <a href="#" class="footer__menu-link">Aluminium-ajtó, ablak</a>
+            <NuxtLink to="/" class="footer__menu-link">Aluminium-ajtó, ablak</NuxtLink>
           </li>
           <li class="footer__menu-item">
-            <a href="#" class="footer__menu-link">Árnyékolástechnika</a>
+            <NuxtLink to="/" class="footer__menu-link">Árnyékolástechnika</NuxtLink>
           </li>
           <li class="footer__menu-item">
-            <a href="#" class="footer__menu-link">Beltéri ajtók</a>
+            <NuxtLink to="/belteri-ajtok" class="footer__menu-link">Beltéri ajtók</NuxtLink>
           </li>
           <li class="footer__menu-item">
-            <a href="#" class="footer__menu-link">Kapcsolat</a>
+            <NuxtLink to="/ajanlatkeres" class="footer__menu-link">Kapcsolat</NuxtLink>
           </li>
         </ul>
       </nav>

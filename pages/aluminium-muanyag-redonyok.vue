@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Alumínium és műanyag redőnyök gyártása, szerelése | Panka Plast',
+  title: 'Alumínium és műanyag redőnyök gyártása, szerelése | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -99,13 +99,19 @@ useHead({
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">Kérjen ingyenes árajánlatot!</h2>
         <p class="service-subpage__text">
           Válassza prémium minőségű redőnyeinket, és élvezze a komfortot,
           biztonságot és energiahatékonyságot otthonában! Kérjen egyedi
           ajánlatot még ma.
         </p>
-        <NuxtLink href="/" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

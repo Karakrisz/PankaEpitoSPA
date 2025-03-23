@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Ingyenes helyszíni felmérés és szakmai tanácsadás | Panka Plast',
+  title: 'Ingyenes helyszíni felmérés és szakmai tanácsadás | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -54,7 +54,9 @@ useHead({
           nyílászárók és árnyékolók kerüljenek beépítésre.
         </p>
 
-        <h3 class="service-subpage__subtitle offer__title text-transform-uppercase">
+        <h3
+          class="service-subpage__subtitle offer__title text-transform-uppercase"
+        >
           Mit nyer az ingyenes helyszíni felméréssel és tanácsadással?
         </h3>
         <ul class="service-subpage__list">
@@ -72,7 +74,9 @@ useHead({
           </li>
         </ul>
 
-        <h4 class="service-subpage__subtitle offer__title text-transform-uppercase">
+        <h4
+          class="service-subpage__subtitle offer__title text-transform-uppercase"
+        >
           Mit veszíthet, ha nem veszi igénybe ezt a szolgáltatást?
         </h4>
         <ul class="service-subpage__list">
@@ -92,6 +96,12 @@ useHead({
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">Foglaljon időpontot még ma!</h2>
         <p class="service-subpage__text">
           Ne hagyja, hogy rossz döntések befolyásolják otthona kényelmét és
@@ -99,7 +109,7 @@ useHead({
           és szakértő tanácsadásunkat, hogy biztosan a legjobb megoldást
           válassza.
         </p>
-        <NuxtLink href="/" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

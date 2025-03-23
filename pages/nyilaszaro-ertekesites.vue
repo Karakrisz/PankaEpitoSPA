@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Nyílászárók forgalmazása | Panka Plast',
+  title: 'Nyílászárók forgalmazása | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -107,6 +107,12 @@ useHead({
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">
           Kérjen ingyenes árajánlatot még ma!
         </h2>
@@ -115,7 +121,7 @@ useHead({
           személyre szabott ajánlatot még ma, és élvezze az energiahatékony
           otthon minden előnyét!
         </p>
-        <NuxtLink to="/" class="service-subpage__button page-link"
+        <NuxtLink to="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

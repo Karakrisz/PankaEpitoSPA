@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Árnyékolástechnika | Panka Plast',
+  title: 'Árnyékolástechnika | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -14,7 +14,9 @@ useHead({
 <template>
   <div class="service-subpage">
     <div class="service-subpage__header">
-      <h2 class="service-subpage__title offer__title text-transform-uppercase">Árnyékolástechnika</h2>
+      <h2 class="service-subpage__title offer__title text-transform-uppercase">
+        Árnyékolástechnika
+      </h2>
       <div class="service-subpage__breadcrumb">
         <NuxtLink href="/" class="service-subpage__breadcrumb-link"
           >Főoldal</NuxtLink
@@ -52,7 +54,9 @@ useHead({
           Önt, növelve ezzel az energiafogyasztást és a költségeket.
         </p>
 
-        <h2 class="service-subpage__subtitle offer__title text-transform-uppercase">
+        <h2
+          class="service-subpage__subtitle offer__title text-transform-uppercase"
+        >
           Mit veszíthet, ha nincs megfelelő árnyékolás?
         </h2>
         <ul class="service-subpage__list">
@@ -68,7 +72,9 @@ useHead({
           </li>
         </ul>
 
-        <h2 class="service-subpage__subtitle offer__title text-transform-uppercase">
+        <h2
+          class="service-subpage__subtitle offer__title text-transform-uppercase"
+        >
           Mit nyer egy jól megválasztott árnyékolási rendszerrel?
         </h2>
         <ul class="service-subpage__list">
@@ -86,17 +92,22 @@ useHead({
             érdekében.
           </li>
         </ul>
-
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">Kérjen ingyenes árajánlatot!</h2>
         <p class="service-subpage__text">
           Ne hagyja, hogy a nyári hőség vagy a téli hideg megnehezítse
           mindennapjait! Válassza prémium árnyékolástechnikai megoldásainkat, és
           teremtsen tökéletes otthoni komfortot energiatakarékosan.
         </p>
-        <NuxtLink href="/kapcsolat" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

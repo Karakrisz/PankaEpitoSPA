@@ -1,7 +1,7 @@
 <script setup>
 // Meta adatok beállítása
 useHead({
-  title: 'Beltéri ajtó beépítés | Panka Plast',
+  title: 'Beltéri ajtó beépítés | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -97,13 +97,19 @@ useHead({
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">Kérjen ingyenes árajánlatot!</h2>
         <p class="service-subpage__text">
           Ne kockáztasson rosszul beépített ajtókkal! Válassza a precizitást és
           a szakértelmet, hogy hosszú éveken át problémamentesen használhassa
           beltéri ajtóit.
         </p>
-        <NuxtLink href="/" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

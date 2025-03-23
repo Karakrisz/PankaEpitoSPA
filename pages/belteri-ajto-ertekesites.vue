@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'Beltéri ajtó értékesítés | Panka Plast',
+  title: 'Beltéri ajtó értékesítés | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -14,7 +14,9 @@ useHead({
 <template>
   <div class="service-subpage">
     <div class="service-subpage__header">
-      <h2 class="service-subpage__title offer__title text-transform-uppercase">Beltéri ajtó értékesítés</h2>
+      <h2 class="service-subpage__title offer__title text-transform-uppercase">
+        Beltéri ajtó értékesítés
+      </h2>
       <div class="service-subpage__breadcrumb">
         <NuxtLink href="/" class="service-subpage__breadcrumb-link"
           >Főoldal</NuxtLink
@@ -53,7 +55,9 @@ useHead({
           növeli.
         </p>
 
-        <h2 class="service-subpage__subtitle offer__title text-transform-uppercase">
+        <h2
+          class="service-subpage__subtitle offer__title text-transform-uppercase"
+        >
           Mit veszíthet, ha rossz minőségű ajtót választ?
         </h2>
         <ul class="service-subpage__list">
@@ -68,7 +72,9 @@ useHead({
           </li>
         </ul>
 
-        <h4 class="service-subpage__subtitle offer__title text-transform-uppercase">
+        <h4
+          class="service-subpage__subtitle offer__title text-transform-uppercase"
+        >
           Mit nyer, ha minőségi beltéri ajtót választ?
         </h4>
         <ul class="service-subpage__list">
@@ -85,17 +91,21 @@ useHead({
             Egyedi méretben és kivitelben rendelhető modelleket.
           </li>
         </ul>
-
-   
       </div>
 
       <div class="service-subpage__cta">
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
         <h2 class="service-subpage__subtitle">Kérjen ingyenes árajánlatot!</h2>
         <p class="service-subpage__text">
           Ne érje be kevesebbel! Válassza a minőségi, tartós és esztétikus
           beltéri ajtókat, és teremtsen tökéletes harmóniát otthonában!
         </p>
-        <NuxtLink href="/" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

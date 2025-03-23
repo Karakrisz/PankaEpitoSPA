@@ -1,7 +1,7 @@
 <script setup>
 // Meta adatok beállítása
 useHead({
-  title: 'Nyílászárók beépítése | Panka Plast',
+  title: 'Nyílászárók beépítése | Panka Építő',
   meta: [
     {
       name: 'description',
@@ -95,13 +95,21 @@ useHead({
       </div>
 
       <div class="service-subpage__cta">
-        <h2 class="service-subpage__subtitle">Kérjen ingyenes árajánlatot!</h2>
+        <NuxtImg
+          src="/img/logo-next.svg"
+          alt="Panka Plast Kft."
+          class="service-subpage__cta__img"
+          height="100%"
+        />
+        <h2 class="service-subpage__subtitle">
+          Kérjen ingyenes árajánlatot!
+        </h2>
         <p class="service-subpage__text">
           Ne bízza a véletlenre nyílászárói beépítését! Válassza szakértő
           csapatunkat, és élvezze az energiahatékony, esztétikus és hosszú
           élettartamú ablakok és ajtók előnyeit!
         </p>
-        <NuxtLink href="/kapcsolat" class="service-subpage__button page-link"
+        <NuxtLink href="/ajanlatkeres" class="service-subpage__button page-link"
           >Kapcsolatfelvétel</NuxtLink
         >
       </div>

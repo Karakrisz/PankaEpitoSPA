@@ -1,4 +1,39 @@
-<script setup></script>
+<script setup>
+import { useNuxtApp } from '#app'
+const nuxtApp = useNuxtApp()
+
+const form = ref({
+  name: '',
+  email: '',
+  phonenumber: '',
+  subject: '',
+  message: '',
+})
+
+const isSent = ref(false)
+
+const sendEmail = async () => {
+  try {
+    await nuxtApp.$mail.send({
+      from: 'info@ablaktechnika.com',
+      // to: 'nszvtakaritas@gmail.com',
+      subject: `Új üzenetet küldött - ${form.value.name}`,
+      html: `
+        <p><strong>Name:</strong> ${form.value.name}</p>
+        <p><strong>Email:</strong> ${form.value.email}</p>
+        <p><strong>Phone Number:</strong> ${form.value.phonenumber}</p>
+        <p><strong>Subject:</strong> ${form.value.subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${form.value.message}</p>
+      `,
+    })
+    isSent.value = true
+  } catch (error) {
+    console.error('Error sending email:', error)
+    alert('Failed to send email.')
+  }
+}
+</script>
 <template>
   <section class="hero">
     <div class="hero__container">
@@ -9,7 +44,7 @@
           class="hero__image"
           :srcset="['/img/slider.webp 1920w', '/img/slider.webp 100w']"
         />
-        <div class="hero__content-overlay position-absolute">
+        <div class="hero__content-overlay position-absolute bg-color-w">
           <NuxtImg
             src="/img/logo-next.svg"
             alt="Panka Plast Kft."
@@ -230,7 +265,7 @@
       <p class="warranty__note">
         Kérje árajánlatunkat díjtalan helyszíni felmérés után.
       </p>
-      <NuxtLink to="/" class="page-link page-link--format"
+      <NuxtLink to="/ajanlatkeres" class="page-link page-link--format"
         >AJÁNLATKÉRÉS</NuxtLink
       >
     </div>
@@ -293,7 +328,7 @@
             Kérjen ingyenes árajánlatot, és tegye meg az első lépést otthona
             megújulása felé!
           </p>
-          <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
+          <NuxtLink to="/ajanlatkeres" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
       </div>
       <div class="offer__container-inner d-flex">
@@ -318,7 +353,7 @@
             Kattintson, és kérje árajánlatunkat most!
           </h4>
 
-          <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
+          <NuxtLink to="/ajanlatkeres" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
         <div class="offer__image-wrapper">
           <NuxtImg
@@ -363,7 +398,7 @@
             Panka Építő Kft. – ahol a minőség és a gondoskodás találkozik!
           </h6>
 
-          <NuxtLink to="/" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
+          <NuxtLink to="/ajanlatkeres" class="page-link">AJÁNLATKÉRÉS</NuxtLink>
         </div>
       </div>
     </div>
@@ -373,10 +408,11 @@
     <div class="contact">
       <div class="contact__container">
         <h2 class="contact__title">LÉPJÜNK KAPCSOLATBA!</h2>
-        <form class="contact__form d-flex">
+        <form @submit.prevent="sendEmail" class="contact__form d-flex">
           <div class="contact__form-row d-flex">
             <div class="contact__form-group">
               <input
+                v-model="form.name"
                 type="text"
                 id="name"
                 name="name"
@@ -387,6 +423,7 @@
             </div>
             <div class="contact__form-group">
               <input
+                v-model="form.email"
                 type="email"
                 id="email"
                 name="email"
@@ -399,15 +436,17 @@
           <div class="contact__form-row d-flex">
             <div class="contact__form-group">
               <input
+                v-model="form.phonenumber"
                 type="tel"
-                id="phone"
-                name="phone"
+                id="phonenumber"
+                name="phonenumber"
                 class="contact__input"
                 placeholder="Telefonszám"
               />
             </div>
             <div class="contact__form-group">
               <input
+                v-model="form.subject"
                 type="text"
                 id="subject"
                 name="subject"
@@ -420,6 +459,7 @@
 
           <div class="contact__form-group">
             <textarea
+              v-model="form.message"
               id="message"
               name="message"
               class="contact__textarea"
@@ -427,12 +467,12 @@
               rows="6"
             ></textarea>
           </div>
-          <div class="contact__footer d-flex">
+          <div v-if="!isSent" class="contact__footer d-flex">
             <div class="contact__consent">
               <p class="contact__consent-text">
                 A küldés gombra kattintva elfogadja az
-                <a href="#" class="contact__consent-link"
-                  >Adatkezelési Tájékoztatót</a
+                <NuxtLink to="adatvedelmi-tajekoztato" class="contact__consent-link"
+                  >Adatkezelési Tájékoztatót</NuxtLink
                 >
               </p>
             </div>
@@ -444,6 +484,11 @@
                 class="contact__submit-icon"
               />
             </button>
+          </div>
+          <div v-if="isSent" class="confirmation-message">
+            <p class="confirmation-message__p text-color-w text-center">
+              Köszönjük az üzenetét, hamarosan felvesszük Önnel a kapcsolatot.
+            </p>
           </div>
         </form>
       </div>

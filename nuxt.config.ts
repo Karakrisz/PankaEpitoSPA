@@ -6,7 +6,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Panka Plast Kft., Nyílászárók forgalmazása, beépítése. árnyékolástechnika',
+      title:
+        'Panka Építő Kft., Nyílászárók forgalmazása, beépítése. árnyékolástechnika',
       htmlAttrs: {
         lang: 'hu',
       },
@@ -52,14 +53,14 @@ export default defineNuxtConfig({
       'nuxt-mail',
       {
         message: {
-          to: 'web@alkuszom.info',
+          to: 'info@ablaktechnika.com',
         },
         smtp: {
           host: 's56.tarhely.com',
           port: 587,
           auth: {
-            user: 'web@alkuszom.info',
-            pass: '#+SpM_HR~QCy',
+            user: 'info@ablaktechnika.com',
+            pass: 'Hacker13prog',
           },
         },
       },
@@ -67,7 +68,7 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: 'https://www.alkuszom.info',
+    url: 'https://ablaktechnika.com',
     trailingSlash: true,
   },
 
