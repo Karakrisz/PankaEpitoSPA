@@ -227,4 +227,22 @@ const sendEmail = async () => {
 .contact--subpage-format {
   margin-top: 13%;
 }
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  .contact--subpage-format {
+    margin-top: 23em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact--subpage-format {
+    margin-top: 20em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact--subpage-format {
+    margin-top: 15em;
+  }
+}
 </style>
