@@ -2507,6 +2507,9 @@ const sources$1 = [
                 "loc": "/belteri-ajto-ertekesites"
             },
             {
+                "loc": "/belteri-ajtok"
+            },
+            {
                 "loc": "/"
             },
             {

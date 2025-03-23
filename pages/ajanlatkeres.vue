@@ -2,6 +2,41 @@
 useHead({
   title: 'Ajánlatkérés',
 })
+
+import { useNuxtApp } from '#app'
+const nuxtApp = useNuxtApp()
+
+const form = ref({
+  name: '',
+  email: '',
+  phonenumber: '',
+  subject: '',
+  message: '',
+})
+
+const isSent = ref(false)
+
+const sendEmail = async () => {
+  try {
+    await nuxtApp.$mail.send({
+      from: 'info@ablaktechnika.com',
+      // to: 'nszvtakaritas@gmail.com',
+      subject: `Új üzenetet küldött - ${form.value.name}`,
+      html: `
+        <p><strong>Name:</strong> ${form.value.name}</p>
+        <p><strong>Email:</strong> ${form.value.email}</p>
+        <p><strong>Phone Number:</strong> ${form.value.phonenumber}</p>
+        <p><strong>Subject:</strong> ${form.value.subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${form.value.message}</p>
+      `,
+    })
+    isSent.value = true
+  } catch (error) {
+    console.error('Error sending email:', error)
+    alert('Failed to send email.')
+  }
+}
 </script>
 
 <template>
@@ -9,10 +44,11 @@ useHead({
     <div class="contact contact--subpage-format">
       <div class="contact__container">
         <h2 class="contact__title">LÉPJÜNK KAPCSOLATBA!</h2>
-        <form class="contact__form d-flex">
+        <form @submit.prevent="sendEmail" class="contact__form d-flex">
           <div class="contact__form-row d-flex">
             <div class="contact__form-group">
               <input
+                v-model="form.name"
                 type="text"
                 id="name"
                 name="name"
@@ -23,6 +59,7 @@ useHead({
             </div>
             <div class="contact__form-group">
               <input
+                v-model="form.email"
                 type="email"
                 id="email"
                 name="email"
@@ -35,15 +72,17 @@ useHead({
           <div class="contact__form-row d-flex">
             <div class="contact__form-group">
               <input
+                v-model="form.phonenumber"
                 type="tel"
-                id="phone"
-                name="phone"
+                id="phonenumber"
+                name="phonenumber"
                 class="contact__input"
                 placeholder="Telefonszám"
               />
             </div>
             <div class="contact__form-group">
               <input
+                v-model="form.subject"
                 type="text"
                 id="subject"
                 name="subject"
@@ -56,6 +95,7 @@ useHead({
 
           <div class="contact__form-group">
             <textarea
+              v-model="form.message"
               id="message"
               name="message"
               class="contact__textarea"
@@ -63,12 +103,14 @@ useHead({
               rows="6"
             ></textarea>
           </div>
-          <div class="contact__footer d-flex">
+          <div v-if="!isSent" class="contact__footer d-flex">
             <div class="contact__consent">
               <p class="contact__consent-text">
                 A küldés gombra kattintva elfogadja az
-                <a href="#" class="contact__consent-link"
-                  >Adatkezelési Tájékoztatót</a
+                <NuxtLink
+                  to="adatvedelmi-tajekoztato"
+                  class="contact__consent-link"
+                  >Adatkezelési Tájékoztatót</NuxtLink
                 >
               </p>
             </div>
@@ -80,6 +122,11 @@ useHead({
                 class="contact__submit-icon"
               />
             </button>
+          </div>
+          <div v-if="isSent" class="confirmation-message">
+            <p class="confirmation-message__p text-color-w text-center">
+              Köszönjük az üzenetét, hamarosan felvesszük Önnel a kapcsolatot.
+            </p>
           </div>
         </form>
       </div>
