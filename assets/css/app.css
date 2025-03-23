@@ -2628,6 +2628,9 @@ ul {
   .service-subpage.aszf {
     padding: 10em 12% 6em 10%;
   }
+  .service-subpage {
+    padding: 15em 10% 13% 10%;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 768px) {
