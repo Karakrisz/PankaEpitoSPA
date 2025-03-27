@@ -350,7 +350,9 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {},
+  "public": {
+    "apiBaseUrl": "https://api.pankaepito.hu"
+  },
   "sitemap": {
     "isI18nMapped": false,
     "sitemapName": "sitemap.xml",
@@ -2526,6 +2528,9 @@ const sources$1 = [
             },
             {
                 "loc": "/pergola-naphalo-ertekesites"
+            },
+            {
+                "loc": "/posts"
             },
             {
                 "loc": "/szolgaltatasok"

@@ -58,6 +58,10 @@ button {
   border: 0;
 }
 
+hr {
+  margin-top: 2em;
+}
+
 ul {
   list-style: none;
 }
@@ -938,7 +942,7 @@ ul {
 /********************  Subpage formating start **********************/
 
 .service-subpage {
-  padding: 13em 10% 13% 10%;
+  padding: 14% 10% 13% 10%;
 }
 
 .service-subpage__image {
@@ -1039,6 +1043,65 @@ ul {
 
 .service-subpage__cta__img {
   width: 20%;
+}
+
+.subpage-content.blog a {
+  color: #8b0000;
+}
+
+.slug-blog__h2.about-content__tBox__h4 {
+  margin: 1.5em 0 2em 0;
+}
+
+.go-back-button {
+  animation: pulse 1s infinite;
+  align-items: center;
+  background-color: #8b0000;
+  border-radius: 5px;
+  color: #fff !important;
+  font-weight: 600;
+  display: inline-flex;
+  margin-top: 3em;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.go-back-button:hover {
+  background-color: #8b0000;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.go-back-button__icon {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.go-back-button:hover .go-back-button__icon {
+  transform: translate(-5px);
+}
+
+.go-back-button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.slug-blog__img {
+  width: 90%;
+  margin-bottom: 2em;
 }
 
 /********************  Subpage formating formating end **********************/
@@ -1978,6 +2041,9 @@ ul {
     margin: 0 auto;
     display: block;
   }
+  .service-subpage {
+    padding: 20em 10% 13% 10%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2286,6 +2352,9 @@ ul {
     width: 70%;
     margin: 0 auto;
     display: block;
+  }
+  .service-subpage {
+    padding: 18em 10% 13% 10%;
   }
 }
 
@@ -2630,6 +2699,12 @@ ul {
   }
   .service-subpage {
     padding: 15em 10% 13% 10%;
+  }
+  .go-back-button {
+    margin-bottom: 3em;
+  }
+  .slug-blog__img {
+    width: 100%;
   }
 }
 
