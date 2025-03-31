@@ -337,7 +337,13 @@ const _inlineRuntimeConfig = {
           "Content-Type": "application/xslt+xml"
         }
       },
-      "/sitemap.xml": {},
+      "/sitemap.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2025-03-31T16:44:44.417Z"
+        }
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -1003,6 +1009,8 @@ function publicAssetsURL(...path) {
   const publicBase = app.cdnURL || app.baseURL;
   return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
+
+const defineSitemapEventHandler = defineEventHandler;
 
 function normalizeSiteConfig(config) {
   if (typeof config.indexable !== "undefined")
@@ -2261,9 +2269,11 @@ const _M1sVtx = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
+const _lazy_PlfQDI = () => Promise.resolve().then(function () { return sitemap$1; });
 const _lazy_GflkU8 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
+  { route: '/api/sitemap', handler: _lazy_PlfQDI, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_GflkU8, lazy: true, middleware: false, method: undefined },
   { route: '', handler: _ln7StO, lazy: false, middleware: true, method: undefined },
   { route: '/__site-config__/debug.json', handler: _ku7okA, lazy: false, middleware: false, method: undefined },
@@ -2474,6 +2484,10 @@ const errorDev = /*#__PURE__*/Object.freeze({
 
 const sources$1 = [
     {
+        "sourceType": "user",
+        "fetch": "/api/sitemap"
+    },
+    {
         "context": {
             "name": "sitemap:urls",
             "description": "Set with the `sitemap.urls` config."
@@ -2550,6 +2564,32 @@ const sources = {};
 const childSources = /*#__PURE__*/Object.freeze({
   __proto__: null,
   sources: sources
+});
+
+const sitemap = defineSitemapEventHandler(async (e) => {
+  try {
+    const response = await fetch(
+      "https://api.pankaepito.hu/json-posts"
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch posts");
+    }
+    const posts = await response.json();
+    return posts.map((post) => {
+      return {
+        loc: `/posts/${post.slug}`,
+        lastmod: post.modifiedAt ? new Date(post.modifiedAt).toISOString() : new Date(post.created_at).toISOString()
+      };
+    });
+  } catch (error) {
+    console.error("Error fetching posts for sitemap:", error);
+    return [];
+  }
+});
+
+const sitemap$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: sitemap
 });
 
 const Vue3 = version[0] === "3";

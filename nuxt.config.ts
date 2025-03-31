@@ -77,5 +77,16 @@ export default defineNuxtConfig({
     trailingSlash: true,
   },
 
+  sitemap: {
+    sources: ['/api/sitemap'],
+    // defaults: { priority: 0.7 },
+  },
+
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
+
   compatibilityDate: '2025-02-16',
 })
