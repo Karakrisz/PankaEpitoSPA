@@ -3,6 +3,12 @@ import type { Serialize, Simplify } from "nitropack/types";
 declare module "nitropack/types" {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
+    '/api/fetch-css': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/fetch-css').default>>>>
+    }
+    '/api/scrape': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/scrape').default>>>>
+    }
     '/api/sitemap': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/sitemap').default>>>>
     }
