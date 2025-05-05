@@ -6,6 +6,15 @@ declare module "nitropack/types" {
     '/api/fetch-css': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/fetch-css').default>>>>
     }
+    '/api/kubus': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/kubus').default>>>>
+    }
+    '/api/linear': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/linear').default>>>>
+    }
+    '/api/m-9000': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-9000').default>>>>
+    }
     '/api/m-eco': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-eco').default>>>>
     }

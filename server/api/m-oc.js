@@ -191,11 +191,8 @@ export default defineEventHandler(async (event) => {
           }
           section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-          }
-          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
-            width: 30%;
+            flex-direction: column;
           }
           .jobb-tulajdonsag {
             text-align: right;

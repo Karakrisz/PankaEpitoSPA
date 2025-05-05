@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio'
 export default defineEventHandler(async (event) => {
   try {
     const url =
-      'https://www.marshallablak.hu/termekek/m-eco-ablakok-es-erkelyajtok/'
+      'https://www.marshallablak.hu/termekek/linear-ablakok-es-erkelyajtok/'
     const headers = {
       'User-Agent':
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
@@ -115,6 +115,12 @@ export default defineEventHandler(async (event) => {
           body { 
             font-family: 'Montserrat', sans-serif;
           }
+        iframe {
+            width: 100%;
+         }
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-039cdb2.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 3%;
+        }
           section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
             margin: 4em 0 1em 0;
@@ -130,7 +136,7 @@ export default defineEventHandler(async (event) => {
             font-size: 1rem;
             font-weight: 300;
           } 
-          img.attachment-large.size-large.wp-image-1453 {
+          img.attachment-large.size-large {
             margin-left: 0em;
             position: relative;
             left: 5em;
@@ -191,9 +197,10 @@ export default defineEventHandler(async (event) => {
           }
           section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
+            flex-wrap: wrap;
           }
+      
           .jobb-tulajdonsag {
             text-align: right;
             color: #21A179;
@@ -227,7 +234,7 @@ export default defineEventHandler(async (event) => {
           }
           section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
           }
-          img.attachment-full.size-full.wp-image-4564 {
+          img.attachment-full.size-full{
             width: 100%;
             height: 30em;
             object-fit: cover;
@@ -300,7 +307,7 @@ export default defineEventHandler(async (event) => {
           .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
             width: 100%;
           }
-          img.attachment-full.size-full.wp-image-4564 {
+          img.attachment-full.size-full {
             margin-top: 11em;
           }
           .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
@@ -323,7 +330,7 @@ export default defineEventHandler(async (event) => {
             padding-right: 5%;
             flex-direction: column;
           }
-          img.attachment-full.size-full.wp-image-4564 {
+          img.attachment-full.size-full {
             width: 100%;
             height: 100%;
           }
@@ -351,7 +358,7 @@ export default defineEventHandler(async (event) => {
             padding: 0 7% 2em 7%;
             flex-direction: column;
           }
-          img.attachment-large.size-large.wp-image-1453 {
+          img.attachment-large.size-large {
             margin-left: 0em;
             position: relative;
             left: 0;
@@ -376,7 +383,14 @@ export default defineEventHandler(async (event) => {
           .vasalat {
             width: calc(100% - 0) !important;
           }
-          img.attachment-full.size-full.wp-image-4564 {
+          .vasalat {
+            width: 100% !important;
+          }  
+
+          #extra-grid .elementor-widget-container {
+            flex-direction: column;
+         }
+          img.attachment-full.size-full {
             width: 100%;
             height: 100%;
           }
@@ -404,7 +418,7 @@ export default defineEventHandler(async (event) => {
             padding: 0 7% 2em 7%;
             flex-direction: column;
           }
-          img.attachment-large.size-large.wp-image-1453 {
+          img.attachment-large.size-large{
             margin-left: 0em;
             position: relative;
             left: 0;
@@ -414,7 +428,8 @@ export default defineEventHandler(async (event) => {
           } 
           #extra-grid .elementor-widget-container {
             padding: 2em;
-          }     
+          }   
+            
         }                         
         </style>
       </head>

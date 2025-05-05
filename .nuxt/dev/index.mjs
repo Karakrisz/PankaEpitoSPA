@@ -2271,6 +2271,9 @@ const _M1sVtx = lazyEventHandler(() => {
 });
 
 const _lazy_9e4cz2 = () => Promise.resolve().then(function () { return fetchCss$1; });
+const _lazy_fZVfj2 = () => Promise.resolve().then(function () { return kubus$1; });
+const _lazy_5X4Tip = () => Promise.resolve().then(function () { return linear$1; });
+const _lazy_CxzGSR = () => Promise.resolve().then(function () { return m9000$1; });
 const _lazy_TMKvTI = () => Promise.resolve().then(function () { return mEco$1; });
 const _lazy_JtALWQ = () => Promise.resolve().then(function () { return mOc$1; });
 const _lazy_PlfQDI = () => Promise.resolve().then(function () { return sitemap$1; });
@@ -2278,6 +2281,9 @@ const _lazy_GflkU8 = () => Promise.resolve().then(function () { return renderer$
 
 const handlers = [
   { route: '/api/fetch-css', handler: _lazy_9e4cz2, lazy: true, middleware: false, method: undefined },
+  { route: '/api/kubus', handler: _lazy_fZVfj2, lazy: true, middleware: false, method: undefined },
+  { route: '/api/linear', handler: _lazy_5X4Tip, lazy: true, middleware: false, method: undefined },
+  { route: '/api/m-9000', handler: _lazy_CxzGSR, lazy: true, middleware: false, method: undefined },
   { route: '/api/m-eco', handler: _lazy_TMKvTI, lazy: true, middleware: false, method: undefined },
   { route: '/api/m-oc', handler: _lazy_JtALWQ, lazy: true, middleware: false, method: undefined },
   { route: '/api/sitemap', handler: _lazy_PlfQDI, lazy: true, middleware: false, method: undefined },
@@ -2620,6 +2626,1275 @@ const fetchCss$1 = /*#__PURE__*/Object.freeze({
   default: fetchCss
 });
 
+const kubus = defineEventHandler(async (event) => {
+  try {
+    const url = "https://www.marshallablak.hu/termekek/kubus-ablakok-es-erkelyajtok/";
+    const headers = {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "hu,en-US;q=0.7,en;q=0.3"
+    };
+    const response = await fetch(url, { headers });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const fullHtml = await response.text();
+    if (!fullHtml || fullHtml.trim() === "") {
+      throw new Error("A v\xE1lasz \xFCres");
+    }
+    console.log("HTML bet\xF6ltve, m\xE9rete:", fullHtml.length);
+    const $ = cheerio.load(fullHtml);
+    const availableTags = [];
+    const availableClasses = [];
+    $("body *").each((i, el) => {
+      if ($(el).attr("class")) {
+        const classes = $(el).attr("class").split(" ");
+        classes.forEach((c) => {
+          if (c && !availableClasses.includes(c)) {
+            availableClasses.push(c);
+          }
+        });
+      }
+      const tagName = el.tagName.toLowerCase();
+      if (!availableTags.includes(tagName)) {
+        availableTags.push(tagName);
+      }
+    });
+    console.log("El\xE9rhet\u0151 oszt\xE1lyok:", availableClasses);
+    let mainContent = "";
+    const contentSelectors = [
+      ".main-content",
+      ".entry-content",
+      "#content",
+      "article",
+      ".post-content",
+      ".page-content",
+      ".content",
+      "main",
+      ".container"
+    ];
+    for (const selector of contentSelectors) {
+      const element = $(selector);
+      if (element.length > 0) {
+        console.log(`Sikeresen megtal\xE1lva: ${selector}`);
+        mainContent = element.html() || "";
+        break;
+      }
+    }
+    if (!mainContent) {
+      console.log(
+        "Nem tal\xE1ltunk megfelel\u0151 szelektort, haszn\xE1ljuk a teljes body tartalmat"
+      );
+      $("header, nav, footer").remove();
+      mainContent = $("body").html() || "";
+    }
+    if (!mainContent) {
+      return {
+        statusCode: 404,
+        error: "Nem tal\xE1ltunk megfelel\u0151 tartalmat az oldalon"
+      };
+    }
+    let processedHtml = mainContent.replace(/href="\/(?!\/)/g, 'href="https://www.marshallablak.hu/').replace(/src="\/(?!\/)/g, 'src="https://www.marshallablak.hu/').replace(/url\(["']?\/(?!\/)/g, 'url("https://www.marshallablak.hu/');
+    const result = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M-ECO ablakok \xE9s erk\xE9lyajt\xF3k</title>
+        <style>
+          /* Itt hozz\xE1adhatsz saj\xE1t CSS-t is */
+          body { 
+            font-family: 'Montserrat', sans-serif;
+          }
+        iframe {
+            width: 100%;
+         }
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-039cdb2.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 3%;
+        }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+          }
+          .vasalat img {
+            width: 100%;
+            max-width: 100% !important;
+            height: 250px;
+            object-fit: cover;
+          }
+          .elementor-widget-container h6 {
+            font-size: 1rem;
+            font-weight: 300;
+          } 
+          img.attachment-large.size-large {
+            margin-left: 0em;
+            position: relative;
+            left: 5em;
+            top: 3em;
+          }   
+          .profil-termektulajdonsag {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5em;
+          }
+          div#profil-termektulajdonsag-neve {
+            font-weight: 500;
+          }
+          div#profil-termektulajdonsag-erteke {
+            font-weight: 300;
+            margin-top: .3em;
+          }
+          .tulajdonsag-tablazat {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            margin-bottom: 1em;
+            padding: 1em;
+            box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+          }    
+          #extra-grid .elementor-widget-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f7f7f7;
+            padding: 5em 7em;
+          }
+          .vasalat {
+            display: unset !important;
+          }
+          .vasalat-szoveg {
+            padding: 1em; 
+            margin: 0 !important;
+            background: #fff;
+          }
+          #vasalat-neve {
+            font-size: 1.1rem !important;
+            margin-bottom: .3em;
+            text-transform: uppercase;
+            line-height: 1.7rem;
+            color: #000 !important;
+            font-weight: 800 !important;
+          }
+          div#vasalat-erteke {
+            font-size: 1rem;
+            margin-top: .7em;
+          }
+          .elementor-button-wrapper {
+            display: none;
+          }
+          .elementor-widget-container p {
+            font-weight: 400;
+            font-size: 1rem;
+          }
+          section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+          }
+      
+          .jobb-tulajdonsag {
+            text-align: right;
+            color: #21A179;
+            font-weight: 700 !important;
+          }
+          .bal-tulajdonsag {
+            text-decoration: underline;
+          }  
+          div#termektulajdonsag-pipa img {
+            width: 17px;
+            height: 17px;
+            margin-right: 1em;
+          }
+          div#termektulajdonsag-pipa {
+            display: flex;
+            align-content: space-evenly;
+            align-items: center;
+          }
+          div#termektulajdonsag-pipa span {
+            font-weight: 600;
+            margin-right: .3em;
+          }
+          .termektulajdonsag {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .termektulajdonsag img {
+            display: none;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+          }
+          img.attachment-full.size-full{
+            width: 100%;
+            height: 30em;
+            object-fit: cover;
+            border-radius: 1em;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 50%;
+          }
+          #fenti-tulajdonsagok .elementor-widget-container {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 30px 50px 50px 50px;
+          }
+          .elementor-element.elementor-element-c675247.ob-harakiri-inherit.ob-has-background-overlay.elementor-widget.elementor-widget-heading .elementor-widget-container span {
+            font-weight: 300;
+            font-style: italic;
+          }
+          div#termektulajdonsag-neve {
+            font-weight: 700;
+            margin: 1em 0;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-81cdef4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            background: #FBFBFF;
+            padding: 3em 7% 5em 7%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-3836e21.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 4em 7% 4em 7%;
+            background: #f7f7f7;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-9909344.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 1em 7% 0 7%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e5321b3.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            display: none;
+          }
+          .elementor-heading-title.elementor-size-default {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+          h1.elementor-heading-title.elementor-size-default {
+            color: #8b0000;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;            
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-81cdef4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default h2 {
+            margin-bottom: 2em;
+          }
+          section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default h3 {
+            margin-bottom: 2em;
+            background: #8b0000;
+            color: #fff;
+            padding: 1em;
+          }
+          @media (min-width: 991px) and (max-width: 1200px) { 
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            flex-direction: column;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          img.attachment-full.size-full {
+            margin-top: 11em;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-a2b913f {
+            width: 100%;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-babc2b5 {
+            width: 100%;
+          }
+          }
+          @media (min-width: 768px) and (max-width: 991px) { 
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+            flex-direction: column;
+          }
+          img.attachment-full.size-full {
+            width: 100%;
+            height: 100%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          .content-container {
+            margin-top: 13em;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 1em;
+          }
+          .termektulajdonsag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+            flex-direction: column;
+          }
+          img.attachment-large.size-large {
+            margin-left: 0em;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          } 
+          #extra-grid .elementor-widget-container {
+            padding: 2em;
+          }              
+          } 
+          @media screen and (max-width: 767px) {
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+            flex-direction: column;
+          }
+          .vasalat {
+            width: calc(100% - 0) !important;
+          }
+          .vasalat {
+            width: 100% !important;
+          }  
+
+          #extra-grid .elementor-widget-container {
+            flex-direction: column;
+         }
+          img.attachment-full.size-full {
+            width: 100%;
+            height: 100%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          .content-container {
+            margin-top: 13em;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 1em;
+          }
+          .termektulajdonsag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+            flex-direction: column;
+          }
+          img.attachment-large.size-large{
+            margin-left: 0em;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          } 
+          #extra-grid .elementor-widget-container {
+            padding: 2em;
+          }   
+            
+        }                         
+        </style>
+      </head>
+      <body>
+        <div class="content-container">
+          ${processedHtml}
+        </div>
+      </body>
+      </html>
+    `;
+    return result;
+  } catch (error) {
+    console.error("Hiba t\xF6rt\xE9nt a proxy sor\xE1n:", error);
+    return {
+      statusCode: 500,
+      error: "Hiba t\xF6rt\xE9nt az adatok lek\xE9r\xE9se k\xF6zben",
+      message: error.message,
+      stack: error.stack
+    };
+  }
+});
+
+const kubus$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: kubus
+});
+
+const linear = defineEventHandler(async (event) => {
+  try {
+    const url = "https://www.marshallablak.hu/termekek/linear-ablakok-es-erkelyajtok/";
+    const headers = {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "hu,en-US;q=0.7,en;q=0.3"
+    };
+    const response = await fetch(url, { headers });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const fullHtml = await response.text();
+    if (!fullHtml || fullHtml.trim() === "") {
+      throw new Error("A v\xE1lasz \xFCres");
+    }
+    console.log("HTML bet\xF6ltve, m\xE9rete:", fullHtml.length);
+    const $ = cheerio.load(fullHtml);
+    const availableTags = [];
+    const availableClasses = [];
+    $("body *").each((i, el) => {
+      if ($(el).attr("class")) {
+        const classes = $(el).attr("class").split(" ");
+        classes.forEach((c) => {
+          if (c && !availableClasses.includes(c)) {
+            availableClasses.push(c);
+          }
+        });
+      }
+      const tagName = el.tagName.toLowerCase();
+      if (!availableTags.includes(tagName)) {
+        availableTags.push(tagName);
+      }
+    });
+    console.log("El\xE9rhet\u0151 oszt\xE1lyok:", availableClasses);
+    let mainContent = "";
+    const contentSelectors = [
+      ".main-content",
+      ".entry-content",
+      "#content",
+      "article",
+      ".post-content",
+      ".page-content",
+      ".content",
+      "main",
+      ".container"
+    ];
+    for (const selector of contentSelectors) {
+      const element = $(selector);
+      if (element.length > 0) {
+        console.log(`Sikeresen megtal\xE1lva: ${selector}`);
+        mainContent = element.html() || "";
+        break;
+      }
+    }
+    if (!mainContent) {
+      console.log(
+        "Nem tal\xE1ltunk megfelel\u0151 szelektort, haszn\xE1ljuk a teljes body tartalmat"
+      );
+      $("header, nav, footer").remove();
+      mainContent = $("body").html() || "";
+    }
+    if (!mainContent) {
+      return {
+        statusCode: 404,
+        error: "Nem tal\xE1ltunk megfelel\u0151 tartalmat az oldalon"
+      };
+    }
+    let processedHtml = mainContent.replace(/href="\/(?!\/)/g, 'href="https://www.marshallablak.hu/').replace(/src="\/(?!\/)/g, 'src="https://www.marshallablak.hu/').replace(/url\(["']?\/(?!\/)/g, 'url("https://www.marshallablak.hu/');
+    const result = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M-ECO ablakok \xE9s erk\xE9lyajt\xF3k</title>
+        <style>
+          /* Itt hozz\xE1adhatsz saj\xE1t CSS-t is */
+          body { 
+            font-family: 'Montserrat', sans-serif;
+          }
+        iframe {
+            width: 100%;
+         }
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-039cdb2.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 3%;
+        }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+          }
+          .vasalat img {
+            width: 100%;
+            max-width: 100% !important;
+            height: 250px;
+            object-fit: cover;
+          }
+          .elementor-widget-container h6 {
+            font-size: 1rem;
+            font-weight: 300;
+          } 
+          img.attachment-large.size-large {
+            margin-left: 0em;
+            position: relative;
+            left: 5em;
+            top: 3em;
+          }   
+          .profil-termektulajdonsag {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5em;
+          }
+          div#profil-termektulajdonsag-neve {
+            font-weight: 500;
+          }
+          div#profil-termektulajdonsag-erteke {
+            font-weight: 300;
+            margin-top: .3em;
+          }
+          .tulajdonsag-tablazat {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            margin-bottom: 1em;
+            padding: 1em;
+            box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+          }    
+          #extra-grid .elementor-widget-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f7f7f7;
+            padding: 5em 7em;
+          }
+          .vasalat {
+            display: unset !important;
+          }
+          .vasalat-szoveg {
+            padding: 1em; 
+            margin: 0 !important;
+            background: #fff;
+          }
+          #vasalat-neve {
+            font-size: 1.1rem !important;
+            margin-bottom: .3em;
+            text-transform: uppercase;
+            line-height: 1.7rem;
+            color: #000 !important;
+            font-weight: 800 !important;
+          }
+          div#vasalat-erteke {
+            font-size: 1rem;
+            margin-top: .7em;
+          }
+          .elementor-button-wrapper {
+            display: none;
+          }
+          .elementor-widget-container p {
+            font-weight: 400;
+            font-size: 1rem;
+          }
+          section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+          }
+      
+          .jobb-tulajdonsag {
+            text-align: right;
+            color: #21A179;
+            font-weight: 700 !important;
+          }
+          .bal-tulajdonsag {
+            text-decoration: underline;
+          }  
+          div#termektulajdonsag-pipa img {
+            width: 17px;
+            height: 17px;
+            margin-right: 1em;
+          }
+          div#termektulajdonsag-pipa {
+            display: flex;
+            align-content: space-evenly;
+            align-items: center;
+          }
+          div#termektulajdonsag-pipa span {
+            font-weight: 600;
+            margin-right: .3em;
+          }
+          .termektulajdonsag {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .termektulajdonsag img {
+            display: none;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+          }
+          img.attachment-full.size-full{
+            width: 100%;
+            height: 30em;
+            object-fit: cover;
+            border-radius: 1em;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 50%;
+          }
+          #fenti-tulajdonsagok .elementor-widget-container {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 30px 50px 50px 50px;
+          }
+          .elementor-element.elementor-element-c675247.ob-harakiri-inherit.ob-has-background-overlay.elementor-widget.elementor-widget-heading .elementor-widget-container span {
+            font-weight: 300;
+            font-style: italic;
+          }
+          div#termektulajdonsag-neve {
+            font-weight: 700;
+            margin: 1em 0;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-81cdef4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            background: #FBFBFF;
+            padding: 3em 7% 5em 7%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-3836e21.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 4em 7% 4em 7%;
+            background: #f7f7f7;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-9909344.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 1em 7% 0 7%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e5321b3.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            display: none;
+          }
+          .elementor-heading-title.elementor-size-default {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+          h1.elementor-heading-title.elementor-size-default {
+            color: #8b0000;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;            
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-81cdef4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default h2 {
+            margin-bottom: 2em;
+          }
+          section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default h3 {
+            margin-bottom: 2em;
+            background: #8b0000;
+            color: #fff;
+            padding: 1em;
+          }
+          @media (min-width: 991px) and (max-width: 1200px) { 
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            flex-direction: column;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          img.attachment-full.size-full {
+            margin-top: 11em;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-a2b913f {
+            width: 100%;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-babc2b5 {
+            width: 100%;
+          }
+          }
+          @media (min-width: 768px) and (max-width: 991px) { 
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+            flex-direction: column;
+          }
+          img.attachment-full.size-full {
+            width: 100%;
+            height: 100%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          .content-container {
+            margin-top: 13em;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 1em;
+          }
+          .termektulajdonsag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+            flex-direction: column;
+          }
+          img.attachment-large.size-large {
+            margin-left: 0em;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          } 
+          #extra-grid .elementor-widget-container {
+            padding: 2em;
+          }              
+          } 
+          @media screen and (max-width: 767px) {
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+            flex-direction: column;
+          }
+          .vasalat {
+            width: calc(100% - 0) !important;
+          }
+          .vasalat {
+            width: 100% !important;
+          }  
+
+          #extra-grid .elementor-widget-container {
+            flex-direction: column;
+         }
+          img.attachment-full.size-full {
+            width: 100%;
+            height: 100%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          .content-container {
+            margin-top: 13em;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 1em;
+          }
+          .termektulajdonsag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+            flex-direction: column;
+          }
+          img.attachment-large.size-large{
+            margin-left: 0em;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          } 
+          #extra-grid .elementor-widget-container {
+            padding: 2em;
+          }   
+            
+        }                         
+        </style>
+      </head>
+      <body>
+        <div class="content-container">
+          ${processedHtml}
+        </div>
+      </body>
+      </html>
+    `;
+    return result;
+  } catch (error) {
+    console.error("Hiba t\xF6rt\xE9nt a proxy sor\xE1n:", error);
+    return {
+      statusCode: 500,
+      error: "Hiba t\xF6rt\xE9nt az adatok lek\xE9r\xE9se k\xF6zben",
+      message: error.message,
+      stack: error.stack
+    };
+  }
+});
+
+const linear$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: linear
+});
+
+const m9000 = defineEventHandler(async (event) => {
+  try {
+    const url = "https://www.marshallablak.hu/termekek/m-9000-ablak-es-erkelyajto/";
+    const headers = {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+      "Accept-Language": "hu,en-US;q=0.7,en;q=0.3"
+    };
+    const response = await fetch(url, { headers });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const fullHtml = await response.text();
+    if (!fullHtml || fullHtml.trim() === "") {
+      throw new Error("A v\xE1lasz \xFCres");
+    }
+    console.log("HTML bet\xF6ltve, m\xE9rete:", fullHtml.length);
+    const $ = cheerio.load(fullHtml);
+    const availableTags = [];
+    const availableClasses = [];
+    $("body *").each((i, el) => {
+      if ($(el).attr("class")) {
+        const classes = $(el).attr("class").split(" ");
+        classes.forEach((c) => {
+          if (c && !availableClasses.includes(c)) {
+            availableClasses.push(c);
+          }
+        });
+      }
+      const tagName = el.tagName.toLowerCase();
+      if (!availableTags.includes(tagName)) {
+        availableTags.push(tagName);
+      }
+    });
+    console.log("El\xE9rhet\u0151 oszt\xE1lyok:", availableClasses);
+    let mainContent = "";
+    const contentSelectors = [
+      ".main-content",
+      ".entry-content",
+      "#content",
+      "article",
+      ".post-content",
+      ".page-content",
+      ".content",
+      "main",
+      ".container"
+    ];
+    for (const selector of contentSelectors) {
+      const element = $(selector);
+      if (element.length > 0) {
+        console.log(`Sikeresen megtal\xE1lva: ${selector}`);
+        mainContent = element.html() || "";
+        break;
+      }
+    }
+    if (!mainContent) {
+      console.log(
+        "Nem tal\xE1ltunk megfelel\u0151 szelektort, haszn\xE1ljuk a teljes body tartalmat"
+      );
+      $("header, nav, footer").remove();
+      mainContent = $("body").html() || "";
+    }
+    if (!mainContent) {
+      return {
+        statusCode: 404,
+        error: "Nem tal\xE1ltunk megfelel\u0151 tartalmat az oldalon"
+      };
+    }
+    let processedHtml = mainContent.replace(/href="\/(?!\/)/g, 'href="https://www.marshallablak.hu/').replace(/src="\/(?!\/)/g, 'src="https://www.marshallablak.hu/').replace(/url\(["']?\/(?!\/)/g, 'url("https://www.marshallablak.hu/');
+    const result = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>M-ECO ablakok \xE9s erk\xE9lyajt\xF3k</title>
+        <style>
+          /* Itt hozz\xE1adhatsz saj\xE1t CSS-t is */
+          body { 
+            font-family: 'Montserrat', sans-serif;
+          }
+        iframe {
+            width: 100%;
+         }
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-039cdb2.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 3%;
+        }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+          }
+          .vasalat img {
+            width: 100%;
+            max-width: 100% !important;
+            height: 250px;
+            object-fit: cover;
+          }
+          .elementor-widget-container h6 {
+            font-size: 1rem;
+            font-weight: 300;
+          } 
+          img.attachment-large.size-large {
+            margin-left: 0em;
+            position: relative;
+            left: 5em;
+            top: 3em;
+          }   
+          .profil-termektulajdonsag {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5em;
+          }
+          div#profil-termektulajdonsag-neve {
+            font-weight: 500;
+          }
+          div#profil-termektulajdonsag-erteke {
+            font-weight: 300;
+            margin-top: .3em;
+          }
+          .tulajdonsag-tablazat {
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            margin-bottom: 1em;
+            padding: 1em;
+            box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+          }    
+          #extra-grid .elementor-widget-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f7f7f7;
+            padding: 5em 7em;
+          }
+          .vasalat {
+            display: unset !important;
+          }
+          .vasalat-szoveg {
+            padding: 1em; 
+            margin: 0 !important;
+            background: #fff;
+          }
+          #vasalat-neve {
+            font-size: 1.1rem !important;
+            margin-bottom: .3em;
+            text-transform: uppercase;
+            line-height: 1.7rem;
+            color: #000 !important;
+            font-weight: 800 !important;
+          }
+          div#vasalat-erteke {
+            font-size: 1rem;
+            margin-top: .7em;
+          }
+          .elementor-button-wrapper {
+            display: none;
+          }
+          .elementor-widget-container p {
+            font-weight: 400;
+            font-size: 1rem;
+          }
+          section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+          }
+      
+          .jobb-tulajdonsag {
+            text-align: right;
+            color: #21A179;
+            font-weight: 700 !important;
+          }
+          .bal-tulajdonsag {
+            text-decoration: underline;
+          }  
+          div#termektulajdonsag-pipa img {
+            width: 17px;
+            height: 17px;
+            margin-right: 1em;
+          }
+          div#termektulajdonsag-pipa {
+            display: flex;
+            align-content: space-evenly;
+            align-items: center;
+          }
+          div#termektulajdonsag-pipa span {
+            font-weight: 600;
+            margin-right: .3em;
+          }
+          .termektulajdonsag {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .termektulajdonsag img {
+            display: none;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+          }
+          img.attachment-full.size-full{
+            width: 100%;
+            height: 30em;
+            object-fit: cover;
+            border-radius: 1em;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 50%;
+          }
+          #fenti-tulajdonsagok .elementor-widget-container {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 30px 50px 50px 50px;
+          }
+          .elementor-element.elementor-element-c675247.ob-harakiri-inherit.ob-has-background-overlay.elementor-widget.elementor-widget-heading .elementor-widget-container span {
+            font-weight: 300;
+            font-style: italic;
+          }
+          div#termektulajdonsag-neve {
+            font-weight: 700;
+            margin: 1em 0;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-81cdef4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            background: #FBFBFF;
+            padding: 3em 7% 5em 7%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-3836e21.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 4em 7% 4em 7%;
+            background: #f7f7f7;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-9909344.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            padding: 1em 7% 0 7%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e5321b3.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default {
+            display: none;
+          }
+          .elementor-heading-title.elementor-size-default {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+          h1.elementor-heading-title.elementor-size-default {
+            color: #8b0000;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 600;            
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-81cdef4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default h2 {
+            margin-bottom: 2em;
+          }
+          section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default h3 {
+            margin-bottom: 2em;
+            background: #8b0000;
+            color: #fff;
+            padding: 1em;
+          }
+          @media (min-width: 991px) and (max-width: 1200px) { 
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            flex-direction: column;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          img.attachment-full.size-full {
+            margin-top: 11em;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-a2b913f {
+            width: 100%;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-babc2b5 {
+            width: 100%;
+          }
+          }
+          @media (min-width: 768px) and (max-width: 991px) { 
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+            flex-direction: column;
+          }
+          img.attachment-full.size-full {
+            width: 100%;
+            height: 100%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          .content-container {
+            margin-top: 13em;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 1em;
+          }
+          .termektulajdonsag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+            flex-direction: column;
+          }
+          img.attachment-large.size-large {
+            margin-left: 0em;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          } 
+          #extra-grid .elementor-widget-container {
+            padding: 2em;
+          }              
+          } 
+          @media screen and (max-width: 767px) {
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+            padding-left: 7%;
+            padding-right: 5%;
+            flex-direction: column;
+          }
+          .vasalat {
+            width: calc(100% - 0) !important;
+          }
+          .vasalat {
+            width: 100% !important;
+          }  
+
+          #extra-grid .elementor-widget-container {
+            flex-direction: column;
+         }
+          img.attachment-full.size-full {
+            width: 100%;
+            height: 100%;
+          }
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+            width: 100%;
+          }
+          .content-container {
+            margin-top: 13em;
+          }
+          .elementor-442 .elementor-element.elementor-element-851a076 > .elementor-element-populated {
+            padding: 1em;
+          }
+          .termektulajdonsag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+          }
+          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
+            width: 100%;
+          }
+          section.elementor-section.elementor-top-section.elementor-element.elementor-element-7c3c666.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+            display: flex;
+            margin: 4em 0 1em 0;
+            padding: 0 7% 2em 7%;
+            flex-direction: column;
+          }
+          img.attachment-large.size-large{
+            margin-left: 0em;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+          } 
+          #extra-grid .elementor-widget-container {
+            padding: 2em;
+          }   
+            
+        }                         
+        </style>
+      </head>
+      <body>
+        <div class="content-container">
+          ${processedHtml}
+        </div>
+      </body>
+      </html>
+    `;
+    return result;
+  } catch (error) {
+    console.error("Hiba t\xF6rt\xE9nt a proxy sor\xE1n:", error);
+    return {
+      statusCode: 500,
+      error: "Hiba t\xF6rt\xE9nt az adatok lek\xE9r\xE9se k\xF6zben",
+      message: error.message,
+      stack: error.stack
+    };
+  }
+});
+
+const m9000$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: m9000
+});
+
 const mEco = defineEventHandler(async (event) => {
   try {
     const url = "https://www.marshallablak.hu/termekek/m-eco-ablakok-es-erkelyajtok/";
@@ -2777,11 +4052,8 @@ const mEco = defineEventHandler(async (event) => {
           }
           section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-          }
-          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
-            width: 33%;
+            flex-direction: column;
           }
           .jobb-tulajdonsag {
             text-align: right;
@@ -3188,11 +4460,8 @@ const mOc = defineEventHandler(async (event) => {
           }
           section.elementor-section.elementor-inner-section.elementor-element.elementor-element-38064f6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
-          }
-          .elementor-column.elementor-col-33.elementor-inner-column.elementor-element.elementor-element-2ec68c3 {
-            width: 30%;
+            flex-direction: column;
           }
           .jobb-tulajdonsag {
             text-align: right;
