@@ -2437,6 +2437,7 @@ ul {
     margin: 0;
     flex-direction: row-reverse;
     align-items: center;
+    background: #f7f7f7;
   }
 
   .header-content__logo-box__link__img {
