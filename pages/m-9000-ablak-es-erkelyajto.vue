@@ -128,6 +128,17 @@ onUnmounted(() => {
         @load="adjustIframeHeight"
       ></iframe>
     </div>
+    <div class="link-box">
+      <NuxtLink
+        to="/ablakok-erkelyajtok"
+        class="go-back-button go-back-button--formating"
+      >
+        <span class="go-back-button__icon">&#8592;</span>
+        <span class="go-back-button__text"
+          >Vissza a Ablakok, erkélyajtókhoz
+        </span>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 

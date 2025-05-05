@@ -1080,6 +1080,10 @@ ul {
   margin: 1.5em 0 2em 0;
 }
 
+.link-box {
+  padding: 0 7% 0 7%;
+}
+
 .go-back-button {
   animation: pulse 1s infinite;
   align-items: center;
@@ -1093,6 +1097,10 @@ ul {
   padding: 10px 20px;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.go-back-button--formating {
+  margin: 0 0 1.7em 0;
 }
 
 @keyframes pulse {
