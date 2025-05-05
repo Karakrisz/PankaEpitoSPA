@@ -26,9 +26,12 @@ onBeforeUnmount(() => {
 
 const route = useRoute()
 
-watch(() => route.path, () => {
-  isMenuOpen.value = false
-})
+watch(
+  () => route.path,
+  () => {
+    isMenuOpen.value = false
+  }
+)
 
 watch(isMenuOpen, (newVal) => {
   if (isMobile.value && newVal) {
@@ -64,10 +67,13 @@ watch(isMenuOpen, (newVal) => {
           <div class="bar"></div>
           <div class="bar"></div>
         </button>
-        <div class="menu-overlay" v-if="isMobile && isMenuOpen" @click="isMenuOpen = false"></div>
-  
+        <div
+          class="menu-overlay"
+          v-if="isMobile && isMenuOpen"
+          @click="isMenuOpen = false"
+        ></div>
+
         <nav :class="{ 'menu--open': isMenuOpen, menu: isMobile }" id="menu">
- 
           <div v-if="isMobile" class="menu-header">
             <button @click="isMenuOpen = false" class="menu-close">
               <span>&times;</span>
@@ -75,10 +81,10 @@ watch(isMenuOpen, (newVal) => {
           </div>
           <ul id="menu__list" class="menu__list d-flex">
             <li v-for="link in links" :key="link.path" class="menu__list__li">
-              <NuxtLink 
-                :to="link.path" 
+              <NuxtLink
+                :to="link.path"
                 :class="['menu__item text-color']"
-                @click="isMobile ? isMenuOpen = false : null"
+                @click="isMobile ? (isMenuOpen = false) : null"
               >
                 <template v-if="link.imagePath">
                   <NuxtImg
@@ -139,37 +145,35 @@ watch(isMenuOpen, (newVal) => {
 </template>
 
 <style scoped>
-
 .hamburger,
 .menu {
   background-color: #5a0001;
 }
-
 
 @media screen and (max-width: 767px) {
   .hamburger,
   .menu {
     background-color: #5a0001;
   }
-  
+
   .menu {
     position: fixed;
     top: 0;
     right: -100%;
     width: 80%;
     height: 100vh;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transform: translateX(100%);
     z-index: 1001;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
   }
-  
+
   .menu--open {
     right: 0;
     transform: translateX(0);
   }
-  
+
   .menu-overlay {
     position: fixed;
     top: 0;
@@ -181,13 +185,13 @@ watch(isMenuOpen, (newVal) => {
     backdrop-filter: blur(3px);
     transition: opacity 0.5s ease;
   }
-  
+
   .menu-header {
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
   }
-  
+
   .menu-close {
     background: none;
     border: none;
@@ -197,12 +201,10 @@ watch(isMenuOpen, (newVal) => {
   }
 }
 
-
 .menu__list {
   padding: 1em;
   width: 100%;
 }
-
 
 @media screen and (max-width: 1199px) {
   .menu__list {
@@ -211,7 +213,7 @@ watch(isMenuOpen, (newVal) => {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .menu__list__li {
     margin-bottom: 1.5em;
     width: 100%;
@@ -220,21 +222,33 @@ watch(isMenuOpen, (newVal) => {
     animation: slideIn 0.3s forwards;
     animation-delay: calc(0.1s * var(--i, 0));
   }
-  
+
   @keyframes slideIn {
     to {
       transform: translateX(0);
       opacity: 1;
     }
   }
-  
-  .menu--open .menu__list__li:nth-child(1) { --i: 1; }
-  .menu--open .menu__list__li:nth-child(2) { --i: 2; }
-  .menu--open .menu__list__li:nth-child(3) { --i: 3; }
-  .menu--open .menu__list__li:nth-child(4) { --i: 4; }
-  .menu--open .menu__list__li:nth-child(5) { --i: 5; }
-  .menu--open .menu__list__li:nth-child(6) { --i: 6; }
-  
+
+  .menu--open .menu__list__li:nth-child(1) {
+    --i: 1;
+  }
+  .menu--open .menu__list__li:nth-child(2) {
+    --i: 2;
+  }
+  .menu--open .menu__list__li:nth-child(3) {
+    --i: 3;
+  }
+  .menu--open .menu__list__li:nth-child(4) {
+    --i: 4;
+  }
+  .menu--open .menu__list__li:nth-child(5) {
+    --i: 5;
+  }
+  .menu--open .menu__list__li:nth-child(6) {
+    --i: 6;
+  }
+
   .menu__item {
     font-size: 1.1rem;
     padding: 0.8em 0;
@@ -247,7 +261,7 @@ watch(isMenuOpen, (newVal) => {
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .menu__item::after {
     content: '';
     position: absolute;
@@ -258,12 +272,12 @@ watch(isMenuOpen, (newVal) => {
     background-color: white;
     transition: width 0.3s ease;
   }
-  
+
   .menu__item:hover::after,
   .menu__item.router-link-active::after {
     width: 100%;
   }
-  
+
   .menu__item:hover {
     transform: translateX(5px);
   }
@@ -275,8 +289,8 @@ watch(isMenuOpen, (newVal) => {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 3.5em;
-    height: 2.87em;
+    width: 3.7em;
+    height: 3.3em;
     border: none;
     cursor: pointer;
     padding: 0.7em;
@@ -284,11 +298,11 @@ watch(isMenuOpen, (newVal) => {
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  
+
   .hamburger:hover {
     background-color: #7a0002;
   }
-  
+
   .bar {
     height: 0.23em;
     width: 100%;
@@ -296,23 +310,23 @@ watch(isMenuOpen, (newVal) => {
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  
+
   .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
   }
-  
+
   .hamburger.open .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
   }
-  
+
   .menu {
     width: 80%;
   }
-  
+
   .menu__item {
     font-size: 1rem;
   }
@@ -324,8 +338,8 @@ watch(isMenuOpen, (newVal) => {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 3.5em;
-    height: 2.87em;
+    width: 3.7em;
+    height: 3.3em;
     border: none;
     cursor: pointer;
     padding: 0.7em;
@@ -333,11 +347,11 @@ watch(isMenuOpen, (newVal) => {
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  
+
   .hamburger:hover {
     background-color: #7a0002;
   }
-  
+
   .bar {
     height: 0.23em;
     width: 100%;
@@ -345,23 +359,23 @@ watch(isMenuOpen, (newVal) => {
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  
+
   .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
   }
-  
+
   .hamburger.open .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
   }
-  
+
   .menu {
     width: 80%;
   }
-  
+
   .menu__item {
     font-size: 1rem;
   }
@@ -373,8 +387,8 @@ watch(isMenuOpen, (newVal) => {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 3.5em;
-    height: 2.87em;
+    width: 3.7em;
+    height: 3.3em;
     border: none;
     cursor: pointer;
     padding: 0.7em;
@@ -382,11 +396,11 @@ watch(isMenuOpen, (newVal) => {
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  
+
   .hamburger:hover {
     background-color: #7a0002;
   }
-  
+
   .bar {
     height: 0.23em;
     width: 100%;
@@ -394,23 +408,23 @@ watch(isMenuOpen, (newVal) => {
     border-radius: 5px;
     transition: all 0.3s ease;
   }
-  
+
   .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
   }
-  
+
   .hamburger.open .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.open .bar:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
   }
-  
+
   .menu {
     width: 80%;
   }
-  
+
   .menu__item {
     font-size: 1rem;
   }
@@ -421,11 +435,11 @@ watch(isMenuOpen, (newVal) => {
   .hamburger {
     display: none;
   }
-  
+
   .menu-overlay {
     display: none;
   }
-  
+
   .menu-header {
     display: none;
   }
