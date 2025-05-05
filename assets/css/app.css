@@ -407,6 +407,10 @@ ul {
   color: #fff;
   margin: 0;
 }
+
+.service-subpage--format {
+  padding: 14% 0 13% 0 !important;
+}
 /********************  Services formating end **********************/
 
 /********************  Warranty formating start **********************/

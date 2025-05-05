@@ -14,7 +14,7 @@ const contentIframe = ref(null)
 const iframeHeight = ref('1000px')
 const isClient = ref(false)
 
-const { data, pending, error: fetchError } = await useFetch('/api/m-eco')
+const { data, pending, error: fetchError } = await useFetch('/api/m-oc')
 
 htmlContent.value = data.value
 
@@ -128,7 +128,6 @@ onUnmounted(() => {
         @load="adjustIframeHeight"
       ></iframe>
     </div>
-
   </div>
 </template>
 
@@ -162,5 +161,4 @@ onUnmounted(() => {
   border: none;
   width: 100%;
 }
-
 </style>

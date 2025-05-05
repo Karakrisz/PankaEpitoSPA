@@ -6,8 +6,11 @@ declare module "nitropack/types" {
     '/api/fetch-css': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/fetch-css').default>>>>
     }
-    '/api/scrape': {
-      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/scrape').default>>>>
+    '/api/m-eco': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-eco').default>>>>
+    }
+    '/api/m-oc': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-oc').default>>>>
     }
     '/api/sitemap': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/sitemap').default>>>>
