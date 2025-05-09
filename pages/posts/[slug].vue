@@ -24,7 +24,7 @@ if (post?.value) {
 
   const metaTags = [
     { name: 'description', content: post.value.meta_description || '' },
-    { property: 'og:title', content: `${post.value.title} - Vasalás Mester` },
+    { property: 'og:title', content: `${post.value.title} - Ablaktechnika` },
     { property: 'og:description', content: post.value.meta_description || '' },
     { property: 'og:image', content: `${baseUrl}/public/storage/${post.value.image}` },
     { property: 'og:url', content: `https://www.ablaktechnika.com/${postPath}` },
