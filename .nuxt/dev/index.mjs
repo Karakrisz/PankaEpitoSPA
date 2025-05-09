@@ -342,7 +342,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2025-05-05T11:15:59.727Z"
+          "X-Sitemap-Prerendered": "2025-05-09T09:18:39.954Z"
         }
       },
       "/_nuxt/builds/meta/**": {
@@ -2518,6 +2518,9 @@ const sources$1 = [
         },
         "urls": [
             {
+                "loc": "/ablakok-erkelyajtok"
+            },
+            {
                 "loc": "/adatvedelmi-tajekoztato"
             },
             {
@@ -2548,6 +2551,15 @@ const sources$1 = [
                 "loc": "/kapcsolat"
             },
             {
+                "loc": "/kubus-ablakok-es-erkelyajtok"
+            },
+            {
+                "loc": "/linear-ablakok-es-erkelyajtok"
+            },
+            {
+                "loc": "/m-9000-ablak-es-erkelyajto"
+            },
+            {
                 "loc": "/m-eco-ablakok-es-erkelyajtok"
             },
             {
@@ -2564,6 +2576,9 @@ const sources$1 = [
             },
             {
                 "loc": "/posts"
+            },
+            {
+                "loc": "/pvc-ajto-ablak"
             },
             {
                 "loc": "/szolgaltatasok"

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
 import { useAsyncData, useRoute, useRuntimeConfig } from '#app'
 
 interface Post {
@@ -8,6 +7,7 @@ interface Post {
   slug: string
   body: string
   image: string
+  meta_description: string
 }
 
 const config = useRuntimeConfig()
@@ -18,13 +18,25 @@ const { data: post, error } = await useAsyncData<Post>('post', () =>
   $fetch(`${config.public.apiBaseUrl}/json-posts/${route.params.slug}`)
 )
 
-onMounted(() => {
-  document.body.setAttribute('data-page', 'slug')
-})
+if (post?.value) {
+  const baseUrl = config.public.apiBaseUrl.replace(/\/$/, '')
+  const postPath = route.path.replace(/^\//, '')
 
-onUnmounted(() => {
-  document.body.removeAttribute('data-page')
-})
+  const metaTags = [
+    { name: 'description', content: post.value.meta_description || '' },
+    { property: 'og:title', content: `${post.value.title} - Vasalás Mester` },
+    { property: 'og:description', content: post.value.meta_description || '' },
+    { property: 'og:image', content: `${baseUrl}/public/storage/${post.value.image}` },
+    { property: 'og:url', content: `https://www.ablaktechnika.com/${postPath}` },
+  ]
+
+   // console.log('Meta Tags:', metaTags)
+
+  useHead({
+    title: `${post.value.title} - Ablaktechnika`,
+    meta: metaTags,
+  })
+}
 </script>
 
 <template>
