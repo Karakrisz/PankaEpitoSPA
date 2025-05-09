@@ -1502,7 +1502,7 @@ ul {
   .offer__manufacturing-text,
   .footer__contact-link,
   .footer__menu-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .header-content__logo-box__link__img {
     width: 45%;
@@ -1596,7 +1596,7 @@ ul {
   .offer__manufacturing-text,
   .footer__contact-link,
   .footer__menu-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .header-content__logo-box__link__img {
     width: 45%;
@@ -2401,7 +2401,8 @@ ul {
   .offer__manufacturing-text,
   .footer__contact-link,
   .footer__menu-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.5em;
   }
 
   .header-content__link-box__link,
