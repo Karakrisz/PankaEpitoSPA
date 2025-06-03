@@ -1,4 +1,4 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, getResponseStatus, setResponseHeaders, setHeaders, sendRedirect, proxyRequest, createError, getRequestHost, getRequestProtocol, setHeader, getHeader, getQuery as getQuery$1, readBody, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file:///Applications/XAMPP/xamppfiles/htdocs/PankaEpitoSPA/node_modules/h3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { getRequestHeader, splitCookiesString, setResponseStatus, setResponseHeader, send, getRequestHeaders, defineEventHandler, handleCacheHeaders, createEvent, fetchWithEvent, isEvent, eventHandler, getResponseStatus, setResponseHeaders, setHeaders, sendRedirect, proxyRequest, createError, getRequestHost, getRequestProtocol, setHeader, getQuery as getQuery$1, getHeader, readBody, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, getResponseStatusText } from 'file:///Applications/XAMPP/xamppfiles/htdocs/PankaEpitoSPA/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -188,7 +188,7 @@ const _sXuHTxT6Dy = (function(nitro) {
 
 const rootDir = "/Applications/XAMPP/xamppfiles/htdocs/PankaEpitoSPA";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Cégünk nyílászárók forgalmazását és beszerelését végzi a nyílászárók kiegészítőinek minden fajtájával együtt. Árnyékolástechnikai termékek széles választéka."},{"name":"format-detection","content":"telephone=no"},{"hid":"robots","name":"robots","content":"index, follow"},{"http-equiv":"Content-Security-Policy","content":"\n            default-src 'self' https: data:;\n            img-src 'self' https: http: data:;\n            font-src 'self' https: data:;\n            style-src 'self' https: 'unsafe-inline';\n            script-src 'self' https: 'unsafe-inline' 'unsafe-eval';\n          "}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"canonical","href":"https://www.alkuszom.info"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Panka Építő Kft., Nyílászárók forgalmazása, beépítése. árnyékolástechnika","htmlAttrs":{"lang":"hu"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Cégünk nyílászárók forgalmazását és beszerelését végzi a nyílászárók kiegészítőinek minden fajtájával együtt. Árnyékolástechnikai termékek széles választéka."},{"name":"format-detection","content":"telephone=no"},{"hid":"robots","name":"robots","content":"index, follow"},{"http-equiv":"Content-Security-Policy","content":"\n            default-src 'self' https: data:;\n            img-src 'self' https: http: data:;\n            font-src 'self' https: data:;\n            style-src 'self' https: 'unsafe-inline';\n            script-src 'self' https: 'unsafe-inline' 'unsafe-eval';\n          "}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"canonical","href":"https://ablaktechnika.com/"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Panka Építő Kft., Nyílászárók forgalmazása, beépítése. árnyékolástechnika","htmlAttrs":{"lang":"hu"}};
 
 const appRootTag = "div";
 
@@ -339,10 +339,37 @@ const _inlineRuntimeConfig = {
         }
       },
       "/sitemap.xml": {
+        "redirect": {
+          "to": "/sitemap_index.xml",
+          "statusCode": 307
+        }
+      },
+      "/sitemap_index.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2025-05-09T09:18:39.954Z"
+          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+        }
+      },
+      "/pages-sitemap.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+        }
+      },
+      "/postwindow-sitemap.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+        }
+      },
+      "/blog-sitemap.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
         }
       },
       "/_nuxt/builds/meta/**": {
@@ -363,7 +390,7 @@ const _inlineRuntimeConfig = {
   "sitemap": {
     "isI18nMapped": false,
     "sitemapName": "sitemap.xml",
-    "isMultiSitemap": false,
+    "isMultiSitemap": true,
     "excludeAppSources": [],
     "cacheMaxAgeSeconds": 0,
     "autoLastmod": false,
@@ -394,16 +421,55 @@ const _inlineRuntimeConfig = {
     "credits": true,
     "version": "5.3.5",
     "sitemaps": {
-      "sitemap.xml": {
-        "sitemapName": "sitemap.xml",
-        "route": "sitemap.xml",
-        "defaults": {},
+      "index": {
+        "sitemapName": "index",
+        "_route": "sitemap_index.xml",
+        "sitemaps": [],
+        "include": [],
+        "exclude": []
+      },
+      "pages": {
         "include": [],
         "exclude": [
           "/_nuxt/**",
           "/_**"
         ],
-        "includeAppSources": true
+        "includeAppSources": true,
+        "defaults": {
+          "priority": 0.7,
+          "changefreq": "monthly"
+        },
+        "sitemapName": "pages",
+        "_route": "pages-sitemap.xml",
+        "_hasSourceChunk": false
+      },
+      "postwindow": {
+        "include": [],
+        "exclude": [
+          "/_nuxt/**",
+          "/_**"
+        ],
+        "defaults": {
+          "priority": 0.9,
+          "changefreq": "daily"
+        },
+        "sitemapName": "postwindow",
+        "_route": "postwindow-sitemap.xml",
+        "_hasSourceChunk": 1
+      },
+      "blog": {
+        "include": [],
+        "exclude": [
+          "/_nuxt/**",
+          "/_**"
+        ],
+        "defaults": {
+          "priority": 0.7,
+          "changefreq": "daily"
+        },
+        "sitemapName": "blog",
+        "_route": "blog-sitemap.xml",
+        "_hasSourceChunk": 1
       }
     }
   },
@@ -1318,6 +1384,99 @@ function useSimpleSitemapRuntimeConfig(e) {
   return Object.freeze(clone);
 }
 
+function resolve(s, resolvers) {
+  if (typeof s === "undefined")
+    return s;
+  s = typeof s === "string" ? s : s.toString();
+  if (hasProtocol(s, { acceptRelative: true, strict: false }))
+    return resolvers.fixSlashes(s);
+  return resolvers.canonicalUrlResolver(s);
+}
+function normaliseSitemapUrls(data, resolvers) {
+  const entries = data.map((e) => typeof e === "string" ? { loc: e } : e).map((e) => {
+    e = { ...e };
+    if (e.url) {
+      e.loc = e.url;
+      delete e.url;
+    }
+    e.loc = fixSlashes(false, e.loc);
+    return e;
+  }).filter(Boolean);
+  function normaliseEntry(e) {
+    if (e.lastmod) {
+      const date = normaliseDate(e.lastmod);
+      if (date)
+        e.lastmod = date;
+      else
+        delete e.lastmod;
+    }
+    if (!e.lastmod)
+      delete e.lastmod;
+    e.loc = resolve(e.loc, resolvers);
+    if (e.alternatives) {
+      e.alternatives = mergeOnKey(e.alternatives.map((e2) => {
+        const a = { ...e2 };
+        if (typeof a.href === "string")
+          a.href = resolve(a.href, resolvers);
+        else if (typeof a.href === "object" && a.href)
+          a.href = resolve(a.href.href, resolvers);
+        return a;
+      }), "hreflang");
+    }
+    if (e.images) {
+      e.images = mergeOnKey(e.images.map((i) => {
+        i = { ...i };
+        i.loc = resolve(i.loc, resolvers);
+        return i;
+      }), "loc");
+    }
+    if (e.videos) {
+      e.videos = e.videos.map((v) => {
+        v = { ...v };
+        if (v.content_loc)
+          v.content_loc = resolve(v.content_loc, resolvers);
+        return v;
+      });
+    }
+    return e;
+  }
+  return mergeOnKey(
+    entries.map(normaliseEntry).map((e) => ({ ...e, _key: `${e._sitemap || ""}${e.loc}` })),
+    "_key"
+  );
+}
+const IS_VALID_W3C_DATE = [
+  /(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))/,
+  /^\d{4}-[01]\d-[0-3]\d$/,
+  /^\d{4}-[01]\d$/,
+  /^\d{4}$/
+];
+function isValidW3CDate(d) {
+  return IS_VALID_W3C_DATE.some((r) => r.test(d));
+}
+function normaliseDate(d) {
+  if (typeof d === "string") {
+    if (d.includes("T")) {
+      const t = d.split("T")[1];
+      if (!t.includes("+") && !t.includes("-") && !t.includes("Z")) {
+        d += "Z";
+      }
+    }
+    if (!isValidW3CDate(d))
+      return false;
+    d = new Date(d);
+    d.setMilliseconds(0);
+    if (Number.isNaN(d.getTime()))
+      return false;
+  }
+  const z = (n) => `0${n}`.slice(-2);
+  const date = `${d.getUTCFullYear()}-${z(d.getUTCMonth() + 1)}-${z(d.getUTCDate())}`;
+  if (d.getUTCHours() > 0 || d.getUTCMinutes() > 0 || d.getUTCSeconds() > 0) {
+    return `${date}T${z(d.getUTCHours())}:${z(d.getUTCMinutes())}:${z(d.getUTCSeconds())}Z`;
+  }
+  return date;
+}
+
 async function fetchDataSource(input, event) {
   const context = typeof input.context === "string" ? { name: input.context } : input.context || { name: "fetch" };
   context.tips = context.tips || [];
@@ -1401,6 +1560,536 @@ async function resolveSitemapSources(sources, event) {
     })
   )).flat();
 }
+
+function normaliseI18nSources(sources, { autoI18n, isI18nMapped, include, exclude }) {
+  const filterPath = createPathFilter({
+    include,
+    exclude
+  });
+  if (autoI18n && isI18nMapped) {
+    return sources.map((s) => {
+      const urls = (s.urls || []).map((_url) => {
+        const url = typeof _url === "string" ? { loc: _url } : _url;
+        url.loc = url.loc || url.url;
+        if (!hasProtocol(url.loc, { acceptRelative: true }))
+          url.loc = withLeadingSlash(url.loc);
+        return url;
+      });
+      s.urls = urls.map((url) => {
+        if (url._sitemap || url._i18nTransform)
+          return url;
+        if (url.loc && !hasProtocol(url.loc, { acceptRelative: true })) {
+          const match = splitForLocales(url.loc, autoI18n.locales.map((l) => l.code));
+          const localeCode = match[0] || autoI18n.defaultLocale;
+          const pathWithoutPrefix = match[1];
+          const locale = autoI18n.locales.find((e) => e.code === localeCode);
+          if (locale) {
+            if (!url.alternatives) {
+              const alternatives = urls.map((u) => {
+                if (u._sitemap || u._i18nTransform)
+                  return false;
+                if (u?.loc) {
+                  if (!filterPath(u.loc))
+                    return false;
+                  const [_localeCode, _pathWithoutPrefix] = splitForLocales(u.loc, autoI18n.locales.map((l) => l.code));
+                  if (pathWithoutPrefix === _pathWithoutPrefix) {
+                    const entries = [];
+                    if (_localeCode === autoI18n.defaultLocale) {
+                      entries.push({
+                        href: u.loc,
+                        hreflang: "x-default"
+                      });
+                    }
+                    entries.push({
+                      href: u.loc,
+                      hreflang: _localeCode || autoI18n.defaultLocale
+                    });
+                    return entries;
+                  }
+                }
+                return false;
+              }).flat().filter(Boolean);
+              if (alternatives.length)
+                url.alternatives = alternatives;
+            }
+            return {
+              _sitemap: locale.iso || locale.code,
+              ...url
+            };
+          }
+        }
+        return url;
+      });
+      return s;
+    });
+  }
+  return sources;
+}
+function applyI18nEnhancements(_urls, options) {
+  const { autoI18n, include, exclude } = options;
+  const filterPath = createPathFilter({
+    include,
+    exclude
+  });
+  return _urls.map((e) => {
+    if (!e._i18nTransform)
+      return e;
+    delete e._i18nTransform;
+    const parsedURL = parseURL(e.loc);
+    const path = withLeadingSlash(parsedURL.pathname + parsedURL.search + parsedURL.hash);
+    const match = splitForLocales(path, autoI18n.locales.map((l) => l.code));
+    let pathWithoutLocale = path;
+    let locale;
+    if (match[0]) {
+      pathWithoutLocale = match[1] || "/";
+      locale = match[0];
+    }
+    if (locale && true) {
+      console.warn("You're providing a locale in the url, but the url is marked as inheritI18n. This will cause issues with the sitemap. Please remove the locale from the url.");
+      return e;
+    }
+    if (autoI18n.differentDomains) {
+      return {
+        // will force it to pass filter
+        _sitemap: options.sitemapName,
+        ...e,
+        alternatives: [
+          {
+            // apply default locale domain
+            ...autoI18n.locales.find((l) => [l.code, l.iso].includes(autoI18n.defaultLocale)),
+            code: "x-default"
+          },
+          ...autoI18n.locales.filter((l) => !!l.domain)
+        ].map((locale2) => {
+          return {
+            hreflang: locale2.iso || locale2.code,
+            href: joinURL(withHttps(locale2.domain), pathWithoutLocale)
+          };
+        })
+      };
+    }
+    return autoI18n.locales.map((l) => {
+      let loc = joinURL(`/${l.code}`, pathWithoutLocale);
+      if (autoI18n.differentDomains || ["prefix_and_default", "prefix_except_default"].includes(autoI18n.strategy) && l.code === autoI18n.defaultLocale)
+        loc = pathWithoutLocale;
+      return {
+        _sitemap: options.isI18nMapped ? l.iso || l.code : void 0,
+        ...e,
+        loc,
+        alternatives: [{ code: "x-default" }, ...autoI18n.locales].map((locale2) => {
+          const code = locale2.code === "x-default" ? autoI18n.defaultLocale : locale2.code;
+          const isDefault = locale2.code === "x-default" || locale2.code === autoI18n.defaultLocale;
+          let href = "";
+          if (autoI18n.strategy === "prefix") {
+            href = joinURL("/", code, pathWithoutLocale);
+          } else if (["prefix_and_default", "prefix_except_default"].includes(autoI18n.strategy)) {
+            if (isDefault) {
+              href = pathWithoutLocale;
+            } else {
+              href = joinURL("/", code, pathWithoutLocale);
+            }
+          }
+          const hreflang = locale2.iso || locale2.code;
+          if (!filterPath(href))
+            return false;
+          return {
+            hreflang,
+            href
+          };
+        }).filter(Boolean)
+      };
+    });
+  }).flat();
+}
+
+function filterSitemapUrls(_urls, options) {
+  const urlFilter = createFilter({
+    include: options.include,
+    exclude: options.exclude
+  });
+  return _urls.filter((e) => {
+    let path = e.loc;
+    try {
+      path = parseURL(e.loc).pathname;
+    } catch {
+      return false;
+    }
+    if (!urlFilter(path))
+      return false;
+    if (options.isMultiSitemap && e._sitemap && options.sitemapName)
+      return e._sitemap === options.sitemapName;
+    return true;
+  });
+}
+
+function sortSitemapUrls(urls) {
+  return urls.sort(
+    (a, b) => {
+      const aLoc = typeof a === "string" ? a : a.loc;
+      const bLoc = typeof b === "string" ? b : b.loc;
+      return aLoc.localeCompare(bLoc, void 0, { numeric: true });
+    }
+  ).sort((a, b) => {
+    const aLoc = (typeof a === "string" ? a : a.loc) || "";
+    const bLoc = (typeof b === "string" ? b : b.loc) || "";
+    const aSegments = aLoc.split("/").length;
+    const bSegments = bLoc.split("/").length;
+    if (aSegments > bSegments)
+      return 1;
+    if (aSegments < bSegments)
+      return -1;
+    return 0;
+  });
+}
+
+function resolveKey(k) {
+  switch (k) {
+    case "images":
+      return "image";
+    case "videos":
+      return "video";
+    case "news":
+      return "news";
+    default:
+      return k;
+  }
+}
+function handleObject(key, obj) {
+  return [
+    `        <${key}:${key}>`,
+    ...Object.entries(obj).map(([sk, sv]) => {
+      if (key === "video" && Array.isArray(sv)) {
+        return sv.map((v) => {
+          if (typeof v === "string") {
+            return [
+              `            `,
+              `<${key}:${sk}>`,
+              escapeValueForXml(v),
+              `</${key}:${sk}>`
+            ].join("");
+          }
+          const attributes = Object.entries(v).filter(([ssk]) => ssk !== sk).map(([ssk, ssv]) => `${ssk}="${escapeValueForXml(ssv)}"`).join(" ");
+          return [
+            `            <${key}:${sk} ${attributes}>`,
+            // value is the same sk
+            v[sk],
+            `</${key}:${sk}>`
+          ].join("");
+        }).join("\n");
+      }
+      if (typeof sv === "object") {
+        if (key === "video") {
+          const attributes = Object.entries(sv).filter(([ssk]) => ssk !== sk).map(([ssk, ssv]) => `${ssk}="${escapeValueForXml(ssv)}"`).join(" ");
+          return [
+            `            <${key}:${sk} ${attributes}>`,
+            // value is the same sk
+            sv[sk],
+            `</${key}:${sk}>`
+          ].join("");
+        }
+        return [
+          `            <${key}:${sk}>`,
+          ...Object.entries(sv).map(([ssk, ssv]) => `                <${key}:${ssk}>${escapeValueForXml(ssv)}</${key}:${ssk}>`),
+          `            </${key}:${sk}>`
+        ].join("\n");
+      }
+      return `            <${key}:${sk}>${escapeValueForXml(sv)}</${key}:${sk}>`;
+    }),
+    `        </${key}:${key}>`
+  ].join("\n");
+}
+function handleArray(key, arr) {
+  if (arr.length === 0)
+    return false;
+  key = resolveKey(key);
+  if (key === "alternatives") {
+    return arr.map((obj) => [
+      `        <xhtml:link rel="alternate" ${Object.entries(obj).map(([sk, sv]) => `${sk}="${escapeValueForXml(sv)}"`).join(" ")} />`
+    ].join("\n")).join("\n");
+  }
+  return arr.map((obj) => handleObject(key, obj)).join("\n");
+}
+function handleEntry(k, e) {
+  return Array.isArray(e[k]) ? handleArray(k, e[k]) : typeof e[k] === "object" ? handleObject(k, e[k]) : `        <${k}>${escapeValueForXml(e[k])}</${k}>`;
+}
+function wrapSitemapXml(input, resolvers, options) {
+  const xsl = options.xsl ? resolvers.relativeBaseUrlResolver(options.xsl) : false;
+  const credits = options.credits;
+  input.unshift(`<?xml version="1.0" encoding="UTF-8"?>${xsl ? `<?xml-stylesheet type="text/xsl" href="${xsl}"?>` : ""}`);
+  if (credits)
+    input.push(`<!-- XML Sitemap generated by @nuxtjs/sitemap v${options.version} at ${(/* @__PURE__ */ new Date()).toISOString()} -->`);
+  return input.join("\n");
+}
+function escapeValueForXml(value) {
+  if (value === true || value === false)
+    return value ? "yes" : "no";
+  return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+}
+
+async function buildSitemapIndex(resolvers, runtimeConfig) {
+  const {
+    sitemaps,
+    // enhancing
+    autoLastmod,
+    // chunking
+    defaultSitemapsChunkSize,
+    autoI18n,
+    isI18nMapped,
+    sortEntries,
+    // xls
+    version,
+    xsl,
+    credits
+  } = runtimeConfig;
+  if (!sitemaps)
+    throw new Error("Attempting to build a sitemap index without required `sitemaps` configuration.");
+  function maybeSort(urls) {
+    return sortEntries ? sortSitemapUrls(urls) : urls;
+  }
+  const isChunking = typeof sitemaps.chunks !== "undefined";
+  const chunks = {};
+  if (isChunking) {
+    const sitemap = sitemaps.chunks;
+    const sources = await resolveSitemapSources(await globalSitemapSources());
+    const normalisedUrls = normaliseSitemapUrls(sources.map((e) => e.urls).flat(), resolvers);
+    let enhancedUrls = normalisedUrls.map((e) => defu$1(e, sitemap.defaults));
+    if (autoI18n?.locales)
+      enhancedUrls = applyI18nEnhancements(enhancedUrls, { isI18nMapped, autoI18n, sitemapName: sitemap.sitemapName });
+    const filteredUrls = filterSitemapUrls(enhancedUrls, { ...sitemap, isMultiSitemap: true });
+    const sortedUrls = maybeSort(filteredUrls);
+    sortedUrls.forEach((url, i) => {
+      const chunkIndex = Math.floor(i / defaultSitemapsChunkSize);
+      chunks[chunkIndex] = chunks[chunkIndex] || { urls: [] };
+      chunks[chunkIndex].urls.push(url);
+    });
+  } else {
+    for (const sitemap in sitemaps) {
+      if (sitemap !== "index") {
+        chunks[sitemap] = chunks[sitemap] || { urls: [] };
+      }
+    }
+  }
+  const entries = [];
+  for (const name in chunks) {
+    const sitemap = chunks[name];
+    const entry = {
+      sitemap: resolvers.canonicalUrlResolver(`${name}-sitemap.xml`)
+    };
+    let lastmod = sitemap.urls.filter((a) => !!a?.lastmod).map((a) => typeof a.lastmod === "string" ? new Date(a.lastmod) : a.lastmod).sort((a, b) => (b?.getTime() || 0) - (a?.getTime() || 0))?.[0];
+    if (!lastmod && autoLastmod)
+      lastmod = /* @__PURE__ */ new Date();
+    if (lastmod)
+      entry.lastmod = normaliseDate(lastmod);
+    entries.push(entry);
+  }
+  if (sitemaps.index) {
+    entries.push(...sitemaps.index.sitemaps.map((entry) => {
+      return typeof entry === "string" ? { sitemap: entry } : entry;
+    }));
+  }
+  const ctx = { sitemaps: entries };
+  const nitro = useNitroApp();
+  await nitro.hooks.callHook("sitemap:index-resolved", ctx);
+  const sitemapXml = ctx.sitemaps.map((e) => [
+    "    <sitemap>",
+    `        <loc>${escapeValueForXml(e.sitemap)}</loc>`,
+    // lastmod is optional
+    e.lastmod ? `        <lastmod>${escapeValueForXml(e.lastmod)}</lastmod>` : false,
+    "    </sitemap>"
+  ].filter(Boolean).join("\n")).join("\n");
+  return wrapSitemapXml([
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    sitemapXml,
+    "</sitemapindex>"
+  ], resolvers, { version, xsl, credits });
+}
+
+const _frnfii = defineEventHandler(async (e) => {
+  const canonicalQuery = getQuery$1(e).canonical;
+  const isShowingCanonical = typeof canonicalQuery !== "undefined" && canonicalQuery !== "false";
+  const runtimeConfig = useSimpleSitemapRuntimeConfig();
+  const siteConfig = useSiteConfig(e);
+  let sitemap = await buildSitemapIndex({
+    event: e,
+    canonicalUrlResolver: createSitePathResolver(e, { canonical: isShowingCanonical || false, absolute: true, withBase: true }),
+    relativeBaseUrlResolver: createSitePathResolver(e, { absolute: false, withBase: true }),
+    fixSlashes: (path) => fixSlashes(siteConfig.trailingSlash, path)
+  }, runtimeConfig);
+  const nitro = useNitroApp();
+  const ctx = { sitemap, sitemapName: "sitemap" };
+  await nitro.hooks.callHook("sitemap:output", ctx);
+  sitemap = ctx.sitemap;
+  setHeader(e, "Content-Type", "text/xml; charset=UTF-8");
+  if (runtimeConfig.cacheMaxAgeSeconds)
+    setHeader(e, "Cache-Control", `public, max-age=${runtimeConfig.cacheMaxAgeSeconds}, must-revalidate`);
+  else
+    setHeader(e, "Cache-Control", `no-cache, no-store`);
+  return sitemap;
+});
+
+function withoutQuery(path) {
+  return path.split("?")[0];
+}
+function createNitroRouteRuleMatcher() {
+  const { nitro, app } = useRuntimeConfig();
+  const _routeRulesMatcher = toRouteMatcher(
+    createRouter({
+      routes: Object.fromEntries(
+        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
+      )
+    })
+  );
+  return (path) => {
+    return defu$1({}, ..._routeRulesMatcher.matchAll(
+      // radix3 does not support trailing slashes
+      withoutBase(withoutTrailingSlash(withoutQuery(path)), app.baseURL)
+    ).reverse());
+  };
+}
+
+async function buildSitemap(sitemap, resolvers, runtimeConfig) {
+  const {
+    sitemaps,
+    // enhancing
+    autoI18n,
+    isI18nMapped,
+    isMultiSitemap,
+    // sorting
+    sortEntries,
+    // chunking
+    defaultSitemapsChunkSize,
+    // xls
+    version,
+    xsl,
+    credits
+  } = runtimeConfig;
+  const isChunking = typeof sitemaps.chunks !== "undefined" && !Number.isNaN(Number(sitemap.sitemapName));
+  function maybeSort(urls2) {
+    return sortEntries ? sortSitemapUrls(urls2) : urls2;
+  }
+  function maybeSlice(urls2) {
+    if (isChunking && defaultSitemapsChunkSize) {
+      const chunk = Number(sitemap.sitemapName);
+      return urls2.slice(chunk * defaultSitemapsChunkSize, (chunk + 1) * defaultSitemapsChunkSize);
+    }
+    return urls2;
+  }
+  if (autoI18n?.differentDomains) {
+    const domain = autoI18n.locales.find((e) => [e.iso, e.code].includes(sitemap.sitemapName))?.domain;
+    if (domain) {
+      const _tester = resolvers.canonicalUrlResolver;
+      resolvers.canonicalUrlResolver = (path) => resolveSitePath(path, {
+        absolute: true,
+        withBase: false,
+        siteUrl: withHttps(domain),
+        trailingSlash: !_tester("/test/").endsWith("/"),
+        base: "/"
+      });
+    }
+  }
+  const sources = sitemap.includeAppSources ? await globalSitemapSources() : [];
+  sources.push(...await childSitemapSources(sitemap));
+  let resolvedSources = await resolveSitemapSources(sources, resolvers.event);
+  if (autoI18n)
+    resolvedSources = normaliseI18nSources(resolvedSources, { autoI18n, isI18nMapped, ...sitemap });
+  const normalisedUrls = normaliseSitemapUrls(resolvedSources.map((e) => e.urls).flat(), resolvers);
+  const routeRuleMatcher = createNitroRouteRuleMatcher();
+  let enhancedUrls = normalisedUrls.map((e) => defu$1(e, sitemap.defaults)).map((e) => {
+    const path = parseURL(e.loc).pathname;
+    let routeRules = routeRuleMatcher(path);
+    if (autoI18n?.locales && autoI18n?.strategy !== "no_prefix") {
+      const match = splitForLocales(path, autoI18n.locales.map((l) => l.code));
+      const pathWithoutPrefix = match[1];
+      if (pathWithoutPrefix && pathWithoutPrefix !== path)
+        routeRules = defu$1(routeRules, routeRuleMatcher(pathWithoutPrefix));
+    }
+    if (routeRules.sitemap === false)
+      return false;
+    if (typeof routeRules.index !== "undefined" && !routeRules.index)
+      return false;
+    const hasRobotsDisabled = Object.entries(routeRules.headers || {}).some(([name, value]) => name.toLowerCase() === "x-robots-tag" && value.toLowerCase() === "noindex");
+    if (routeRules.redirect || hasRobotsDisabled)
+      return false;
+    return routeRules.sitemap ? defu$1(e, routeRules.sitemap) : e;
+  }).filter(Boolean);
+  if (autoI18n?.locales)
+    enhancedUrls = applyI18nEnhancements(enhancedUrls, { isI18nMapped, autoI18n, ...sitemap });
+  const filteredUrls = filterSitemapUrls(enhancedUrls, { event: resolvers.event, isMultiSitemap, ...sitemap });
+  const sortedUrls = maybeSort(filteredUrls);
+  const slicedUrls = maybeSlice(sortedUrls);
+  const nitro = useNitroApp();
+  const ctx = {
+    urls: slicedUrls,
+    sitemapName: sitemap.sitemapName
+  };
+  await nitro.hooks.callHook("sitemap:resolved", ctx);
+  const urls = maybeSort(normaliseSitemapUrls(ctx.urls, resolvers));
+  const urlset = urls.map((e) => {
+    const keys = Object.keys(e).filter((k) => !k.startsWith("_"));
+    return [
+      "    <url>",
+      keys.map((k) => handleEntry(k, e)).filter(Boolean).join("\n"),
+      "    </url>"
+    ].join("\n");
+  });
+  return wrapSitemapXml([
+    '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    urlset.join("\n"),
+    "</urlset>"
+  ], resolvers, { version, xsl, credits });
+}
+
+function useNitroUrlResolvers(e) {
+  const canonicalQuery = getQuery$1(e).canonical;
+  const isShowingCanonical = typeof canonicalQuery !== "undefined" && canonicalQuery !== "false";
+  const siteConfig = useSiteConfig(e);
+  return {
+    event: e,
+    fixSlashes: (path) => fixSlashes(siteConfig.trailingSlash, path),
+    // we need these as they depend on the nitro event
+    canonicalUrlResolver: createSitePathResolver(e, {
+      canonical: isShowingCanonical || false,
+      absolute: true,
+      withBase: true
+    }),
+    relativeBaseUrlResolver: createSitePathResolver(e, { absolute: false, withBase: true })
+  };
+}
+async function createSitemap(e, definition, runtimeConfig) {
+  const { sitemapName } = definition;
+  const nitro = useNitroApp();
+  let sitemap = await (definition.sitemapName === "index" ? buildSitemapIndex(useNitroUrlResolvers(e), runtimeConfig) : buildSitemap(definition, useNitroUrlResolvers(e), runtimeConfig));
+  const ctx = { sitemap, sitemapName };
+  await nitro.hooks.callHook("sitemap:output", ctx);
+  sitemap = ctx.sitemap;
+  setHeader(e, "Content-Type", "text/xml; charset=UTF-8");
+  if (runtimeConfig.cacheMaxAgeSeconds)
+    setHeader(e, "Cache-Control", `public, max-age=${runtimeConfig.cacheMaxAgeSeconds}, must-revalidate`);
+  else
+    setHeader(e, "Cache-Control", `no-cache, no-store`);
+  e.context._isSitemap = true;
+  return sitemap;
+}
+
+const _ac2A6p = defineEventHandler(async (e) => {
+  const path = parseURL(e.path).pathname;
+  if (!path.endsWith("-sitemap.xml"))
+    return;
+  const runtimeConfig = useSimpleSitemapRuntimeConfig();
+  const { sitemaps } = runtimeConfig;
+  const sitemapName = path.replace("-sitemap.xml", "").replace("/", "");
+  const isChunking = typeof sitemaps.chunks !== "undefined" && !Number.isNaN(Number(sitemapName));
+  if (!(sitemapName in sitemaps) && !isChunking) {
+    return createError({
+      statusCode: 404,
+      message: `Sitemap "${sitemapName}" not found.`
+    });
+  }
+  return createSitemap(e, isChunking ? {
+    ...sitemaps.chunks,
+    sitemapName
+  } : sitemaps[sitemapName], runtimeConfig);
+});
 
 const _Diypcf = defineEventHandler(async (e) => {
   const _runtimeConfig = useSimpleSitemapRuntimeConfig();
@@ -1650,586 +2339,6 @@ const _lQbJhl = defineEventHandler(async (e) => {
 `;
 });
 
-function resolve(s, resolvers) {
-  if (typeof s === "undefined")
-    return s;
-  s = typeof s === "string" ? s : s.toString();
-  if (hasProtocol(s, { acceptRelative: true, strict: false }))
-    return resolvers.fixSlashes(s);
-  return resolvers.canonicalUrlResolver(s);
-}
-function normaliseSitemapUrls(data, resolvers) {
-  const entries = data.map((e) => typeof e === "string" ? { loc: e } : e).map((e) => {
-    e = { ...e };
-    if (e.url) {
-      e.loc = e.url;
-      delete e.url;
-    }
-    e.loc = fixSlashes(false, e.loc);
-    return e;
-  }).filter(Boolean);
-  function normaliseEntry(e) {
-    if (e.lastmod) {
-      const date = normaliseDate(e.lastmod);
-      if (date)
-        e.lastmod = date;
-      else
-        delete e.lastmod;
-    }
-    if (!e.lastmod)
-      delete e.lastmod;
-    e.loc = resolve(e.loc, resolvers);
-    if (e.alternatives) {
-      e.alternatives = mergeOnKey(e.alternatives.map((e2) => {
-        const a = { ...e2 };
-        if (typeof a.href === "string")
-          a.href = resolve(a.href, resolvers);
-        else if (typeof a.href === "object" && a.href)
-          a.href = resolve(a.href.href, resolvers);
-        return a;
-      }), "hreflang");
-    }
-    if (e.images) {
-      e.images = mergeOnKey(e.images.map((i) => {
-        i = { ...i };
-        i.loc = resolve(i.loc, resolvers);
-        return i;
-      }), "loc");
-    }
-    if (e.videos) {
-      e.videos = e.videos.map((v) => {
-        v = { ...v };
-        if (v.content_loc)
-          v.content_loc = resolve(v.content_loc, resolvers);
-        return v;
-      });
-    }
-    return e;
-  }
-  return mergeOnKey(
-    entries.map(normaliseEntry).map((e) => ({ ...e, _key: `${e._sitemap || ""}${e.loc}` })),
-    "_key"
-  );
-}
-const IS_VALID_W3C_DATE = [
-  /(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))/,
-  /^\d{4}-[01]\d-[0-3]\d$/,
-  /^\d{4}-[01]\d$/,
-  /^\d{4}$/
-];
-function isValidW3CDate(d) {
-  return IS_VALID_W3C_DATE.some((r) => r.test(d));
-}
-function normaliseDate(d) {
-  if (typeof d === "string") {
-    if (d.includes("T")) {
-      const t = d.split("T")[1];
-      if (!t.includes("+") && !t.includes("-") && !t.includes("Z")) {
-        d += "Z";
-      }
-    }
-    if (!isValidW3CDate(d))
-      return false;
-    d = new Date(d);
-    d.setMilliseconds(0);
-    if (Number.isNaN(d.getTime()))
-      return false;
-  }
-  const z = (n) => `0${n}`.slice(-2);
-  const date = `${d.getUTCFullYear()}-${z(d.getUTCMonth() + 1)}-${z(d.getUTCDate())}`;
-  if (d.getUTCHours() > 0 || d.getUTCMinutes() > 0 || d.getUTCSeconds() > 0) {
-    return `${date}T${z(d.getUTCHours())}:${z(d.getUTCMinutes())}:${z(d.getUTCSeconds())}Z`;
-  }
-  return date;
-}
-
-function filterSitemapUrls(_urls, options) {
-  const urlFilter = createFilter({
-    include: options.include,
-    exclude: options.exclude
-  });
-  return _urls.filter((e) => {
-    let path = e.loc;
-    try {
-      path = parseURL(e.loc).pathname;
-    } catch {
-      return false;
-    }
-    if (!urlFilter(path))
-      return false;
-    if (options.isMultiSitemap && e._sitemap && options.sitemapName)
-      return e._sitemap === options.sitemapName;
-    return true;
-  });
-}
-
-function normaliseI18nSources(sources, { autoI18n, isI18nMapped, include, exclude }) {
-  const filterPath = createPathFilter({
-    include,
-    exclude
-  });
-  if (autoI18n && isI18nMapped) {
-    return sources.map((s) => {
-      const urls = (s.urls || []).map((_url) => {
-        const url = typeof _url === "string" ? { loc: _url } : _url;
-        url.loc = url.loc || url.url;
-        if (!hasProtocol(url.loc, { acceptRelative: true }))
-          url.loc = withLeadingSlash(url.loc);
-        return url;
-      });
-      s.urls = urls.map((url) => {
-        if (url._sitemap || url._i18nTransform)
-          return url;
-        if (url.loc && !hasProtocol(url.loc, { acceptRelative: true })) {
-          const match = splitForLocales(url.loc, autoI18n.locales.map((l) => l.code));
-          const localeCode = match[0] || autoI18n.defaultLocale;
-          const pathWithoutPrefix = match[1];
-          const locale = autoI18n.locales.find((e) => e.code === localeCode);
-          if (locale) {
-            if (!url.alternatives) {
-              const alternatives = urls.map((u) => {
-                if (u._sitemap || u._i18nTransform)
-                  return false;
-                if (u?.loc) {
-                  if (!filterPath(u.loc))
-                    return false;
-                  const [_localeCode, _pathWithoutPrefix] = splitForLocales(u.loc, autoI18n.locales.map((l) => l.code));
-                  if (pathWithoutPrefix === _pathWithoutPrefix) {
-                    const entries = [];
-                    if (_localeCode === autoI18n.defaultLocale) {
-                      entries.push({
-                        href: u.loc,
-                        hreflang: "x-default"
-                      });
-                    }
-                    entries.push({
-                      href: u.loc,
-                      hreflang: _localeCode || autoI18n.defaultLocale
-                    });
-                    return entries;
-                  }
-                }
-                return false;
-              }).flat().filter(Boolean);
-              if (alternatives.length)
-                url.alternatives = alternatives;
-            }
-            return {
-              _sitemap: locale.iso || locale.code,
-              ...url
-            };
-          }
-        }
-        return url;
-      });
-      return s;
-    });
-  }
-  return sources;
-}
-function applyI18nEnhancements(_urls, options) {
-  const { autoI18n, include, exclude } = options;
-  const filterPath = createPathFilter({
-    include,
-    exclude
-  });
-  return _urls.map((e) => {
-    if (!e._i18nTransform)
-      return e;
-    delete e._i18nTransform;
-    const parsedURL = parseURL(e.loc);
-    const path = withLeadingSlash(parsedURL.pathname + parsedURL.search + parsedURL.hash);
-    const match = splitForLocales(path, autoI18n.locales.map((l) => l.code));
-    let pathWithoutLocale = path;
-    let locale;
-    if (match[0]) {
-      pathWithoutLocale = match[1] || "/";
-      locale = match[0];
-    }
-    if (locale && true) {
-      console.warn("You're providing a locale in the url, but the url is marked as inheritI18n. This will cause issues with the sitemap. Please remove the locale from the url.");
-      return e;
-    }
-    if (autoI18n.differentDomains) {
-      return {
-        // will force it to pass filter
-        _sitemap: options.sitemapName,
-        ...e,
-        alternatives: [
-          {
-            // apply default locale domain
-            ...autoI18n.locales.find((l) => [l.code, l.iso].includes(autoI18n.defaultLocale)),
-            code: "x-default"
-          },
-          ...autoI18n.locales.filter((l) => !!l.domain)
-        ].map((locale2) => {
-          return {
-            hreflang: locale2.iso || locale2.code,
-            href: joinURL(withHttps(locale2.domain), pathWithoutLocale)
-          };
-        })
-      };
-    }
-    return autoI18n.locales.map((l) => {
-      let loc = joinURL(`/${l.code}`, pathWithoutLocale);
-      if (autoI18n.differentDomains || ["prefix_and_default", "prefix_except_default"].includes(autoI18n.strategy) && l.code === autoI18n.defaultLocale)
-        loc = pathWithoutLocale;
-      return {
-        _sitemap: options.isI18nMapped ? l.iso || l.code : void 0,
-        ...e,
-        loc,
-        alternatives: [{ code: "x-default" }, ...autoI18n.locales].map((locale2) => {
-          const code = locale2.code === "x-default" ? autoI18n.defaultLocale : locale2.code;
-          const isDefault = locale2.code === "x-default" || locale2.code === autoI18n.defaultLocale;
-          let href = "";
-          if (autoI18n.strategy === "prefix") {
-            href = joinURL("/", code, pathWithoutLocale);
-          } else if (["prefix_and_default", "prefix_except_default"].includes(autoI18n.strategy)) {
-            if (isDefault) {
-              href = pathWithoutLocale;
-            } else {
-              href = joinURL("/", code, pathWithoutLocale);
-            }
-          }
-          const hreflang = locale2.iso || locale2.code;
-          if (!filterPath(href))
-            return false;
-          return {
-            hreflang,
-            href
-          };
-        }).filter(Boolean)
-      };
-    });
-  }).flat();
-}
-
-function sortSitemapUrls(urls) {
-  return urls.sort(
-    (a, b) => {
-      const aLoc = typeof a === "string" ? a : a.loc;
-      const bLoc = typeof b === "string" ? b : b.loc;
-      return aLoc.localeCompare(bLoc, void 0, { numeric: true });
-    }
-  ).sort((a, b) => {
-    const aLoc = (typeof a === "string" ? a : a.loc) || "";
-    const bLoc = (typeof b === "string" ? b : b.loc) || "";
-    const aSegments = aLoc.split("/").length;
-    const bSegments = bLoc.split("/").length;
-    if (aSegments > bSegments)
-      return 1;
-    if (aSegments < bSegments)
-      return -1;
-    return 0;
-  });
-}
-
-function withoutQuery(path) {
-  return path.split("?")[0];
-}
-function createNitroRouteRuleMatcher() {
-  const { nitro, app } = useRuntimeConfig();
-  const _routeRulesMatcher = toRouteMatcher(
-    createRouter({
-      routes: Object.fromEntries(
-        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
-      )
-    })
-  );
-  return (path) => {
-    return defu$1({}, ..._routeRulesMatcher.matchAll(
-      // radix3 does not support trailing slashes
-      withoutBase(withoutTrailingSlash(withoutQuery(path)), app.baseURL)
-    ).reverse());
-  };
-}
-
-function resolveKey(k) {
-  switch (k) {
-    case "images":
-      return "image";
-    case "videos":
-      return "video";
-    case "news":
-      return "news";
-    default:
-      return k;
-  }
-}
-function handleObject(key, obj) {
-  return [
-    `        <${key}:${key}>`,
-    ...Object.entries(obj).map(([sk, sv]) => {
-      if (key === "video" && Array.isArray(sv)) {
-        return sv.map((v) => {
-          if (typeof v === "string") {
-            return [
-              `            `,
-              `<${key}:${sk}>`,
-              escapeValueForXml(v),
-              `</${key}:${sk}>`
-            ].join("");
-          }
-          const attributes = Object.entries(v).filter(([ssk]) => ssk !== sk).map(([ssk, ssv]) => `${ssk}="${escapeValueForXml(ssv)}"`).join(" ");
-          return [
-            `            <${key}:${sk} ${attributes}>`,
-            // value is the same sk
-            v[sk],
-            `</${key}:${sk}>`
-          ].join("");
-        }).join("\n");
-      }
-      if (typeof sv === "object") {
-        if (key === "video") {
-          const attributes = Object.entries(sv).filter(([ssk]) => ssk !== sk).map(([ssk, ssv]) => `${ssk}="${escapeValueForXml(ssv)}"`).join(" ");
-          return [
-            `            <${key}:${sk} ${attributes}>`,
-            // value is the same sk
-            sv[sk],
-            `</${key}:${sk}>`
-          ].join("");
-        }
-        return [
-          `            <${key}:${sk}>`,
-          ...Object.entries(sv).map(([ssk, ssv]) => `                <${key}:${ssk}>${escapeValueForXml(ssv)}</${key}:${ssk}>`),
-          `            </${key}:${sk}>`
-        ].join("\n");
-      }
-      return `            <${key}:${sk}>${escapeValueForXml(sv)}</${key}:${sk}>`;
-    }),
-    `        </${key}:${key}>`
-  ].join("\n");
-}
-function handleArray(key, arr) {
-  if (arr.length === 0)
-    return false;
-  key = resolveKey(key);
-  if (key === "alternatives") {
-    return arr.map((obj) => [
-      `        <xhtml:link rel="alternate" ${Object.entries(obj).map(([sk, sv]) => `${sk}="${escapeValueForXml(sv)}"`).join(" ")} />`
-    ].join("\n")).join("\n");
-  }
-  return arr.map((obj) => handleObject(key, obj)).join("\n");
-}
-function handleEntry(k, e) {
-  return Array.isArray(e[k]) ? handleArray(k, e[k]) : typeof e[k] === "object" ? handleObject(k, e[k]) : `        <${k}>${escapeValueForXml(e[k])}</${k}>`;
-}
-function wrapSitemapXml(input, resolvers, options) {
-  const xsl = options.xsl ? resolvers.relativeBaseUrlResolver(options.xsl) : false;
-  const credits = options.credits;
-  input.unshift(`<?xml version="1.0" encoding="UTF-8"?>${xsl ? `<?xml-stylesheet type="text/xsl" href="${xsl}"?>` : ""}`);
-  if (credits)
-    input.push(`<!-- XML Sitemap generated by @nuxtjs/sitemap v${options.version} at ${(/* @__PURE__ */ new Date()).toISOString()} -->`);
-  return input.join("\n");
-}
-function escapeValueForXml(value) {
-  if (value === true || value === false)
-    return value ? "yes" : "no";
-  return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
-}
-
-async function buildSitemap(sitemap, resolvers, runtimeConfig) {
-  const {
-    sitemaps,
-    // enhancing
-    autoI18n,
-    isI18nMapped,
-    isMultiSitemap,
-    // sorting
-    sortEntries,
-    // chunking
-    defaultSitemapsChunkSize,
-    // xls
-    version,
-    xsl,
-    credits
-  } = runtimeConfig;
-  const isChunking = typeof sitemaps.chunks !== "undefined" && !Number.isNaN(Number(sitemap.sitemapName));
-  function maybeSort(urls2) {
-    return sortEntries ? sortSitemapUrls(urls2) : urls2;
-  }
-  function maybeSlice(urls2) {
-    if (isChunking && defaultSitemapsChunkSize) {
-      const chunk = Number(sitemap.sitemapName);
-      return urls2.slice(chunk * defaultSitemapsChunkSize, (chunk + 1) * defaultSitemapsChunkSize);
-    }
-    return urls2;
-  }
-  if (autoI18n?.differentDomains) {
-    const domain = autoI18n.locales.find((e) => [e.iso, e.code].includes(sitemap.sitemapName))?.domain;
-    if (domain) {
-      const _tester = resolvers.canonicalUrlResolver;
-      resolvers.canonicalUrlResolver = (path) => resolveSitePath(path, {
-        absolute: true,
-        withBase: false,
-        siteUrl: withHttps(domain),
-        trailingSlash: !_tester("/test/").endsWith("/"),
-        base: "/"
-      });
-    }
-  }
-  const sources = sitemap.includeAppSources ? await globalSitemapSources() : [];
-  sources.push(...await childSitemapSources(sitemap));
-  let resolvedSources = await resolveSitemapSources(sources, resolvers.event);
-  if (autoI18n)
-    resolvedSources = normaliseI18nSources(resolvedSources, { autoI18n, isI18nMapped, ...sitemap });
-  const normalisedUrls = normaliseSitemapUrls(resolvedSources.map((e) => e.urls).flat(), resolvers);
-  const routeRuleMatcher = createNitroRouteRuleMatcher();
-  let enhancedUrls = normalisedUrls.map((e) => defu$1(e, sitemap.defaults)).map((e) => {
-    const path = parseURL(e.loc).pathname;
-    let routeRules = routeRuleMatcher(path);
-    if (autoI18n?.locales && autoI18n?.strategy !== "no_prefix") {
-      const match = splitForLocales(path, autoI18n.locales.map((l) => l.code));
-      const pathWithoutPrefix = match[1];
-      if (pathWithoutPrefix && pathWithoutPrefix !== path)
-        routeRules = defu$1(routeRules, routeRuleMatcher(pathWithoutPrefix));
-    }
-    if (routeRules.sitemap === false)
-      return false;
-    if (typeof routeRules.index !== "undefined" && !routeRules.index)
-      return false;
-    const hasRobotsDisabled = Object.entries(routeRules.headers || {}).some(([name, value]) => name.toLowerCase() === "x-robots-tag" && value.toLowerCase() === "noindex");
-    if (routeRules.redirect || hasRobotsDisabled)
-      return false;
-    return routeRules.sitemap ? defu$1(e, routeRules.sitemap) : e;
-  }).filter(Boolean);
-  if (autoI18n?.locales)
-    enhancedUrls = applyI18nEnhancements(enhancedUrls, { isI18nMapped, autoI18n, ...sitemap });
-  const filteredUrls = filterSitemapUrls(enhancedUrls, { event: resolvers.event, isMultiSitemap, ...sitemap });
-  const sortedUrls = maybeSort(filteredUrls);
-  const slicedUrls = maybeSlice(sortedUrls);
-  const nitro = useNitroApp();
-  const ctx = {
-    urls: slicedUrls,
-    sitemapName: sitemap.sitemapName
-  };
-  await nitro.hooks.callHook("sitemap:resolved", ctx);
-  const urls = maybeSort(normaliseSitemapUrls(ctx.urls, resolvers));
-  const urlset = urls.map((e) => {
-    const keys = Object.keys(e).filter((k) => !k.startsWith("_"));
-    return [
-      "    <url>",
-      keys.map((k) => handleEntry(k, e)).filter(Boolean).join("\n"),
-      "    </url>"
-    ].join("\n");
-  });
-  return wrapSitemapXml([
-    '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    urlset.join("\n"),
-    "</urlset>"
-  ], resolvers, { version, xsl, credits });
-}
-
-async function buildSitemapIndex(resolvers, runtimeConfig) {
-  const {
-    sitemaps,
-    // enhancing
-    autoLastmod,
-    // chunking
-    defaultSitemapsChunkSize,
-    autoI18n,
-    isI18nMapped,
-    sortEntries,
-    // xls
-    version,
-    xsl,
-    credits
-  } = runtimeConfig;
-  if (!sitemaps)
-    throw new Error("Attempting to build a sitemap index without required `sitemaps` configuration.");
-  function maybeSort(urls) {
-    return sortEntries ? sortSitemapUrls(urls) : urls;
-  }
-  const isChunking = typeof sitemaps.chunks !== "undefined";
-  const chunks = {};
-  if (isChunking) {
-    const sitemap = sitemaps.chunks;
-    const sources = await resolveSitemapSources(await globalSitemapSources());
-    const normalisedUrls = normaliseSitemapUrls(sources.map((e) => e.urls).flat(), resolvers);
-    let enhancedUrls = normalisedUrls.map((e) => defu$1(e, sitemap.defaults));
-    if (autoI18n?.locales)
-      enhancedUrls = applyI18nEnhancements(enhancedUrls, { isI18nMapped, autoI18n, sitemapName: sitemap.sitemapName });
-    const filteredUrls = filterSitemapUrls(enhancedUrls, { ...sitemap, isMultiSitemap: true });
-    const sortedUrls = maybeSort(filteredUrls);
-    sortedUrls.forEach((url, i) => {
-      const chunkIndex = Math.floor(i / defaultSitemapsChunkSize);
-      chunks[chunkIndex] = chunks[chunkIndex] || { urls: [] };
-      chunks[chunkIndex].urls.push(url);
-    });
-  } else {
-    for (const sitemap in sitemaps) {
-      if (sitemap !== "index") {
-        chunks[sitemap] = chunks[sitemap] || { urls: [] };
-      }
-    }
-  }
-  const entries = [];
-  for (const name in chunks) {
-    const sitemap = chunks[name];
-    const entry = {
-      sitemap: resolvers.canonicalUrlResolver(`${name}-sitemap.xml`)
-    };
-    let lastmod = sitemap.urls.filter((a) => !!a?.lastmod).map((a) => typeof a.lastmod === "string" ? new Date(a.lastmod) : a.lastmod).sort((a, b) => (b?.getTime() || 0) - (a?.getTime() || 0))?.[0];
-    if (!lastmod && autoLastmod)
-      lastmod = /* @__PURE__ */ new Date();
-    if (lastmod)
-      entry.lastmod = normaliseDate(lastmod);
-    entries.push(entry);
-  }
-  if (sitemaps.index) {
-    entries.push(...sitemaps.index.sitemaps.map((entry) => {
-      return typeof entry === "string" ? { sitemap: entry } : entry;
-    }));
-  }
-  const ctx = { sitemaps: entries };
-  const nitro = useNitroApp();
-  await nitro.hooks.callHook("sitemap:index-resolved", ctx);
-  const sitemapXml = ctx.sitemaps.map((e) => [
-    "    <sitemap>",
-    `        <loc>${escapeValueForXml(e.sitemap)}</loc>`,
-    // lastmod is optional
-    e.lastmod ? `        <lastmod>${escapeValueForXml(e.lastmod)}</lastmod>` : false,
-    "    </sitemap>"
-  ].filter(Boolean).join("\n")).join("\n");
-  return wrapSitemapXml([
-    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    sitemapXml,
-    "</sitemapindex>"
-  ], resolvers, { version, xsl, credits });
-}
-
-function useNitroUrlResolvers(e) {
-  const canonicalQuery = getQuery$1(e).canonical;
-  const isShowingCanonical = typeof canonicalQuery !== "undefined" && canonicalQuery !== "false";
-  const siteConfig = useSiteConfig(e);
-  return {
-    event: e,
-    fixSlashes: (path) => fixSlashes(siteConfig.trailingSlash, path),
-    // we need these as they depend on the nitro event
-    canonicalUrlResolver: createSitePathResolver(e, {
-      canonical: isShowingCanonical || false,
-      absolute: true,
-      withBase: true
-    }),
-    relativeBaseUrlResolver: createSitePathResolver(e, { absolute: false, withBase: true })
-  };
-}
-async function createSitemap(e, definition, runtimeConfig) {
-  const { sitemapName } = definition;
-  const nitro = useNitroApp();
-  let sitemap = await (definition.sitemapName === "index" ? buildSitemapIndex(useNitroUrlResolvers(e), runtimeConfig) : buildSitemap(definition, useNitroUrlResolvers(e), runtimeConfig));
-  const ctx = { sitemap, sitemapName };
-  await nitro.hooks.callHook("sitemap:output", ctx);
-  sitemap = ctx.sitemap;
-  setHeader(e, "Content-Type", "text/xml; charset=UTF-8");
-  if (runtimeConfig.cacheMaxAgeSeconds)
-    setHeader(e, "Cache-Control", `public, max-age=${runtimeConfig.cacheMaxAgeSeconds}, must-revalidate`);
-  else
-    setHeader(e, "Cache-Control", `no-cache, no-store`);
-  e.context._isSitemap = true;
-  return sitemap;
-}
-
 const _yQiFRc = defineEventHandler(async (e) => {
   const runtimeConfig = useSimpleSitemapRuntimeConfig();
   const { sitemaps } = runtimeConfig;
@@ -2277,6 +2386,8 @@ const _lazy_CxzGSR = () => Promise.resolve().then(function () { return m9000$1; 
 const _lazy_TMKvTI = () => Promise.resolve().then(function () { return mEco$1; });
 const _lazy_JtALWQ = () => Promise.resolve().then(function () { return mOc$1; });
 const _lazy_PlfQDI = () => Promise.resolve().then(function () { return sitemap$1; });
+const _lazy_zACoTv = () => Promise.resolve().then(function () { return window_sitemap$1; });
+const _lazy_8qQR9J = () => Promise.resolve().then(function () { return window_variations$1; });
 const _lazy_GflkU8 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
@@ -2287,9 +2398,15 @@ const handlers = [
   { route: '/api/m-eco', handler: _lazy_TMKvTI, lazy: true, middleware: false, method: undefined },
   { route: '/api/m-oc', handler: _lazy_JtALWQ, lazy: true, middleware: false, method: undefined },
   { route: '/api/sitemap', handler: _lazy_PlfQDI, lazy: true, middleware: false, method: undefined },
+  { route: '/api/window_sitemap', handler: _lazy_zACoTv, lazy: true, middleware: false, method: undefined },
+  { route: '/api/window_variations', handler: _lazy_8qQR9J, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_GflkU8, lazy: true, middleware: false, method: undefined },
   { route: '', handler: _ln7StO, lazy: false, middleware: true, method: undefined },
   { route: '/__site-config__/debug.json', handler: _ku7okA, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap_index.xml', handler: _frnfii, lazy: false, middleware: false, method: undefined },
+  { route: '/pages-sitemap.xml', handler: _ac2A6p, lazy: false, middleware: false, method: undefined },
+  { route: '/postwindow-sitemap.xml', handler: _ac2A6p, lazy: false, middleware: false, method: undefined },
+  { route: '/blog-sitemap.xml', handler: _ac2A6p, lazy: false, middleware: false, method: undefined },
   { route: '/__sitemap__/debug.json', handler: _Diypcf, lazy: false, middleware: false, method: undefined },
   { route: '/__sitemap__/style.xsl', handler: _lQbJhl, lazy: false, middleware: false, method: undefined },
   { route: '/sitemap.xml', handler: _yQiFRc, lazy: false, middleware: false, method: undefined },
@@ -2497,10 +2614,6 @@ const errorDev = /*#__PURE__*/Object.freeze({
 
 const sources$1 = [
     {
-        "sourceType": "user",
-        "fetch": "/api/sitemap"
-    },
-    {
         "context": {
             "name": "sitemap:urls",
             "description": "Set with the `sitemap.urls` config."
@@ -2581,7 +2694,7 @@ const sources$1 = [
                 "loc": "/pvc-ajto-ablak"
             },
             {
-                "loc": "/szolgaltatasok"
+                "loc": "/sitemap.xml"
             }
         ],
         "sourceType": "app"
@@ -2593,7 +2706,21 @@ const globalSources = /*#__PURE__*/Object.freeze({
   sources: sources$1
 });
 
-const sources = {};
+const sources = {
+    "pages": [],
+    "postwindow": [
+        {
+            "sourceType": "user",
+            "fetch": "/api/window_sitemap"
+        }
+    ],
+    "blog": [
+        {
+            "sourceType": "user",
+            "fetch": "/api/sitemap"
+        }
+    ]
+};
 
 const childSources = /*#__PURE__*/Object.freeze({
   __proto__: null,
@@ -4758,6 +4885,74 @@ const sitemap = defineSitemapEventHandler(async (e) => {
 const sitemap$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   default: sitemap
+});
+
+const window_sitemap = defineSitemapEventHandler(async () => {
+  try {
+    const response = await fetch(
+      "https://api.pankaepito.hu/ablakapi/nyilaszaro_seo_500.json"
+    );
+    const data = await response.json();
+    const variations = data;
+    const baseUrl = process.env.BASE_URL || "https://ablaktechnika.com";
+    return variations.map((variation) => {
+      var _a;
+      function slugify(text = "") {
+        return text.toLowerCase().replace(/[áàâä]/g, "a").replace(/[éèêë]/g, "e").replace(/[íìîï]/g, "i").replace(/[óòôö]/g, "o").replace(/[úùûü]/g, "u").replace(/ő/g, "o").replace(/ű/g, "u").replace(/\./g, "").replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "").replace(/-+/g, "-").replace(/^-|-$/g, "");
+      }
+      const slugUrl = `/nyilaszaro/${slugify(variation.kerulet)}/${slugify(
+        variation.kulcsszo
+      )}/${slugify(variation.szolgaltatas)}/${slugify(variation.extra)}/${variation.ev}`;
+      const fullImageUrl = ((_a = variation.image_url) == null ? void 0 : _a.startsWith("http")) ? variation.image_url : `${baseUrl}${variation.image_url}`;
+      return {
+        loc: slugUrl,
+        lastmod: (/* @__PURE__ */ new Date()).toISOString(),
+        changefreq: "monthly",
+        // Explicit típuskonverzió
+        priority: 0.8,
+        // Az _images mező a nuxt-sitemap modulban használatos a képekhez
+        _images: variation.image_url ? [
+          {
+            url: fullImageUrl,
+            title: variation.title || `${variation.kulcsszo} ${variation.kerulet}`,
+            caption: variation.meta_description || `${variation.kulcsszo} ${variation.varos} ${variation.kerulet}`,
+            // Opcionális mezők
+            license: "https://ablaktechnika.com/license",
+            geoLocation: `${variation.varos}, Hungary`
+          }
+        ] : void 0,
+        // Alternatív módszer, ha a fenti nem működik
+        images: variation.image_url ? [
+          {
+            loc: fullImageUrl,
+            title: variation.title || `${variation.kulcsszo} ${variation.kerulet}`,
+            caption: variation.meta_description || `${variation.kulcsszo} ${variation.varos} ${variation.kerulet}`
+          }
+        ] : void 0
+      };
+    });
+  } catch (error) {
+    console.error("Error generating sitemap for variations:", error);
+    return [];
+  }
+});
+
+const window_sitemap$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: window_sitemap
+});
+
+const window_variations = defineEventHandler(async () => {
+  const response = await fetch(
+    "https://api.pankaepito.hu/ablakapi/nyilaszaro_seo_500.json"
+  );
+  const data = await response.json();
+  return data;
+});
+
+const window_variations$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: window_variations
 });
 
 const Vue3 = version[0] === "3";

@@ -878,7 +878,7 @@ ul {
   border-radius: 20px 20px 0px 0px;
   background: linear-gradient(180deg, #971e20 0%, #5a0001 100%);
   padding: 3em 2em;
-  width: 70%;
+  width: 77%;
   margin: auto;
   margin-top: -4em;
 }
@@ -1596,7 +1596,7 @@ ul {
   .offer__manufacturing-text,
   .footer__contact-link,
   .footer__menu-link {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   .header-content__logo-box__link__img {
     width: 45%;
@@ -2375,8 +2375,9 @@ ul {
     width: 100%;
     padding: 1.5em 1em 0.7em 2em;
     flex-direction: column;
-    z-index: 1;
+    z-index: 9;
   }
+
 
   .header-content__link-box__content {
     margin-right: 0;
@@ -2707,7 +2708,7 @@ ul {
     width: 100%;
     padding: 1.5em 1em 0.7em 2em;
     flex-direction: column;
-    z-index: 1;
+    z-index: 9;
   }
 
   .header-content__link-box__content {

@@ -40,7 +40,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://www.alkuszom.info' },
+        { rel: 'canonical', href: 'https://ablaktechnika.com/' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
         {
@@ -78,8 +78,29 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    sources: ['/api/sitemap'],
-    // defaults: { priority: 0.7 },
+    sitemaps: {
+      pages: {
+        includeAppSources: true,
+        defaults: {
+          priority: 0.7,
+          changefreq: 'monthly',
+        },
+      },
+      postwindow: {
+        sources: ['/api/window_sitemap'],
+        defaults: {
+          priority: 0.9,
+          changefreq: 'daily',
+        },
+      },
+      blog: {
+        sources: ['/api/sitemap'],
+        defaults: {
+          priority: 0.7,
+          changefreq: 'daily',
+        },
+      },
+    },
   },
 
   nitro: {
