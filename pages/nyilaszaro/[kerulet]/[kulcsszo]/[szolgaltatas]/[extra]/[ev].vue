@@ -445,7 +445,7 @@ useSeoMeta({
                   <i class="fas fa-comments"></i>
                 </div>
                 <div class="cta-card__content">
-                  <h3>Ingyenes konzultáció - Értéket adunk előre</h3>
+                  <h6>Ingyenes konzultáció - Értéket adunk előre</h6>
                   <p>
                     Már az első találkozás alkalmával
                     <strong>ingyen megkapja</strong> professzionális hőkamera

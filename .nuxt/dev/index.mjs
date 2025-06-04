@@ -348,28 +348,28 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+          "X-Sitemap-Prerendered": "2025-06-04T08:09:23.046Z"
         }
       },
       "/pages-sitemap.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+          "X-Sitemap-Prerendered": "2025-06-04T08:09:23.046Z"
         }
       },
       "/postwindow-sitemap.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+          "X-Sitemap-Prerendered": "2025-06-04T08:09:23.046Z"
         }
       },
       "/blog-sitemap.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2025-06-03T17:41:35.069Z"
+          "X-Sitemap-Prerendered": "2025-06-04T08:09:23.046Z"
         }
       },
       "/_nuxt/builds/meta/**": {
