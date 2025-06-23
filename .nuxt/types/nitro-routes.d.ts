@@ -12,17 +12,35 @@ declare module "nitropack/types" {
     '/api/linear': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/linear').default>>>>
     }
+    '/api/m-9000-bejarati-ajtok': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-9000-bejarati-ajtok').default>>>>
+    }
+    '/api/m-9000-emelo-tolo-ajto': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-9000-emelo-tolo-ajto').default>>>>
+    }
+    '/api/m-9000-tolo-buko-ajtok': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-9000-tolo-buko-ajtok').default>>>>
+    }
     '/api/m-9000': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-9000').default>>>>
     }
+    '/api/m-eco-bejarati-ajto': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-eco-bejarati-ajto').default>>>>
+    }
     '/api/m-eco': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-eco').default>>>>
+    }
+    '/api/m-oc-bejarati-ajto': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-oc-bejarati-ajto').default>>>>
     }
     '/api/m-oc': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-oc').default>>>>
     }
     '/api/sitemap': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/sitemap').default>>>>
+    }
+    '/api/smoovio-toloajto': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/smoovio-toloajto').default>>>>
     }
     '/api/window_sitemap': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/window_sitemap').default>>>>
