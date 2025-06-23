@@ -9,6 +9,9 @@ declare module "nitropack/types" {
     '/api/kubus': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/kubus').default>>>>
     }
+    '/api/kulso-tokos-aluminium-redon': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/kulso-tokos-aluminium-redon').default>>>>
+    }
     '/api/linear': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/linear').default>>>>
     }
@@ -36,17 +39,38 @@ declare module "nitropack/types" {
     '/api/m-oc': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/m-oc').default>>>>
     }
+    '/api/raepitheto-tokos-aluminium-redony': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/raepitheto-tokos-aluminium-redony').default>>>>
+    }
+    '/api/raepitheto-tokos-muanyag-redony': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/raepitheto-tokos-muanyag-redony').default>>>>
+    }
+    '/api/redex-kulso-tokos-muanyag-redony': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/redex-kulso-tokos-muanyag-redony').default>>>>
+    }
     '/api/sitemap': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/sitemap').default>>>>
     }
     '/api/smoovio-toloajto': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/smoovio-toloajto').default>>>>
     }
+    '/api/vakolhato-tokos-aluminium-redony': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/vakolhato-tokos-aluminium-redony').default>>>>
+    }
+    '/api/vakolhato-tokos-muanyag-redony': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/vakolhato-tokos-muanyag-redony').default>>>>
+    }
     '/api/window_sitemap': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/window_sitemap').default>>>>
     }
     '/api/window_variations': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/window_variations').default>>>>
+    }
+    '/api/zip-screen': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/zip-screen').default>>>>
+    }
+    '/api/zsaluzia-2': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/zsaluzia-2').default>>>>
     }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>>>

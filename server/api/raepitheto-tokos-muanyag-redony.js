@@ -2,7 +2,8 @@ import * as cheerio from 'cheerio'
 
 export default defineEventHandler(async (event) => {
   try {
-    const url = 'https://www.marshallablak.hu/termekek/m-9000-tolo-buko-ajtok/'
+    const url =
+      'https://www.marshallablak.hu/termekek/raepitheto-tokos-muanyag-redony/'
     const headers = {
       'User-Agent':
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
@@ -117,7 +118,7 @@ export default defineEventHandler(async (event) => {
         iframe {
             width: 100%;
          }
-        section.elementor-section.elementor-top-section.elementor-element.elementor-element-4394ec0.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default, section.elementor-section.elementor-top-section.elementor-element.elementor-element-364fe183.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-4394ec0.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default, section.elementor-section.elementor-top-section.elementor-element.elementor-element-364fe183.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default,section.elementor-section.elementor-top-section.elementor-element.elementor-element-676d28b0.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default,section.elementor-section.elementor-top-section.elementor-element.elementor-element-32865d01.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default
         {
            display: none;
         }
@@ -224,6 +225,7 @@ export default defineEventHandler(async (event) => {
             width: 17px;
             height: 17px;
             margin-right: 1em;
+            margin-left: 1em;
           }
           div#termektulajdonsag-pipa {
             display: flex;
@@ -243,7 +245,7 @@ export default defineEventHandler(async (event) => {
           .termektulajdonsag img {
             display: none;
           }
-        section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default  {
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-3c2f11b6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default  {
           }
           img.attachment-full.size-full{
             width: 100%;
@@ -251,15 +253,16 @@ export default defineEventHandler(async (event) => {
             object-fit: cover;
             border-radius: 1em;
           }
-        section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-3c2f11b6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
             justify-content: space-between;
             position: relative;
             align-items: center;
             padding-left: 7%;
             padding-right: 5%;
+            margin-bottom: 3em;
           }
-          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076  {
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-563a7932  {
             width: 50%;
                 padding: 0 3em 2em 3em;
           }    
@@ -316,10 +319,10 @@ export default defineEventHandler(async (event) => {
             padding: 1em;
           }
           @media (min-width: 991px) and (max-width: 1200px) { 
-        section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default  {
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-3c2f11b6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             flex-direction: column;
           }
-          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-563a7932 {
             width: 100%;
           }
           img.attachment-full.size-full {
@@ -336,7 +339,7 @@ export default defineEventHandler(async (event) => {
           }
           }
           @media (min-width: 768px) and (max-width: 991px) { 
-        section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-3c2f11b6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
             justify-content: space-between;
             position: relative;
@@ -349,7 +352,7 @@ export default defineEventHandler(async (event) => {
             width: 100%;
             height: 100%;
           }
-          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-563a7932 {
             width: 100%;
           }
           .content-container {
@@ -386,7 +389,7 @@ export default defineEventHandler(async (event) => {
           }              
           } 
           @media screen and (max-width: 767px) {
-        section.elementor-section.elementor-top-section.elementor-element.elementor-element-e78e85f.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default  {
+        section.elementor-section.elementor-top-section.elementor-element.elementor-element-3c2f11b6.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default .elementor-container.elementor-column-gap-default {
             display: flex;
             justify-content: space-between;
             position: relative;
@@ -409,7 +412,7 @@ export default defineEventHandler(async (event) => {
             width: 100%;
             height: 100%;
           }
-          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-851a076 {
+          .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-563a7932 {
             width: 100%;
           }
           .content-container {

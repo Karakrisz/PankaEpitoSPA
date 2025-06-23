@@ -3,7 +3,7 @@ const links = [
   { name: 'Főoldal', path: '/' },
   { name: 'PVC-ajtó, ablak', path: '/pvc-ajto-ablak' },
   { name: 'Alumínium-ajtó, ablak', path: '/' },
-  { name: 'Árnyékolástechnika', path: '/' },
+  { name: 'Árnyékolástechnika', path: '/arnyekolastechnika-ajanlatok' },
   { name: 'Beltéri ajók', path: '/belteri-ajtok' },
   { name: 'Kapcsolat', path: '/ajanlatkeres' },
 ]

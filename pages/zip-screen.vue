@@ -1,10 +1,10 @@
 <script setup>
 useHead({
-  title: 'M-OC bejárati ajtók',
+  title: 'Zip screen',
   meta: [
     {
       name: 'description',
-      content: 'M-OC bejárati ajtók részletes információi.',
+      content: 'Zip screen részletes információi.',
     },
   ],
 })
@@ -18,7 +18,7 @@ const {
   data,
   pending,
   error: fetchError,
-} = await useFetch('/api/m-oc-bejarati-ajto')
+} = await useFetch('/api/zip-screen')
 
 htmlContent.value = data.value
 
@@ -134,11 +134,11 @@ onUnmounted(() => {
     </div>
     <div class="link-box">
       <NuxtLink
-        to="/bejarati-ajtok"
+        to="/arnyekolastechnika-ajanlatok"
         class="go-back-button go-back-button--formating"
       >
         <span class="go-back-button__icon">&#8592;</span>
-        <span class="go-back-button__text">Vissza a bejárati ajtókhoz </span>
+        <span class="go-back-button__text">Vissza az árnyékolástechnikákhoz</span>
       </NuxtLink>
     </div>
   </div>
